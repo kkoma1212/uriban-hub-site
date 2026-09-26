@@ -388,10 +388,13 @@
           <table class="env">
             <caption class="sr-only">사용 환경</caption>
             <tbody>
-              <tr><th scope="row">운영체제</th><td>Windows 64비트 (Windows 11에서 확인)</td></tr>
+              <tr><th scope="row">운영체제</th><td>Windows 10 · 11 64비트 (Windows 11에서 확인)</td></tr>
               <tr><th scope="row">Windows 10</th><td>아직 확인하지 못했어요</td></tr>
               <tr><th scope="row">지원하지 않음</th><td>macOS · 태블릿 · 휴대폰</td></tr>
               <tr><th scope="row">파일 크기</th><td>약 355MB, 파일 하나</td></tr>
+              <tr><th scope="row">메모리</th><td>4GB 이상 (권장 8GB)</td></tr>
+              <tr><th scope="row">여유 공간</th><td>1.5GB 이상 (업데이트 포함)</td></tr>
+              <tr><th scope="row">화면</th><td>1366×768 이상</td></tr>
               <tr><th scope="row">설치 · 계정</th><td>필요 없어요</td></tr>
               <tr><th scope="row">인터넷</th><td>없어도 뽑기는 모두 돼요 (업데이트 · 공지 · 유튜브 타이머에만 사용)</td></tr>
               <tr><th scope="row">반 · 번호</th><td>반마다 1~40번, 빈 번호 지정 가능 (반 최대 30개)</td></tr>
@@ -414,11 +417,29 @@
       </div>
       <div class="faq">
         <details><summary>정말 무료인가요?</summary><p>네, 무료예요. 받아서 바로 쓰시면 돼요.</p></details>
+        <details><summary>어떤 컴퓨터에서 돌아가나요? (최소·권장 사양)</summary>
+          <p>설치 없이 파일 하나로 켜지는 Windows 64비트 프로그램이에요. 아래 표는 만든 사람의 PC에서 CPU를 일부러 느리게 만들어 가며 잰 결과로 정한 <strong>추정치</strong>예요. 실제 교실 노트북에서 확인한 값은 아니에요.</p>
+          <div class="spec-wrap">
+            <table class="env spec-table">
+              <caption class="sr-only">최소 사양과 권장 사양</caption>
+              <thead><tr><th scope="col"></th><th scope="col">최소</th><th scope="col">권장</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">운영체제</th><td>Windows 10 · 11 (64비트)</td><td>Windows 11 (64비트)</td></tr>
+                <tr><th scope="row">CPU</th><td>보급형 노트북 CPU (셀러론 N4000 · 펜티엄 실버급)</td><td>코어 i3 8세대 · 라이젠 3 이상</td></tr>
+                <tr><th scope="row">메모리</th><td>4GB</td><td>8GB 이상</td></tr>
+                <tr><th scope="row">여유 공간</th><td>1.5GB (업데이트 포함)</td><td>2GB 이상</td></tr>
+                <tr><th scope="row">그래픽</th><td>따로 필요 없어요 (내장 그래픽)</td><td>4K TV에 연결하면 4K 출력이 되는 그래픽</td></tr>
+                <tr><th scope="row">화면</th><td>1366×768</td><td>1920×1080 · 4K TV</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>가장 무거운 것은 또르르(공 40개 경주)예요. 만든 사람의 PC(라이젠 7 9700X)에서 CPU를 10배 느리게 해도 1초에 60장면으로 부드러웠고, 16배부터 끊기기 시작했어요. 그래픽 가속을 끈 상태(그래픽이 약한 PC와 비슷한 조건)에서도 끊김 없이 돌았어요. 프로그램이 쓰는 메모리는 실제 화면(2560×1440)에서 약 0.6GB였어요. 켤 때마다 임시 폴더에 약 355MB를 풀고, 업데이트 때는 새 파일과 이전 파일을 함께 보관해서 여유 공간이 더 필요해요. Windows 7 · 8, 맥, 태블릿에서는 실행되지 않아요.</p>
+        </details>
         <details><summary>실행할 때 Windows 안내 창이 나와요.</summary><p>코드 서명이 없어서 「Windows의 PC 보호」 경고가 뜰 수 있어요. 「추가 정보」를 누른 뒤 「실행」을 눌러 주세요. 학교 PC 설정에 따라 「실행」이 보이지 않으면 학교 전산 담당 선생님께 여쭤 주세요. 켜진 뒤 받는 업데이트 파일은 서명이 맞을 때만 적용해요.</p></details>
         <details><summary>학생 정보는 안전한가요?</summary><p>학생 이름을 넣는 칸이 없어요. 번호·결석·발표 기록은 어디로도 보내지 않고, 프로그램을 끄면 사라져요. 인터넷은 업데이트·공지 확인과 선생님이 고른 유튜브 타이머 화면에만 써요.</p></details>
         <details><summary>마지막 장면이 정해진 것처럼 보여요.</summary><p>룰렛·로또·캡슐은 당첨을 연출 전에 먼저 공평하게 정해요. 연출은 보는 재미일 뿐 확률을 바꾸지 않아요. 각 100만 번씩 돌려 본 검증 보고서도 공개해 두었어요.</p></details>
         <details><summary>또르르에서 막대기를 쓰면 결과가 바뀌나요?</summary><p>네, 달라질 수 있어요. 또르르는 공이 실제로 도착한 순서로 정해지기 때문에, 막대기나 흔들기를 쓰면 결과가 달라질 수 있어요. 36만 7,500판 검증은 아무도 건드리지 않은 경기의 1등만 잰 결과예요. 막대기는 설정의 「또르르」 탭에서 끌 수 있지만, 기울이기(A · D)와 흔들기(S)는 그대로 남아요. 완전히 우연에 맡기고 싶은 날에는 룰렛이나 캡슐을 권해요.</p></details>
-        <details><summary>Windows 10이나 맥, 태블릿에서도 되나요?</summary><p>Windows 11에서 확인했어요. Windows 10은 아직 확인하지 못했어요. macOS·태블릿·휴대폰은 지원하지 않아요.</p></details>
+        <details><summary>Windows 10이나 맥, 태블릿에서도 되나요?</summary><p>Windows 11에서 확인했어요. Windows 10(64비트)은 프로그램 바탕이 지원하지만 아직 직접 확인하지 못했어요. Windows 7 · 8, macOS·태블릿·휴대폰은 지원하지 않아요.</p></details>
         <details><summary>파일이 355MB로 커요.</summary><p>빨리 켜지도록 압축하지 않은 파일이라 커요. 한 번 받아 두면 USB로 옮겨 쓸 수 있어요.</p></details>
         <details><summary>발표 기록이 남지 않아서 아쉬워요.</summary><p>학생 기록을 남기지 않는 쪽을 일부러 골랐어요. 프로그램을 끄거나 업데이트 뒤 다시 시작하면 그날 기록은 지워져요.</p></details>
         <details><summary>수업 중에 저절로 업데이트되어 기록이 지워지지는 않나요?</summary><p>아니요. 켜진 뒤 새 버전이 있는지 확인만 하고, 있으면 홈 위쪽에 알림 줄이 나와요. 설정 「정보」 탭에서 선생님이 「업데이트 받기」와 「다시 시작」을 누르셔야 바뀌어요. 다시 시작하면 그날 결석·발표 기록은 지워지고 설정은 그대로 남으니, 업데이트는 수업이 끝난 뒤에 해 주세요.</p></details>
