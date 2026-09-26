@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>뽑기 시간 — 교실 발표자 뽑기 · 우리반 허브</title>
-<meta name="description" content="학생 번호로 발표자를 뽑는 Windows 프로그램이에요. 설치도, 인터넷도, 학생 이름도 필요 없어요. 무료로 받으실 수 있어요.">
+<meta name="description" content="학생 번호로 발표자를 뽑는 Windows용 무료 프로그램. 설치·인터넷·학생 이름 없이 씁니다.">
 <meta name="theme-color" content="#f5f2ec">
 <link rel="icon" href="assets/ppobgi/app-mark.svg" type="image/svg+xml">
 <script>document.documentElement.classList.add("has-js")</script>
@@ -28,7 +28,7 @@
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="sr-only">메뉴</span></button>
       <ul class="menu" id="menu">
         <li><a href="#top" aria-current="page">뽑기 시간</a></li>
-        <li><a href="#fair">공평한가요?</a></li>
+        <li><a href="#fair">공평성 검증</a></li>
         <li><a href="#tools">뽑기 도구</a></li>
         <li><a href="#safe">안심하고 쓰기</a></li>
         <li><a href="#faq">자주 묻는 질문</a></li>
@@ -54,7 +54,7 @@
       <div class="hero__grid">
         <div>
           <p class="pill"><b>무료</b>교실 발표자 뽑기 · Windows용 프로그램</p>
-          <h1 id="hero-title"><span>오늘 발표는 누구?</span> <span><em>번호 공</em>이 발표자를 정해요.</span></h1>
+          <h1 id="hero-title"><span>교실 발표자,</span> <span><em>번호</em>로 뽑아요.</span></h1>
           <p class="lead">설치·인터넷·학생 이름 없이, Windows 파일 하나로 써요.</p>
           <div class="cta">
             <a class="btn btn--primary pc-only" href="https://github.com/kkoma1212/ppobgi-site/releases/latest/download/ppobgi-sigan.exe" download><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></svg>무료로 받기</a>
@@ -66,7 +66,7 @@
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Windows 64비트</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Windows 11에서 확인</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>약 355MB</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>현재 버전 1.2.5</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>현재 버전 1.2.8</li>
           </ul>
           <a class="warn-link" href="#first-run">처음 실행할 때 Windows 안내 창이 나올 수 있어요. 여는 방법 보기 <span aria-hidden="true">→</span></a>
         </div>
@@ -100,22 +100,22 @@
     </div>
   </section>
 
-  <!-- 공평한가요?: 칠판 띠 -->
+  <!-- 공평성 검증: 칠판 띠 -->
   <section id="fair" class="section board" aria-labelledby="fair-title">
     <div class="wrap">
       <div class="fair__top reveal">
         <div>
-          <p class="eyebrow">공평한가요?</p>
-          <h2 id="fair-title" class="h2">"정말 무작위 추첨이죠?" 숫자로 확인해 보세요.</h2>
+          <p class="eyebrow">공평성 검증</p>
+          <h2 id="fair-title" class="h2">추첨 결과를 직접 세어 공개해요.</h2>
           <p class="lead">룰렛·캡슐·로또·승부수는 각 100만 번, 또르르는 36만 7,500판을 돌려 확인했어요.</p>
-          <p class="body" style="margin-top:20px">화면 효과가 클수록 결과가 궁금해지기 마련이에요. 그래서 앱에 실제로 들어 있는 추첨 코드를 그대로 돌려, 번호마다(승부수는 칸마다) 뽑힌 횟수를 세어 봤어요. 모두 「공평」 판정이 나왔어요. <span class="nowrap">(2026년 9월 24일 검증)</span></p>
-          <p class="fair-src">외부 기관 검사가 아니라, 만든 사람이 직접 돌려 세어 본 결과예요. 누구나 보고서로 숫자를 확인할 수 있어요.</p>
+          <p class="body" style="margin-top:20px">앱의 추첨 코드를 그대로 돌려 번호마다(승부수는 칸마다) 뽑힌 횟수를 셌어요. 모두 「공평」으로 판정됐어요. <span class="nowrap">(2026년 9월 24일 검증)</span></p>
+          <p class="fair-src">외부 기관이 아닌 만든 사람이 직접 검증했어요. 자세한 수치는 보고서에 있어요.</p>
         </div>
         <figure style="margin:0">
           <div class="screen">
             <img src="assets/ppobgi/capsule-odds-640.webp" width="640" height="270" loading="lazy" alt="캡슐 뽑기 화면 오른쪽에 「번호마다 2.5%」, 「캡슐 40개」, 「모든 번호가 같은 확률이에요.」라는 안내가 보이는 부분">
           </div>
-          <figcaption>앱 화면에도 번호마다 확률이 그대로 보여요.</figcaption>
+          <figcaption>앱 화면에도 번호별 확률이 표시돼요.</figcaption>
         </figure>
       </div>
 
@@ -136,11 +136,11 @@
 
       <div class="fair__more reveal">
         <div class="body">
-          <p>28명이면 한 번호가 1등을 할 공평한 몫은 3.57%예요. 36만 7,500판 동안 가장 많이 1등 한 번호(5번)는 3.63%, 가장 적게 한 번호(26번)는 3.52%였어요. 모든 번호가 공평한 몫 근처에 모여 있어요.</p>
+          <p>28명이면 번호마다 1등 할 확률은 3.57%예요. 36만 7,500판에서 1등이 가장 많았던 5번은 3.63%, 가장 적었던 26번은 3.52%였어요.</p>
           <p class="small">통계 검사(카이제곱) 기준 p ≥ 0.01이면 「공평」으로 판정했어요. 또르르는 p = 0.86이었어요.</p>
         </div>
         <div>
-          <a class="btn btn--magnet" href="https://kkoma1212.github.io/ppobgi-site/assets/fairness-report.pdf" target="_blank" rel="noopener">검증 보고서 보기<span class="sr-only"> (PDF, 새 탭)</span></a>
+          <a class="btn btn--magnet" href="assets/ppobgi/fairness-report.pdf" target="_blank" rel="noopener">검증 보고서 보기<span class="sr-only"> (PDF, 새 탭)</span></a>
           <p class="small">PDF · 약 173KB · 새 탭에서 열려요</p>
         </div>
       </div>
@@ -152,12 +152,12 @@
     <div class="wrap split reveal">
       <div>
         <p class="doodle" aria-hidden="true">아이가 물으면</p>
-        <h2 id="show-title" class="h2" style="margin-top:0">화면 효과와 결과는 서로 관계가 없어요.</h2>
+        <h2 id="show-title" class="h2" style="margin-top:0">연출은 결과에 영향을 주지 않아요.</h2>
         <div class="body" style="margin-top:20px;color:var(--muted)">
-          <p>룰렛·로또·캡슐은 당첨 번호를 먼저 공평하게 정한 뒤, 그다음에 연출을 보여 줘요. 막판에 아슬아슬하게 넘어가거나 되돌아오는 장면은 보는 재미를 위한 것이고, 확률은 바뀌지 않아요.</p>
+          <p>룰렛·로또·캡슐은 당첨 번호를 먼저 공평하게 정한 뒤, 그다음에 연출을 보여 줘요. 막판에 칸을 넘어가거나 되돌아오는 장면도 연출일 뿐, 확률은 그대로예요.</p>
           <p>또르르는 미리 정해 둔 당첨자가 없어요. 공이 실제로 도착한 순서대로 정해져요.</p>
         </div>
-        <p class="nosneak"><span class="magnet" style="--m:var(--magnet-pink)" aria-hidden="true"></span>그리고 특정 번호를 골라 뽑는 기능은 없어요.</p>
+        <p class="nosneak"><span class="magnet" style="--m:var(--magnet-pink)" aria-hidden="true"></span>특정 번호가 뽑히도록 정하는 기능은 없어요.</p>
       </div>
       <div class="screen">
         <img src="assets/ppobgi/capsule-drum-1200.webp" srcset="assets/ppobgi/capsule-drum-600.webp 600w, assets/ppobgi/capsule-drum-1200.webp 1200w" sizes="(min-width:1024px) 560px, 100vw" width="1200" height="675" loading="lazy" alt="캡슐 뽑기 통의 손잡이를 돌려 캡슐 하나가 열리려는 장면">
@@ -180,7 +180,7 @@
             <img src="assets/ppobgi/roulette-600.webp" srcset="assets/ppobgi/roulette-600.webp 600w, assets/ppobgi/roulette-1200.webp 1200w" sizes="(min-width:1024px) 360px, (min-width:600px) 50vw, 100vw" width="600" height="333" loading="lazy" alt="1부터 28까지 번호가 같은 크기 칸으로 나뉜 알록달록한 룰렛 원판과 위쪽 포인터, 오른쪽에 「지금 ?」 메모지와 「돌리기 · 룰렛을 드래그 · Space」 안내">
           </div>
           <h3>룰렛</h3>
-          <p>모든 번호가 똑같은 확률로 돌아가는 원판이에요. Space 한 번이나 원판을 끌어 돌려요. 가끔 막판에 아슬아슬한 연출이 나오지만, 당첨은 그 전에 이미 정해져 있어요.</p>
+          <p>번호마다 칸 크기가 같은 원판이에요. Space를 누르거나 원판을 끌어 돌려요. 막판에 아슬아슬한 연출이 나와도 당첨은 그 전에 정해져 있어요.</p>
           <dl class="per num">
             <div><dt>28명이면 번호마다</dt><dd>3.57%</dd></div>
             <div><dt>40명이면 번호마다</dt><dd>2.5%</dd></div>
@@ -192,7 +192,7 @@
             <img src="assets/ppobgi/ddororeu-card-600.webp" srcset="assets/ppobgi/ddororeu-card-600.webp 600w, assets/ppobgi/ddororeu-card-895.webp 895w" sizes="(min-width:1024px) 360px, (min-width:600px) 50vw, 100vw" width="600" height="372" loading="lazy" alt="또르르 화면: 위에 맵·당첨 순위·「플리퍼 켜기」 설정, 가운데 칠판 경주판에서 출발을 기다리는 번호 공들과 미니맵, 아래에 왼쪽·오른쪽(막대기)·기울이기 A·기울이기 D·흔들기 S 버튼">
           </div>
           <h3>또르르</h3>
-          <p>번호 공들이 긴 코스를 실제로 굴러 내려오는 경주예요. 맵은 네 가지(자 미끄럼틀 · 못밭과 풍차 · 깔때기 다섯 고개 · 물레방아 길)이고, 몇 번째로 도착한 공을 뽑을지 정할 수 있어요. 마지막으로 도착한 공도 뽑을 수 있어요. 미니맵으로 코스를 살펴보고, 2배 빠르기로 빨리 볼 수도 있어요.</p>
+          <p>번호 공들이 긴 코스를 실제로 굴러 내려오는 경주예요. 맵은 네 가지(자 미끄럼틀 · 못밭과 풍차 · 깔때기 다섯 고개 · 물레방아 길)이고, 1등부터 꼴찌까지, 몇 번째로 도착한 공을 뽑을지 정할 수 있어요. 미니맵으로 코스를 살펴보고, 2배 빠르기로 빨리 볼 수도 있어요.</p>
           <p class="aside">선생님이 막대기(← → · Z X), 기울이기(A · D), 흔들기(S)를 쓰면 결과가 달라질 수 있어요. 설정에서 막대기를 꺼도 기울이기와 흔들기는 그대로 남아요.</p>
         </li>
         <li class="card reveal" style="--m:var(--magnet-sky)">
@@ -201,7 +201,7 @@
             <img src="assets/ppobgi/lotto-600.webp" srcset="assets/ppobgi/lotto-600.webp 600w, assets/ppobgi/lotto-1152.webp 1152w" sizes="(min-width:1024px) 360px, (min-width:600px) 50vw, 100vw" width="600" height="279" loading="lazy" alt="3·1·0·7·7이 적힌 구슬 다섯 개와 「합 18」 메모지, 「번호마다 2.5%」 안내가 보이는 로또 화면">
           </div>
           <h3>로또</h3>
-          <p>구슬 다섯 개의 합이 오늘의 번호예요. 번호를 먼저 공평하게 정한 뒤 합이 그 번호가 되는 구슬을 보여 주기 때문에, 번호마다 확률이 같아요.</p>
+          <p>구슬 다섯 개의 합이 당첨 번호예요. 번호를 먼저 공평하게 정한 뒤 합이 그 번호가 되는 구슬을 보여 주기 때문에, 번호마다 확률이 같아요.</p>
         </li>
         <li class="card reveal" style="--m:var(--magnet-peach)">
           <span class="magnet" aria-hidden="true"></span>
@@ -214,7 +214,7 @@
         <li class="card reveal" style="--m:var(--magnet-pink)">
           <span class="magnet" aria-hidden="true"></span>
           <h3>승부수</h3>
-          <p>당첨된 친구가 한 번 더 돌리는 작은 룰렛이에요. 칸은 2~8개로 바꿀 수 있고 확률도 선생님이 정해요. 「수업 종료」 5%만 고정이에요.</p>
+          <p>당첨된 학생이 한 번 더 돌리는 작은 룰렛이에요. 칸은 2~8개로 바꿀 수 있고 확률도 선생님이 정해요. 「수업 종료」 5%만 고정이에요.</p>
           <table class="odds">
             <caption class="sr-only">승부수 기본 칸과 확률</caption>
             <thead><tr><th scope="col">기본 칸</th><td aria-hidden="true"></td><th scope="col" class="num">확률</th></tr></thead>
@@ -237,12 +237,12 @@
     <div class="wrap">
       <div class="head reveal">
         <p class="eyebrow">수업 흐름</p>
-        <h2 id="flow-title" class="h2">수업 중에 바로 쓸 수 있어요</h2>
+        <h2 id="flow-title" class="h2">수업에서 쓰는 순서</h2>
       </div>
       <ol class="steps reveal">
         <li><div><h3>인원 정하고 결석 누르기</h3><p>수업 인원은 1명부터 40명까지 정할 수 있어요. 결석한 번호를 한 번 누르면 뽑기에서 빠져요.</p></div></li>
-        <li><div><h3>뽑고, 발표하고</h3><p>결과 창에서 「발표하기」를 누르면 기록되고, 「승부수」로 한 번 더 돌릴 수도 있어요.</p></div></li>
-        <li><div><h3>「발표자 제외」</h3><p>이미 발표한 친구는 다시 뽑히지 않아요. 오늘 누가 발표했는지도 한 화면에서 보여요.</p></div></li>
+        <li><div><h3>뽑고 발표하기</h3><p>결과 창에서 「발표하기」를 누르면 기록되고, 「승부수」로 한 번 더 돌릴 수도 있어요.</p></div></li>
+        <li><div><h3>「발표자 제외」</h3><p>이미 발표한 학생은 다시 뽑히지 않아요. 오늘 누가 발표했는지도 한 화면에서 보여요.</p></div></li>
       </ol>
       <div class="flow__shots reveal">
         <figure style="margin:0">
@@ -259,7 +259,7 @@
         </figure>
       </div>
       <div class="reveal">
-        <p class="endline"><span class="magnet" style="--m:var(--magnet-sky)" aria-hidden="true"></span>기록은 프로그램을 끄면 사라져요. 일부러 저장하지 않아요.</p>
+        <p class="endline"><span class="magnet" style="--m:var(--magnet-sky)" aria-hidden="true"></span>발표 기록은 프로그램을 끄면 지워져요. 학생 기록이 남지 않도록 만들었어요.</p>
         <p class="small times">한 번 뽑는 데 걸리는 시간: 캡슐은 손잡이를 돌리고 약 4초 뒤 열려요. 또르르는 1등 도착까지 평균 약 29초예요(검사에서 잰 게임 속 시간). 「2배 빠르기」로 빨리 볼 수도 있어요.</p>
       </div>
     </div>
@@ -316,7 +316,7 @@
         <li class="reveal" style="--m:var(--magnet-sky)"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><div><h3>인터넷으로 보내지 않아요</h3><p>학생 번호·결석·발표 기록은 밖으로 보내지 않아요. 프로그램을 끄면 기록도 사라져요.</p></div></li>
         <li class="reveal" style="--m:var(--magnet-yellow)"><span class="ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 8.8a15 15 0 0 1 4.2-2.5M10.6 5.1A15 15 0 0 1 22 8.8M5 12.6a10 10 0 0 1 3.5-2M16 10.8a10 10 0 0 1 3 1.8M8.5 16.4a5 5 0 0 1 7 0"/><path d="M3 3l18 18"/></svg></span><div><h3>인터넷 없이도 뽑기는 다 돼요</h3><p>인터넷은 업데이트와 공지를 확인할 때, 그리고 타이머에서 유튜브 영상을 고를 때만 써요. 학교망이 끊겨도 뽑기는 그대로 돼요.</p></div></li>
       </ul>
-      <p class="after reveal">설치도 계정도 필요 없어요. 파일을 USB에 넣어 다녀도 되고, 옆에 생기는 <code>data</code> 폴더째 옮기면 설정도 따라와요.</p>
+      <p class="after reveal">계정도 필요 없어요. 파일 옆에 생기는 <code>data</code> 폴더를 함께 옮기면 설정도 그대로예요.</p>
     </div>
   </section>
 
@@ -326,17 +326,17 @@
       <div class="dl board">
         <div class="dl__main">
           <p class="eyebrow">무료로 받기</p>
-          <h2 id="dl-title" class="h2">USB에 담아 어느 교실에서나 써요</h2>
-          <p class="lead">무료예요. 설치 없이, 받은 파일을 더블클릭해서 열어요. 처음 열 때는 Windows 경고가 뜰 수 있으니 경고 안내도 함께 봐 주세요.</p>
+          <h2 id="dl-title" class="h2">파일 하나로 바로 써요</h2>
+          <p class="lead">설치 없이 받은 파일을 두 번 눌러 열어요. 처음 열 때 Windows 경고가 뜨면 오른쪽 안내를 따라 주세요.</p>
           <a class="btn btn--magnet btn--lg" href="https://github.com/kkoma1212/ppobgi-site/releases/latest/download/ppobgi-sigan.exe" download><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></svg>무료로 받기</a>
-          <p class="spec num"><span class="nowrap">ppobgi-sigan.exe ·</span> <span class="nowrap">Windows 64비트 ·</span> <span class="nowrap">약 355MB ·</span> <span class="nowrap">현재 버전 1.2.5</span></p>
+          <p class="spec num"><span class="nowrap">ppobgi-sigan.exe ·</span> <span class="nowrap">Windows 64비트 ·</span> <span class="nowrap">약 355MB ·</span> <span class="nowrap">현재 버전 1.2.8</span></p>
           <p class="mobile-only">휴대폰에서는 쓸 수 없어요. Windows PC에서 받아 주세요.</p>
           <div class="trust">
             <h3>받은 파일이 맞는지 확인하는 법</h3>
             <ul>
               <li>이 페이지의 「무료로 받기」로 받은 파일만 열어 주세요. 다른 곳에서 받은 같은 이름의 파일은 열지 마세요.</li>
-              <li>파일 이름은 <code>ppobgi-sigan.exe</code>, 크기는 355,428,393바이트(약 355MB)예요.</li>
-              <li>파일 확인값(SHA-256): <code class="hash">9233893d877f816db441416fa549c92a694c5b4a4ff5de27886c286122f6df1c</code></li>
+              <li>파일 이름은 <code>ppobgi-sigan.exe</code>, 크기는 355,431,680바이트(약 355MB)예요.</li>
+              <li>파일 확인값(SHA-256): <code class="hash">7ca2bff8bce2358790f7ad0e821ab20f83c0a9cc349846ccf056aa597d1bd814</code></li>
             </ul>
             <p class="maker">만든 사람: 이건윤<span class="maker__sep" aria-hidden="true"> · </span><a href="mailto:gunyoon0322@naver.com">gunyoon0322@naver.com</a></p>
           </div>
@@ -375,7 +375,7 @@
               <tr><th scope="row">설치 · 계정</th><td>필요 없어요</td></tr>
               <tr><th scope="row">인터넷</th><td>없어도 뽑기는 모두 돼요 (업데이트 · 공지 · 유튜브 타이머에만 사용)</td></tr>
               <tr><th scope="row">수업 인원</th><td>1~40명</td></tr>
-              <tr><th scope="row">현재 판</th><td>1.2.5</td></tr>
+              <tr><th scope="row">현재 판</th><td>1.2.8</td></tr>
               <tr><th scope="row">켜지는 시간</th><td>약 1.1초 (검사 PC 측정)</td></tr>
             </tbody>
           </table>
@@ -397,12 +397,12 @@
         <details><summary>실행할 때 Windows 안내 창이 나와요.</summary><p>코드 서명이 없어서 「Windows의 PC 보호」 경고가 뜰 수 있어요. 「추가 정보」를 누른 뒤 「실행」을 눌러 주세요. 학교 PC 설정에 따라 「실행」이 보이지 않으면 학교 전산 담당 선생님께 여쭤 주세요. 켜진 뒤 받는 업데이트 파일은 서명이 맞을 때만 적용해요.</p></details>
         <details><summary>학생 정보는 안전한가요?</summary><p>학생 이름을 넣는 칸이 없어요. 번호·결석·발표 기록은 어디로도 보내지 않고, 프로그램을 끄면 사라져요. 인터넷은 업데이트·공지 확인과 선생님이 고른 유튜브 타이머 화면에만 써요.</p></details>
         <details><summary>마지막 장면이 정해진 것처럼 보여요.</summary><p>룰렛·로또·캡슐은 당첨을 연출 전에 먼저 공평하게 정해요. 연출은 보는 재미일 뿐 확률을 바꾸지 않아요. 각 100만 번씩 돌려 본 검증 보고서도 공개해 두었어요.</p></details>
-        <details><summary>또르르에서 막대기를 쓰면 결과가 바뀌나요?</summary><p>맞아요. 또르르는 공이 실제로 도착한 순서로 정해지기 때문에, 막대기나 흔들기를 쓰면 결과가 달라질 수 있어요. 36만 7,500판 검증은 아무도 건드리지 않은 경기의 1등만 잰 결과예요. 막대기는 설정의 「또르르」 탭에서 끌 수 있지만, 기울이기(A · D)와 흔들기(S)는 그대로 남아요. 완전히 우연에 맡기고 싶은 날에는 룰렛이나 캡슐을 권해요.</p></details>
+        <details><summary>또르르에서 막대기를 쓰면 결과가 바뀌나요?</summary><p>네, 달라질 수 있어요. 또르르는 공이 실제로 도착한 순서로 정해지기 때문에, 막대기나 흔들기를 쓰면 결과가 달라질 수 있어요. 36만 7,500판 검증은 아무도 건드리지 않은 경기의 1등만 잰 결과예요. 막대기는 설정의 「또르르」 탭에서 끌 수 있지만, 기울이기(A · D)와 흔들기(S)는 그대로 남아요. 완전히 우연에 맡기고 싶은 날에는 룰렛이나 캡슐을 권해요.</p></details>
         <details><summary>Windows 10이나 맥, 태블릿에서도 되나요?</summary><p>Windows 11에서 확인했어요. Windows 10은 아직 확인하지 못했어요. macOS·태블릿·휴대폰은 지원하지 않아요.</p></details>
-        <details><summary>파일이 355MB로 커요.</summary><p>네, 약 355MB예요. 한 번 받아 두면 설치 없이 열 수 있고, USB로 옮겨 쓸 수 있어요.</p></details>
+        <details><summary>파일이 355MB로 커요.</summary><p>빨리 켜지도록 압축하지 않은 파일이라 커요. 한 번 받아 두면 USB로 옮겨 쓸 수 있어요.</p></details>
         <details><summary>발표 기록이 남지 않아서 아쉬워요.</summary><p>학생 기록을 남기지 않는 쪽을 일부러 골랐어요. 프로그램을 끄거나 업데이트 뒤 다시 시작하면 그날 기록은 지워져요.</p></details>
         <details><summary>수업 중에 저절로 업데이트되어 기록이 지워지지는 않나요?</summary><p>아니요. 켜진 뒤 새 버전이 있는지 확인만 하고, 있으면 홈 위쪽에 알림 줄이 나와요. 설정 「정보」 탭에서 선생님이 「업데이트 받기」와 「다시 시작」을 누르셔야 바뀌어요. 다시 시작하면 그날 결석·발표 기록은 지워지고 설정은 그대로 남으니, 업데이트는 수업이 끝난 뒤에 해 주세요.</p></details>
-        <details><summary>승부수에서 「수업 종료」가 나오면 정말 끝내야 하나요?</summary><p>5%로 고정된 재미로 넣은 칸이고, 누르면 홈 화면으로 돌아가요. 다른 칸과 확률은 선생님이 바꿀 수 있어요.</p></details>
+        <details><summary>승부수에서 「수업 종료」가 나오면 정말 끝내야 하나요?</summary><p>재미로 넣은 칸이에요. 확률은 5%로 고정이고, 나오면 홈 화면으로 돌아가요. 다른 칸과 확률은 선생님이 바꿀 수 있어요.</p></details>
       </div>
     </div>
   </section>
@@ -412,21 +412,21 @@
   <div class="wrap foot__grid">
     <div>
       <a class="brand" href="index.html" aria-label="우리반 허브 처음으로"><img src="assets/app-icon.png" width="34" height="34" alt=""><span>우리반 허브</span></a>
-      <p class="foot__sub"><img src="assets/ppobgi/app-mark.svg" width="22" height="22" alt="">뽑기 시간 1.2.5 · Windows 64비트용 무료 프로그램</p>
+      <p class="foot__sub"><img src="assets/ppobgi/app-mark.svg" width="22" height="22" alt="">뽑기 시간 1.2.8 · Windows 64비트용 무료 프로그램</p>
       <dl class="credits">
         <div><dt>만든 사람</dt><dd>이건윤</dd></div>
         <div><dt>문의</dt><dd><a href="mailto:gunyoon0322@naver.com">gunyoon0322@naver.com</a></dd></div>
         <div><dt>유튜브</dt><dd><a href="https://www.youtube.com/channel/UCaeHgxvmvaR_f2cloP2kAng" target="_blank" rel="noopener">만든 사람의 유튜브 채널<span class="sr-only"> (새 탭)</span></a></dd></div>
       </dl>
       <p>© 2026 이건윤. 뽑기 시간의 저작권은 이건윤에게 있습니다.</p>
-      <p>이 프로그램은 공개 자료의 도움을 받았어요. 글꼴은 OFL, 효과음은 CC0, 물리 엔진은 MIT·Zlib 라이선스를 따라요.</p>
+      <p>사용한 공개 자료: 글꼴 OFL · 효과음 CC0 · 물리 엔진 MIT·Zlib</p>
     </div>
     <nav aria-label="바닥글 링크">
       <ul>
         <li><a href="index.html">우리반 허브</a></li>
         <li><a href="#top">뽑기 시간</a></li>
         <li><a href="#faq">자주 묻는 질문</a></li>
-        <li><a href="https://kkoma1212.github.io/ppobgi-site/assets/fairness-report.pdf" target="_blank" rel="noopener">검증 보고서 (PDF, 새 탭)</a></li>
+        <li><a href="assets/ppobgi/fairness-report.pdf" target="_blank" rel="noopener">검증 보고서 (PDF, 새 탭)</a></li>
       </ul>
     </nav>
   </div>
