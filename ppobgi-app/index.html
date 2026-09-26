@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>뽑기 시간</title>
+    <link rel="icon" type="image/svg+xml" href="./assets/app-mark-ptt0DDdq.svg">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; img-src 'self'; font-src 'self'; media-src 'self' blob:; connect-src 'self' https://raw.githubusercontent.com; worker-src 'self'; manifest-src 'self'; object-src 'none'; base-uri 'none'; frame-src https://www.youtube-nocookie.com; form-action 'none'">
+    <link rel="manifest" href="./manifest.webmanifest">
+    <meta name="theme-color" content="#24433a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="뽑기 시간">
+    <link rel="apple-touch-icon" href="./icons/icon-180.png">
+    <script type="module" crossorigin src="./assets/index-CRlWXS0G.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-iTz4qNQB.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-DxfA8nCZ.css">
+  </head>
+  <body>
+   <div class="app-board">
+    <header class="topbar">
+      <button id="home" class="brand" data-route="home" type="button" aria-label="뽑기 시간 홈"><img class="brand-mark" src="./assets/app-mark-ptt0DDdq.svg" alt="" width="64" height="64"><span>뽑기 시간</span></button>
+      <button id="shell-class" class="class-badge" data-route="home" type="button" title="홈에서 반 선택"><span id="shell-class-name">반을 선택해 주세요</span></button>
+      <span id="shell-save" class="shell-save" role="status">설정 확인 중</span>
+      <div class="shell-tools" role="group" aria-label="앱 조작">
+        <button id="sound" class="shell-icon" type="button" aria-pressed="true" aria-label="소리 켜짐" title="소리 켜짐 (M)"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 12h6l7-6v20l-7-6H5Z"/><path class="sound-waves" d="M23 11c3 3 3 7 0 10m3-14c5 5 5 13 0 18"/><path class="sound-off" d="m23 12 7 8m0-8-7 8"/></svg><span id="sound-label" class="sr-only">소리 켜짐</span></button>
+        <button id="fullscreen" class="shell-icon" type="button" aria-label="전체화면 전환" title="전체화면 전환 (F11)"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M12 5H5v7m15-7h7v7M5 20v7h7m15-7v7h-7"/></svg><span class="sr-only">전체화면</span></button>
+        <button id="settings" class="shell-icon" data-route="settings" type="button" aria-label="설정" title="설정"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="m13 4 6 0 1 4 4 2 4-1 3 5-3 3v4l-4 4-4-1-2 4h-6l-1-4-4-2-4 1-2-5 3-3v-4l4-4 4 1Z" transform="translate(1 1) scale(.9)"/><circle cx="16" cy="16" r="5"/></svg><span class="sr-only">설정</span></button>
+        <button id="quit" class="shell-icon quit" type="button" aria-label="프로그램 종료" title="프로그램 종료"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3v13m-7-9a12 12 0 1 0 14 0"/></svg><span class="sr-only">종료</span></button>
+      </div>
+    </header>
+    <nav class="magnet-nav" aria-label="수업 도구 메뉴">
+      <button id="nav-home" class="nav-magnet" type="button" data-route="home">홈</button>
+      <button id="nav-roulette" class="nav-magnet" type="button" data-route="roulette">룰렛</button>
+      <button id="nav-lotto" class="nav-magnet" type="button" data-route="lotto">로또</button>
+      <button id="nav-pinball" class="nav-magnet" type="button" data-route="pinball">또르르</button>
+      <button id="nav-capsule" class="nav-magnet" type="button" data-route="capsule">캡슐</button>
+      <button id="nav-timer" class="nav-magnet" type="button" data-route="timer">타이머</button>
+    </nav>
+    <div class="shell-notices">
+    <aside id="session-warning" class="notice" role="status" hidden></aside>
+    <aside id="asset-warning" class="notice" role="status" hidden></aside>
+    <aside id="storage-warning" class="notice" role="alert" hidden>저장할 수 없어 이번 실행에만 적용됩니다.</aside>
+    <aside id="size-warning" class="notice" role="status" hidden>화면이 작아 한 열로 표시합니다. 아래로 스크롤해 주세요.</aside>
+    <p id="error" class="notice" role="alert" hidden></p>
+    </div>
+    <main id="screen" tabindex="-1" aria-label="뽑기 시간 화면"></main>
+    <footer class="chalk-ledge" aria-label="현재 화면과 단축키">
+      <strong id="shell-route">오늘의 수업</strong>
+      <span id="shell-hint">반을 고르고 수업을 시작해요</span>
+      <div id="shell-actions" hidden></div>
+      <div class="shell-keys"><span><kbd>M</kbd> 소리</span><span><kbd>F11</kbd> 전체화면</span></div>
+      <span class="resting-chalk" aria-hidden="true"><i></i><i></i><i></i></span>
+    </footer>
+    <p id="chalk-signature" class="chalk-signature" aria-hidden="true"><span>악동꼬마</span><span>구독</span></p>
+   </div>
+  </body>
+</html>
