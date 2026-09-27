@@ -38,7 +38,7 @@
 }
 @media (min-width:1024px){.hero__grid{grid-template-columns:1.05fr 1fr}.hero h1 span{white-space:nowrap}}
 /* 2026-09-27 노트북(1280·1366) 최적화: 72px 제목을 한 줄로 두면 왼쪽 칸이 넓어져 휴대폰 그림이 오른쪽 밖으로 잘렸다 — 제목을 화면 폭에 맞추고 칸이 서로 밀지 않게 */
-@media (min-width:1024px){.hero h1{font-size:clamp(40px,4.4vw,72px)}.hero__grid>*{min-width:0}}
+@media (min-width:1024px){.hero h1{font-size:clamp(40px,4.4vw,64px)}.hero h1 span{white-space:normal}.hero__grid>*{min-width:0}} /* 넓은 화면에서 한 줄로 묶으면 칸 밖으로 넘쳐 휴대폰 그림 밑으로 들어간다 — 칸이 좁으면 줄바꿈 */
 /* 높이가 낮은 노트북 화면(720~820px): 첫 화면이 한 화면에 들어오게 여백과 휴대폰 그림을 줄인다 */
 @media (min-width:1024px) and (max-height:820px){.hero{padding:24px 0 48px}.hero h1{margin-top:14px}.hero .lead{margin-top:16px}.cta{margin-top:22px}.facts{margin-top:18px}.duo .device{--w:min(19vw,225px)}.duo figcaption{margin-top:36px}}
 
