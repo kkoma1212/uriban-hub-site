@@ -1,0 +1,105 @@
+/* 우리반 허브 CI v1(2026-09-26 칠판) + 화면 개편 확정안(2026-09-27)에 맞춘 색·글꼴.
+   index.html·start.html 에서만 site.css·home.css 뒤에 불러온다 — 뽑기 시간(ppobgi.html)은 예전 토큰을 그대로 쓴다.
+   색 값은 앱(apps/web design-foundation.css·styles.css)과 같다: 칠판 #244d3c · 나무 틀 #b58c5c · 분필 #f3f1ea · 노란 분필 #f5c842,
+   학생 = 칠판 초록 #2b6149, 선생님 = 나무 갈색 #7a4e24. 노란 분필은 '바뀐 것·중요'에만 쓴다. */
+:root{
+  --canvas:#f6f4f0;--paper:#fff;--paper-2:#efece6;--line:#e2ddd4;--line-strong:#cbc3b6;
+  --text:#20201d;--muted:#625f59;
+  --teacher:#7a4e24;--teacher-deep:#5b391a;--teacher-soft:#f4ece2;
+  --student:#2b6149;--student-soft:#e6f0ea;
+  --notice:#7d5a12;--notice-soft:#fbf1d3;
+  --supplies:#2f5c48;--supplies-soft:#e3ede7;
+  --note:#fdf3d0;--note-edge:#e2bd4f;--note-ink:#4e3f12;
+  --board:#244d3c;--board-2:#2f5c48;--board-deep:#1b3a2d;--chalk:#f3f1ea;--frame:#b58c5c;--magnet-yellow:#f5c842;
+  --primary:#244d3c;--primary-deep:#15301f;
+  --font-display:"Pretendard Variable",Pretendard,system-ui,-apple-system,"Malgun Gothic",sans-serif;
+  --font-chalk:"Gaegu","Pretendard Variable","Malgun Gothic",cursive;
+  --shadow-card:0 1px 2px rgba(32,32,29,.05),0 10px 28px -16px rgba(32,32,29,.22);
+}
+
+/* 제목은 본문 글꼴의 굵은 두께로. 손글씨(개구)는 칠판 안에서만 쓴다(확정안 v3) */
+h1,h2{font-weight:800;letter-spacing:-.035em}
+.brand span{font-weight:800;font-size:21px;letter-spacing:-.03em}
+.when,.feature__text h3,.show__text h3,.honest h3,.tool-card__body strong,.steps li::before{font-weight:800;letter-spacing:-.03em}
+.feature__text h3{font-size:clamp(24px,2.6vw,32px)}
+:focus-visible{outline-color:var(--student)}
+.bar{background:rgba(246,244,240,.94)}
+
+/* 버튼: 칠판 초록 */
+.btn--primary{background:var(--primary);box-shadow:0 1px 0 #ffffff26 inset,0 4px 0 var(--primary-deep),0 10px 20px -8px rgba(21,48,31,.55)}
+.btn--primary:hover{background:#2b5a46}
+.btn--primary:active{box-shadow:0 1px 0 var(--primary-deep)}
+.btn.bar__cta{box-shadow:0 3px 0 var(--primary-deep)}
+.eyebrow{color:var(--student)}
+
+/* 노란 분필 밑줄 — 앱의 '바뀜' 표시와 같은 모양 */
+.chalk-mark{background:linear-gradient(transparent 68%,var(--magnet-yellow) 68%,var(--magnet-yellow) 92%,transparent 92%);padding:0 .06em}
+
+/* ── 첫 화면 ── */
+.hero h1 em{color:var(--text);background:linear-gradient(transparent 68%,var(--magnet-yellow) 68%,var(--magnet-yellow) 92%,transparent 92%)}
+.duo::before{background:radial-gradient(circle at 30% 35%,#d9e8df 0,transparent 60%),radial-gradient(circle at 72% 62%,#efe0cc 0,transparent 58%)}
+.facts svg{color:var(--student)}
+.hero-board{display:inline-flex;align-items:center;gap:12px;margin-top:22px;padding:10px 18px 12px;border-radius:14px;background:linear-gradient(160deg,var(--board-2),var(--board));box-shadow:0 0 0 4px var(--frame),0 12px 24px -14px rgba(27,58,45,.8);color:var(--chalk);font-family:var(--font-chalk);font-weight:700;font-size:clamp(21px,2.2vw,26px);line-height:1.3}
+.hero-board u{text-decoration:none;background:linear-gradient(transparent 72%,var(--magnet-yellow) 72%,var(--magnet-yellow) 90%,transparent 90%)}
+
+/* ── 걱정 해소 쪽지 ── */
+.worry li::before{box-shadow:2px 4px 0 #20201d26,inset 4px 5px 0 #ffffff55,inset -4px -6px 0 #0003}
+
+/* ── 새로 생긴 기능 ── */
+.news-grid{list-style:none;margin:0;padding:0;display:grid;gap:20px}
+.news-card{display:grid;grid-template-rows:auto 1fr;overflow:hidden;border-radius:var(--r-lg);background:var(--paper);box-shadow:var(--shadow-card),0 0 0 1px var(--line)}
+.news-card__img{position:relative;display:grid;place-items:center;padding:28px 16px 0;background:var(--tint,var(--student-soft));overflow:hidden;height:300px}
+.news-card__img .device{--w:220px}
+.news-card__body{padding:20px 22px 24px}
+.news-card__body .tag{margin-bottom:10px}
+.news-card h3{font-size:20px}
+.news-card p{margin-top:6px;color:var(--muted);font-size:15.5px}
+.tag--new{background:var(--note);color:var(--note-ink)}
+@media (min-width:700px){.news-grid{grid-template-columns:1fr 1fr}}
+@media (min-width:1100px){.news-grid{grid-template-columns:repeat(4,1fr)}.news-card__img{height:280px}.news-card__img .device{--w:200px}}
+
+/* ── PC 화면(노트북 틀) ── */
+.pc{display:grid;gap:clamp(28px,4vw,56px);align-items:center}
+.laptop{margin:0}
+.laptop__screen{padding:1.6%;border-radius:16px 16px 4px 4px;background:var(--device);box-shadow:inset 0 0 0 1.5px #45423c,0 26px 50px -24px rgba(32,32,29,.5)}
+.laptop__screen img{width:100%;height:auto;aspect-ratio:16/10;border-radius:6px;background:#fff}
+.laptop__base{height:14px;margin:0 -5%;border-radius:0 0 14px 14px;background:linear-gradient(#d8d4cc,#b9b3a8);box-shadow:0 10px 18px -10px rgba(32,32,29,.45)}
+.laptop figcaption{margin-top:14px;text-align:center;font-size:15px;font-weight:700;color:var(--muted)}
+.pc ul{list-style:none;margin:20px 0 0;padding:0;display:grid;gap:12px}
+.pc li{display:grid;grid-template-columns:26px 1fr;gap:10px;align-items:start}
+.pc li svg{color:var(--student);margin-top:3px}
+@media (min-width:1024px){.pc{grid-template-columns:.8fr 1.2fr}}
+
+/* ── 기능 탭: 다섯 묶음 ── */
+.has-js .show__tabs{grid-template-columns:repeat(5,1fr);max-width:780px}
+@media (max-width:599px){.has-js .show__tabs{grid-template-columns:repeat(3,1fr)}.show__tab{font-size:15px}}
+
+/* ── 비교 ── */
+.compare thead th.us{background:var(--board);color:var(--chalk)}
+.compare td.us{background:#eef4f0}
+@media (max-width:759px){.compare td.us::before{color:var(--student)}}
+
+/* ── 시작 순서·팁 ── */
+.steps li::before{background:var(--board);color:var(--chalk)}
+.steps li:last-child::before{background:var(--teacher)}
+.strip figcaption b{color:var(--student)}
+.tipnote{background:var(--student-soft);color:#1c3d2e}
+
+/* ── 안전 ── */
+.safe-grid .ico{background:var(--student-soft);color:var(--student)}
+
+/* ── 자주 묻는 질문 ── */
+.faq h3{color:var(--student)}
+.faq summary:hover{color:var(--student)}
+.faq summary::after{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14'%3E%3Cpath d='M7 2v10M2 7h10' stroke='%232b6149' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E")}
+
+/* ── 마무리: 나무 틀 칠판 ── */
+.closing__panel{background:radial-gradient(ellipse at 20% 0%,#356650,transparent 60%),linear-gradient(160deg,var(--board-2),var(--board-deep));color:var(--chalk);border:8px solid var(--frame);box-shadow:0 30px 60px -30px rgba(27,58,45,.75)}
+.closing__panel::before{background-image:radial-gradient(#ffffff14 1.2px,transparent 1.3px)}
+.closing h2{font-family:var(--font-chalk);font-weight:700;font-size:clamp(34px,5vw,58px);letter-spacing:0;line-height:1.25}
+.closing h2 u{text-decoration:none;background:linear-gradient(transparent 70%,var(--magnet-yellow) 70%,var(--magnet-yellow) 90%,transparent 90%)}
+.closing p{color:#e3ebe6}
+.closing .small{color:#cbd8d0}
+.btn--white{background:var(--chalk);color:var(--board-deep);box-shadow:0 4px 0 #0f2519}
+.btn--white:hover{background:#fff}
+.btn--white:active{box-shadow:0 1px 0 #0f2519}

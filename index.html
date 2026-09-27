@@ -3,18 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>우리반 허브 — 공지를 누가 확인했는지 바로 보여요</title>
-<meta name="description" content="공지·준비물·일정을 한곳에 올리는 학급 안내 앱이에요. 학생은 오늘 할 일을 먼저 보고, 선생님은 아직 확인하지 않은 학생을 바로 봐요. 개발 중인 앱의 접속 주소와 체험 방법을 안내해요.">
-<meta name="theme-color" content="#f5f2ec">
+<title>우리반 허브 — 칠판에 쓰면 누가 봤는지 바로 보여요</title>
+<meta name="description" content="공지·숙제·준비물·일정을 우리반 칠판 한곳에 올리는 학급 안내 앱이에요. 학생은 아직 안 본 것부터 보고, 선생님은 누가 확인했는지 바로 봐요. 개발 중인 앱의 접속 주소와 체험 방법을 안내해요.">
+<meta name="theme-color" content="#f6f4f0">
 <link rel="icon" href="assets/app-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <script>document.documentElement.classList.add("has-js")</script>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="stylesheet" href="assets/home.css">
 <link rel="stylesheet" href="assets/entry.css">
+<link rel="stylesheet" href="assets/brand.css">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -26,9 +27,10 @@
     <nav class="nav" aria-label="주 메뉴">
       <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="menu"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg><span class="sr-only">메뉴</span></button>
       <ul class="menu" id="menu">
+        <li><a href="#new">새 기능</a></li>
         <li><a href="#how">시작 방법</a></li>
+        <li><a href="#features">기능</a></li>
         <li><a href="#pilot">이용 안내</a></li>
-        <li><a href="#safe">개인정보와 안전</a></li>
         <li><a href="#faq">자주 묻는 질문</a></li>
         <li class="menu__other"><a href="ppobgi">뽑기 시간 <small>함께 쓰는 도구</small></a></li>
       </ul>
@@ -43,27 +45,28 @@
     <div class="wrap hero__grid">
       <div>
         <p class="pill"><b>공개 체험</b>개발 중인 학급 안내 앱</p>
-        <h1 id="hero-title"><span>공지를 올리면</span> <span><em>누가 확인했는지</em> 바로 보여요.</span></h1>
-        <p class="lead">공지·준비물·일정을 한곳에 올리는 학급 안내 앱이에요. 학생은 오늘 할 일을 먼저 보고, 선생님은 아직 확인하지 않은 학생을 바로 볼 수 있어요.</p>
+        <h1 id="hero-title"><span>칠판에 쓰면</span> <span><em>누가 봤는지</em> 바로 보여요.</span></h1>
+        <p class="lead">공지·숙제·준비물·일정을 우리반 칠판 한곳에 올려요. 학생은 아직 안 본 것부터 보고, 선생님은 확인하지 않은 학생에게만 다시 알려요.</p>
+        <p class="hero-board" aria-label="바뀐 것까지, 우리 반 모두에게.">바뀐 것까지, <u>우리 반 모두에게.</u></p>
         <div class="cta">
           <a class="btn btn--primary" href="start.html" data-app-entry>우리반 허브 열기</a>
-          <a class="btn btn--ghost" href="#day">사용 예시 보기</a>
+          <a class="btn btn--ghost" href="#day">하루 예시 보기</a>
         </div>
         <p class="entry-note">개발 중인 앱을 열어 보세요. 교사 기능은 운영자 승인 후 사용할 수 있어요. 실제 학생 개인정보 대신 예시 정보로 체험해 주세요. <a href="#pilot">이용 안내</a></p>
         <ul class="facts">
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>앱 설치 없이 사용</li>
-          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>지원 기기에서 알림 허용 후 사용</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>앱 설치 없이 휴대폰·PC에서</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>전화번호 없이 이메일로 가입</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>학생은 중학교 3학년 이상</li>
         </ul>
       </div>
       <div class="hero__visual">
         <div class="duo">
           <figure class="device">
-            <div class="device__body"><img src="assets/shots/teacher-home-640.webp" srcset="assets/shots/teacher-home-640.webp 640w, assets/shots/teacher-home-900.webp 900w, assets/shots/teacher-home.png 1170w" sizes="(min-width:600px) 270px, 72vw" width="390" height="844" loading="lazy" alt="선생님 홈 화면: 맨 위 우리반 칠판에 중요한 공지와 챙길 준비물, 그 아래 처리할 일(출결·도움), 공지마다 확인한 학생 수가 보이는 우리반 소식"></div>
+            <div class="device__body"><img src="assets/shots/teacher-home-640.webp" srcset="assets/shots/teacher-home-640.webp 640w, assets/shots/teacher-home-900.webp 900w, assets/shots/teacher-home.png 1170w" sizes="(min-width:600px) 270px, 72vw" width="390" height="844" loading="lazy" alt="선생님 홈 화면: 맨 위 우리반 칠판에 '10월 현장체험학습 안내'·'체육대회 일정 안내'(중요)와 '수채화 도구'(내일), '칠판에 쓰기' 버튼, 그 아래 처리할 일(출결 1·도움 1·가입 3)과 우리반 소식"></div>
             <figcaption><span class="tag tag--teacher">선생님</span> 홈 화면</figcaption>
           </figure>
           <figure class="device">
-            <div class="device__body"><img src="assets/shots/student-home-640.webp" srcset="assets/shots/student-home-640.webp 640w, assets/shots/student-home-900.webp 900w, assets/shots/student-home.png 1170w" sizes="(min-width:600px) 270px, 72vw" width="390" height="844" fetchpriority="high" alt="학생 홈 화면: '선생님께 물어보기' 버튼, 아직 안 본 공지와 준비물이 적힌 우리반 칠판, 오늘 급식과 가까운 일정, 우리반 소식"></div>
+            <div class="device__body"><img src="assets/shots/student-home-640.webp" srcset="assets/shots/student-home-640.webp 640w, assets/shots/student-home-900.webp 900w, assets/shots/student-home.png 1170w" sizes="(min-width:600px) 270px, 72vw" width="390" height="844" fetchpriority="high" alt="학생 홈 화면: '선생님께 물어보기' 버튼, 우리반 칠판에 노란 밑줄과 '바뀜' 표시가 붙은 '체육대회 일정 안내', 오늘 급식과 가까운 일정(D-1 수학 익힘책 제출)"></div>
             <figcaption><span class="tag tag--student">학생</span> 홈 화면</figcaption>
           </figure>
         </div>
@@ -76,79 +79,108 @@
     <div class="wrap">
       <h2 id="worry-title" class="sr-only">단체 대화방 공지에서 생기는 걱정</h2>
       <ul>
-        <li class="reveal" style="--m:var(--notice)">
-          <h3><small>대화가 많으면 공지를 찾기 어려워요</small>공지를 놓치지 않아요</h3>
-          <p>학생 화면 맨 위에 아직 보지 않은 공지가 나와요.</p>
+        <li class="reveal" style="--m:var(--board)">
+          <h3><small>대화가 많으면 공지를 찾기 어려워요</small>칠판에 아직 안 본 것만 남아요</h3>
+          <p>학생 홈의 우리반 칠판에는 각자 아직 안 본 공지와 챙길 것이 올라와요.</p>
         </li>
-        <li class="reveal" style="--m:var(--teacher)">
-          <h3><small>공지 내용이 바뀌었어요</small>바뀐 내용을 다시 확인받아요</h3>
-          <p>공지를 고치면 이미 확인한 학생도 바뀐 내용을 다시 확인해요.</p>
+        <li class="reveal" style="--m:var(--magnet-yellow)">
+          <h3><small>공지 내용이 바뀌었어요</small>바뀐 것은 노란 밑줄로 보여요</h3>
+          <p>선생님이 글을 고치면 '바뀜' 표시가 붙고, 이미 확인한 학생도 다시 확인해요.</p>
         </li>
-        <li class="reveal" style="--m:var(--student)">
-          <h3><small>연락처가 걱정돼요</small>전화번호와 채팅이 없어요</h3>
-          <p>전화번호를 받지 않아요. 궁금한 점은 '도움 요청' 버튼으로 선생님께 보내요.</p>
+        <li class="reveal" style="--m:var(--frame)">
+          <h3><small>연락처가 걱정돼요</small>전화번호를 받지 않아요</h3>
+          <p>이메일로 가입해요. 궁금한 점은 선생님과 1:1 도움 대화로 물어봐요. 학생끼리 대화하는 기능은 없어요.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 새로 생긴 기능 -->
+  <section id="new" class="section section--paper" aria-labelledby="new-title">
+    <div class="wrap">
+      <div class="head head--center reveal">
+        <p class="eyebrow">새로 생긴 기능</p>
+        <h2 id="new-title" class="h2">화면을 새로 바꾸고, 기능을 더했어요.</h2>
+        <p class="lead">칠판 한 장에 오늘 볼 것을 모았어요. 선생님께 묻기, 반 투표·선거, 다음 주 급식도 새로 볼 수 있어요.</p>
+      </div>
+      <ul class="news-grid">
+        <li class="news-card reveal" style="--tint:var(--student-soft)">
+          <div class="news-card__img"><figure class="device"><div class="device__body"><img src="assets/shots/notice-detail-640.webp" srcset="assets/shots/notice-detail-640.webp 640w, assets/shots/notice-detail-900.webp 900w" sizes="220px" width="390" height="844" loading="lazy" alt="학생의 공지 화면: '선생님이 글을 고쳤어요' 노란 안내와 바뀐 체육대회 날짜, 아래에 '질문'과 '확인했어요' 버튼"></div></figure></div>
+          <div class="news-card__body"><span class="tag tag--new">새 화면</span><h3>우리반 칠판</h3><p>오늘 꼭 알아야 할 것만 칠판에 3줄로. 바뀐 글은 노란 분필 밑줄로 보여요.</p></div>
+        </li>
+        <li class="news-card reveal" style="--tint:var(--teacher-soft)">
+          <div class="news-card__img"><figure class="device"><div class="device__body"><img src="assets/shots/help-thread-640.webp" srcset="assets/shots/help-thread-640.webp 640w, assets/shots/help-thread-900.webp 900w" sizes="220px" width="390" height="844" loading="lazy" alt="학생과 담임 선생님의 도움 대화: 학생이 수채화 물감을 빌려도 되는지 묻고, 선생님이 미술실 물감을 쓰라고 답한 대화, '선생님만 볼 수 있어요' 안내"></div></figure></div>
+          <div class="news-card__body"><span class="tag tag--new">새 기능</span><h3>선생님께 물어보기</h3><p>학생은 담임 선생님과 1:1로 물어봐요. 다른 학생에게는 보이지 않아요.</p></div>
+        </li>
+        <li class="news-card reveal" style="--tint:var(--notice-soft)">
+          <div class="news-card__img"><figure class="device"><div class="device__body"><img src="assets/shots/poll-results-640.webp" srcset="assets/shots/poll-results-640.webp 640w, assets/shots/poll-results-900.webp 900w" sizes="220px" width="390" height="844" loading="lazy" alt="반 투표 화면: '반 티셔츠 색 정하기' 투표에 내 선택(연두색)과 18명이 참여한 결과 막대"></div></figure></div>
+          <div class="news-card__body"><span class="tag tag--new">새 기능</span><h3>반 투표 · 대표 선거</h3><p>반 티셔츠 색부터 학급 회장 선거까지. 비밀투표와 결과 공개 시점을 정할 수 있어요.</p></div>
+        </li>
+        <li class="news-card reveal" style="--tint:var(--supplies-soft)">
+          <div class="news-card__img"><figure class="device"><div class="device__body"><img src="assets/shots/meals-next-640.webp" srcset="assets/shots/meals-next-640.webp 640w, assets/shots/meals-next-900.webp 900w" sizes="220px" width="390" height="844" loading="lazy" alt="급식 화면: 다음 주 월요일부터 금요일 요일 칸과 고른 날(10월 5일)의 메뉴"></div></figure></div>
+          <div class="news-card__body"><span class="tag tag--new">새 기능</span><h3>이번 주 · 다음 주 급식</h3><p>요일을 눌러 메뉴를 봐요. 달이 바뀌는 주도 이어서 보여요.</p></div>
         </li>
       </ul>
     </div>
   </section>
 
   <!-- 첫날 시작 -->
-  <section id="how" class="section section--paper" aria-labelledby="how-title">
+  <section id="how" class="section" aria-labelledby="how-title">
     <div class="wrap">
       <div class="head reveal">
         <p class="eyebrow">시작 방법</p>
         <h2 id="how-title" class="h2"><span class="nowrap">처음 쓰는 날은</span> <span class="nowrap">이 순서로 하면 돼요.</span></h2>
       </div>
       <ol class="steps reveal">
-        <li><div><h3>반 만들기</h3><p>학교와 학년·반을 고르면 초대 코드가 생겨요.</p></div></li>
+        <li><div><h3>반 만들기</h3><p>학교와 학년·반을 고르면 초대 코드와 QR 코드가 생겨요.</p></div></li>
         <li><div><h3>QR 코드 보여 주기</h3><p>학생은 휴대폰으로 QR 코드를 찍거나 초대 코드를 입력해 참여를 요청해요.</p></div></li>
-        <li><div><h3>학생 승인하기</h3><p>학생 번호와 이름을 정하고 '모두 승인' 버튼으로 한꺼번에 승인해요.</p></div></li>
-        <li><div><h3>첫 공지 쓰기</h3><p>공지를 올리면 누가 확인했는지 바로 보여요.</p></div></li>
+        <li><div><h3>학생 승인하기</h3><p>'대기 학생 모두 승인' 버튼으로 한꺼번에 승인해요.</p></div></li>
+        <li><div><h3>칠판에 첫 글 쓰기</h3><p>공지·숙제·준비물·수행평가를 한 화면에서 골라 올려요.</p></div></li>
       </ol>
       <div class="strip strip--center reveal" tabindex="0" role="group" aria-label="첫날 화면 예시 3장">
         <figure class="device">
-          <div class="device__body"><img src="assets/shots/invite-qr-640.webp" srcset="assets/shots/invite-qr-640.webp 640w, assets/shots/invite-qr-900.webp 900w, assets/shots/invite-qr.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생 초대 화면: 학생 참여용 초대 코드와 코드 복사 버튼, 학생이 휴대폰 카메라로 찍는 QR 코드와 사용 기한"></div>
+          <div class="device__body"><img src="assets/shots/invite-qr-640.webp" srcset="assets/shots/invite-qr-640.webp 640w, assets/shots/invite-qr-900.webp 900w, assets/shots/invite-qr.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="반 관리 화면의 학생 초대: QR 코드와 초대 코드, '코드 복사'·'새 코드' 버튼과 사용 기한, 아래에 학교·반 이름·관리 기록"></div>
           <figcaption><b>2</b> · QR 코드 보여 주기</figcaption>
         </figure>
         <figure class="device">
-          <div class="device__body"><img src="assets/shots/members-approve-640.webp" srcset="assets/shots/members-approve-640.webp 640w, assets/shots/members-approve-900.webp 900w, assets/shots/members-approve.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님의 학생 관리 화면: '반 참여 대기' 탭에 '대기 학생 모두 승인 (3명)' 버튼, 일부를 가린 이메일과 요청 시각, 학생 번호·반에서 보이는 이름 입력 칸과 '승인' 버튼"></div>
+          <div class="device__body"><img src="assets/shots/members-approve-640.webp" srcset="assets/shots/members-approve-640.webp 640w, assets/shots/members-approve-900.webp 900w, assets/shots/members-approve.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님의 학생 화면: 대기 3·참여 24·제외 0 탭, '대기 학생 모두 승인 (3명)' 버튼, 일부를 가린 이메일과 학생마다 '거절'·'승인' 버튼"></div>
           <figcaption><b>3</b> · 학생 승인하기</figcaption>
         </figure>
         <figure class="device">
-          <div class="device__body"><img src="assets/shots/teacher-first-day-640.webp" srcset="assets/shots/teacher-first-day-640.webp 640w, assets/shots/teacher-first-day-900.webp 900w, assets/shots/teacher-first-day.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생 승인 뒤 선생님 홈: 우리반 칠판에 '칠판이 비어 있어요. 반에 알릴 것을 적어 보세요' 안내와 '칠판에 쓰기' 버튼"></div>
-          <figcaption><b>4</b> · 칠판에 첫 공지 쓰기</figcaption>
+          <div class="device__body"><img src="assets/shots/notice-write-640.webp" srcset="assets/shots/notice-write-640.webp 640w, assets/shots/notice-write-900.webp 900w, assets/shots/notice-write.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="소식 쓰기 화면: 공지·숙제·준비물·수행평가 종류 버튼, 제목과 본문, '지난 글 불러오기'와 '중요 공지로 표시', '올리기' 버튼"></div>
+          <figcaption><b>4</b> · 칠판에 첫 글 쓰기</figcaption>
         </figure>
       </div>
       <p class="strip-hint" aria-hidden="true">옆으로 넘겨 더 보기 →</p>
       <div class="tipnote reveal">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
-        <div><strong>다음에 할 일을 알려 줘요.</strong><p>칠판이 비어 있으면 선생님 홈의 우리반 칠판에 '칠판에 쓰기' 버튼이 나와요. 누르면 바로 첫 공지를 쓸 수 있어요. 학생 칠판에는 각자 아직 안 본 것만 보여요.</p></div>
+        <div><strong>선생님 홈에서 바로 써요.</strong><p>선생님 홈 칠판 아래 '칠판에 쓰기'를 누르면 바로 글을 올릴 수 있어요. 학생 칠판에는 각자 아직 안 본 것만 보여요.</p></div>
       </div>
     </div>
   </section>
 
   <!-- 하루 흐름: 예시 하루(체육대회 안내)를 실제 화면으로 따라간다 -->
-  <section id="day" class="section" aria-labelledby="day-title">
+  <section id="day" class="section section--paper" aria-labelledby="day-title">
     <div class="wrap">
       <div class="head head--center reveal">
-        <p class="eyebrow">사용 예시</p>
-        <h2 id="day-title" class="h2">공지를 올리고 학생이 확인하기까지, 하루를 예로 보여 드려요.</h2>
-        <p class="lead">체육대회 안내 공지를 올린 날, 선생님과 학생이 하는 일을 시간 순서로 보여 드려요.</p>
+        <p class="eyebrow">하루 예시</p>
+        <h2 id="day-title" class="h2">공지를 올리고 모두 확인하기까지, 하루를 따라가 볼게요.</h2>
+        <p class="lead">체육대회 날짜가 바뀐 날, 선생님과 학생이 하는 일을 시간 순서로 보여 드려요.</p>
       </div>
 
       <article class="feature" style="--tint:var(--student-soft);--accent:var(--student)">
         <div class="stage reveal">
           <figure class="device">
-            <div class="device__body"><img src="assets/shots/notice-detail-640.webp" srcset="assets/shots/notice-detail-640.webp 640w, assets/shots/notice-detail-900.webp 900w, assets/shots/notice-detail.png 1170w" sizes="(min-width:600px) 280px, 68vw" width="390" height="844" loading="lazy" alt="학생의 공지 상세 화면: 중요 공지 '체육대회 안내' 제목과 게시 시각, 공지 내용, 그 아래 '공지 내용을 모두 읽었나요?' 확인 상자와 '공지 확인하기' 버튼"></div>
+            <div class="device__body"><img src="assets/shots/notice-detail-640.webp" srcset="assets/shots/notice-detail-640.webp 640w, assets/shots/notice-detail-900.webp 900w, assets/shots/notice-detail.png 1170w" sizes="(min-width:600px) 280px, 68vw" width="390" height="844" loading="lazy" alt="학생의 공지 화면: 중요 공지 '체육대회 일정 안내'에 '선생님이 글을 고쳤어요' 노란 안내, 바뀐 날짜와 준비물, 아래에 '질문'과 '확인했어요' 버튼"></div>
           </figure>
         </div>
         <div class="feature__text reveal">
           <p class="when"><b>1</b>아침</p>
-          <h3>공지를 올리면 학생 화면 맨 위에 나와요.</h3>
+          <h3>바뀐 공지는 학생 칠판에 노란 밑줄로 올라와요.</h3>
           <ol class="tl">
-            <li><span class="tag tag--teacher">선생님</span><p>체육대회 공지를 올려요. 반 전체나 원하는 학생에게만 보낼 수 있어요.</p></li>
-            <li><span class="tag tag--student">학생</span><p>홈 맨 위에서 공지를 읽고 '공지 확인하기'를 눌러요.</p></li>
-            <li><span class="tag tag--sys">알림</span><p>지원 기기에서 홈 화면에 추가하고 알림을 허용하면 알림을 받아요. 수업 시간과 밤에는 알림을 바로 보내지 않고, 나중에 모아서 보내요.</p></li>
+            <li><span class="tag tag--teacher">선생님</span><p>체육대회 날짜를 고쳐 다시 올려요.</p></li>
+            <li><span class="tag tag--student">학생</span><p>칠판에서 '바뀜' 표시를 보고 글을 열어 '확인했어요'를 눌러요.</p></li>
+            <li><span class="tag tag--sys">알림</span><p>지원 기기에서 홈 화면에 추가하고 알림을 허용하면 알림을 받아요. 수업 시간과 밤에는 바로 보내지 않고 나중에 모아서 보내요.</p></li>
           </ol>
         </div>
       </article>
@@ -156,16 +188,15 @@
       <article class="feature feature--flip" style="--tint:var(--teacher-soft);--accent:var(--teacher)">
         <div class="stage reveal">
           <figure class="device">
-            <div class="device__body"><img src="assets/shots/teacher-notice-status-640.webp" srcset="assets/shots/teacher-notice-status-640.webp 640w, assets/shots/teacher-notice-status-900.webp 900w, assets/shots/teacher-notice-status.png 1170w" sizes="(min-width:600px) 280px, 68vw" width="390" height="844" loading="lazy" alt="선생님의 학생 확인 현황 화면: 게시 대상 인원과 수정 후 재확인 인원, 확인·미확인·재확인 탭, 이메일·문자·푸시 없이 앱 안에서만 알리는 '앱 내 재알림' 버튼, 아직 확인하지 않은 학생 목록"></div>
+            <div class="device__body"><img src="assets/shots/teacher-notice-status-640.webp" srcset="assets/shots/teacher-notice-status-640.webp 640w, assets/shots/teacher-notice-status-900.webp 900w, assets/shots/teacher-notice-status.png 1170w" sizes="(min-width:600px) 280px, 68vw" width="390" height="844" loading="lazy" alt="선생님의 학생 확인 현황: 게시 대상 23명, 확인 16·고친 뒤 안 봄 0·아직 안 봄 7, 아직 안 본 학생 이름, 아래에 '7명에게 다시 알림' 버튼"></div>
           </figure>
         </div>
         <div class="feature__text reveal">
-          <p class="when"><b>2</b>점심 · 오후</p>
-          <h3>아직 확인하지 않은 학생에게만 다시 알려요.</h3>
+          <p class="when"><b>2</b>점심</p>
+          <h3>아직 안 본 학생에게만 다시 알려요.</h3>
           <ol class="tl">
-            <li><span class="tag tag--teacher">선생님</span><p>확인한 학생과 아직 확인하지 않은 학생이 나뉘어 보여요.</p></li>
-            <li><span class="tag tag--sys">공지 수정</span><p>오후에 공지를 고치면 이미 확인한 학생도 다시 확인해요. 몇 명이 새 내용을 봤는지도 보여요.</p></li>
-            <li><span class="tag tag--sys">다시 알리기</span><p>아직 확인하지 않은 학생에게만 앱 안에서 다시 알려요.</p></li>
+            <li><span class="tag tag--teacher">선생님</span><p>확인한 학생·고친 뒤 안 본 학생·아직 안 본 학생이 나뉘어 보여요.</p></li>
+            <li><span class="tag tag--sys">다시 알리기</span><p>'7명에게 다시 알림'을 누르면 아직 안 본 학생에게만 앱 안에서 알려요. 문자나 메일은 보내지 않아요.</p></li>
           </ol>
         </div>
       </article>
@@ -173,20 +204,40 @@
       <article class="feature" style="--tint:var(--notice-soft);--accent:var(--notice)">
         <div class="stage reveal">
           <figure class="device">
-            <div class="device__body"><img src="assets/shots/help-requests-640.webp" srcset="assets/shots/help-requests-640.webp 640w, assets/shots/help-requests-900.webp 900w, assets/shots/help-requests.png 1170w" sizes="(min-width:600px) 280px, 68vw" width="390" height="844" loading="lazy" alt="선생님의 도움 요청 화면: 학생이 보낸 '준비하기 어려워요'·'질문 있어요' 요청마다 학생이 붙인 짧은 설명, 한 줄 답변 칸, '처리 완료' 버튼"></div>
+            <div class="device__body"><img src="assets/shots/help-thread-640.webp" srcset="assets/shots/help-thread-640.webp 640w, assets/shots/help-thread-900.webp 900w, assets/shots/help-thread.png 1170w" sizes="(min-width:600px) 280px, 68vw" width="390" height="844" loading="lazy" alt="학생과 담임 선생님의 도움 대화: 학생이 수채화 물감을 빌려도 되는지 묻고 선생님이 붓만 챙겨 오라고 답한 대화"></div>
           </figure>
         </div>
         <div class="feature__text reveal">
           <p class="when"><b>3</b>방과 후</p>
-          <h3>준비가 어려운 학생은 버튼으로 선생님께 알려요.</h3>
+          <h3>궁금한 건 선생님께만 물어봐요.</h3>
           <ol class="tl">
-            <li><span class="tag tag--student">학생</span><p>'준비하기 어려워요'를 누르고 "집에 물감이 없어요"처럼 짧게 적어요.</p></li>
-            <li><span class="tag tag--teacher">선생님</span><p>한 줄로 답하고 '처리 완료'를 누르면 학생 화면에 보여요.</p></li>
-            <li><span class="tag tag--teacher">선생님</span><p>'학생별 미해결 모아보기'에서 아직 확인하지 않은 학생을 한 번에 봐요.</p></li>
+            <li><span class="tag tag--student">학생</span><p>'선생님께 물어보기'나 공지 아래 '질문'을 눌러 담임 선생님께 보내요.</p></li>
+            <li><span class="tag tag--teacher">선생님</span><p>홈의 처리할 일에서 바로 열어 답해요. 대화는 학생과 선생님만 봐요.</p></li>
           </ol>
         </div>
       </article>
-      <p class="day-note">화면 속 이름과 날짜는 예시예요.</p>
+      <p class="day-note">화면 속 학교·이름·날짜는 모두 예시예요.</p>
+    </div>
+  </section>
+
+  <!-- PC 화면 -->
+  <section id="pc" class="section" aria-labelledby="pc-title">
+    <div class="wrap pc">
+      <div class="reveal">
+        <p class="eyebrow">교실 PC에서도</p>
+        <h2 id="pc-title" class="h2">넓은 화면에서는 한눈에 펼쳐져요.</h2>
+        <p class="lead">교실 PC나 노트북으로 열면 칠판·소식·처리할 일이 한 화면에 나란히 보여요.</p>
+        <ul>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>공지마다 확인한 학생 수가 막대로 보여요.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>출결 확인·도움 요청·가입 요청이 오른쪽에 모여요.</li>
+          <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>밝은 화면·어두운 화면을 고를 수 있어요.</li>
+        </ul>
+      </div>
+      <figure class="laptop reveal">
+        <div class="laptop__screen"><img src="assets/shots/teacher-home-desktop-1000.webp" srcset="assets/shots/teacher-home-desktop-1000.webp 1000w, assets/shots/teacher-home-desktop-1600.webp 1600w, assets/shots/teacher-home-desktop.png 2000w" sizes="(min-width:1024px) 680px, 92vw" width="1440" height="900" loading="lazy" alt="PC의 선생님 홈: 왼쪽 메뉴, 가운데 위 우리반 칠판과 그 아래 우리반 소식(공지별 확인 막대 16/23명), 오른쪽에 처리할 일(출결 확인 1·도움 요청 1·가입 요청 3)과 오늘 정보"></div>
+        <div class="laptop__base" aria-hidden="true"></div>
+        <figcaption><span class="tag tag--teacher">선생님</span> PC 홈 화면</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -202,148 +253,178 @@
           <caption class="sr-only">단체 대화방 공지와 우리반 허브 비교</caption>
           <thead><tr><th scope="col"><span class="sr-only">항목</span></th><th scope="col">단체 대화방</th><th scope="col" class="us"><img src="assets/app-icon.png" width="22" height="22" alt="">우리반 허브</th></tr></thead>
           <tbody>
-            <tr><th scope="row">공지 위치</th><td data-label="단체 대화방">새 대화가 올라오면 찾기 어려워요.</td><td class="us" data-label="우리반 허브">아직 보지 않은 공지가 맨 위에 있어요.</td></tr>
-            <tr><th scope="row">누가 확인했는지</th><td data-label="단체 대화방">알기 어려워요.</td><td class="us" data-label="우리반 허브">확인한 학생과 확인하지 않은 학생이 나뉘어 보여요.</td></tr>
-            <tr><th scope="row">내용을 고치면</th><td data-label="단체 대화방">다시 봤는지 알 수 없어요.</td><td class="us" data-label="우리반 허브">다시 확인을 받고, 확인한 학생 수를 보여 줘요.</td></tr>
-            <tr><th scope="row">확인하지 않은 학생 챙기기</th><td data-label="단체 대화방">한 명씩 찾아야 해요.</td><td class="us" data-label="우리반 허브">확인하지 않은 학생에게만 다시 알려요.</td></tr>
-            <tr><th scope="row">질문·어려움</th><td data-label="단체 대화방">모두가 보는 대화방에 질문을 올려요.</td><td class="us" data-label="우리반 허브">버튼으로 선생님께만 보내요.</td></tr>
+            <tr><th scope="row">공지 위치</th><td data-label="단체 대화방">새 대화가 올라오면 찾기 어려워요.</td><td class="us" data-label="우리반 허브">아직 안 본 공지가 칠판에 남아 있어요.</td></tr>
+            <tr><th scope="row">누가 확인했는지</th><td data-label="단체 대화방">알기 어려워요.</td><td class="us" data-label="우리반 허브">확인한 학생과 아직 안 본 학생이 나뉘어 보여요.</td></tr>
+            <tr><th scope="row">내용을 고치면</th><td data-label="단체 대화방">다시 봤는지 알 수 없어요.</td><td class="us" data-label="우리반 허브">'바뀜' 표시가 붙고, 다시 확인한 학생 수를 보여 줘요.</td></tr>
+            <tr><th scope="row">안 본 학생 챙기기</th><td data-label="단체 대화방">한 명씩 찾아야 해요.</td><td class="us" data-label="우리반 허브">아직 안 본 학생에게만 다시 알려요.</td></tr>
+            <tr><th scope="row">질문·어려움</th><td data-label="단체 대화방">모두가 보는 대화방에 질문을 올려요.</td><td class="us" data-label="우리반 허브">담임 선생님과 1:1 도움 대화로 물어봐요.</td></tr>
             <tr><th scope="row">연락처·대화</th><td data-label="단체 대화방">학생 모두가 같은 대화방에 있어요.</td><td class="us" data-label="우리반 허브">전화번호를 받지 않고, 학생끼리 대화하지 않아요.</td></tr>
           </tbody>
         </table>
-        <p class="compare-note">우리반 허브에는 대화 기능이 없어요. 공지를 전하고 확인하는 데에만 써요.</p>
+        <p class="compare-note">우리반 허브에는 학생끼리 대화하는 기능이 없어요. 반 안내를 전하고 확인하는 데 집중해요.</p>
       </div>
     </div>
   </section>
 
-  <!-- 할 수 있는 일: 네 묶음을 탭으로. 스크립트가 없으면 네 묶음이 차례로 모두 보인다 -->
+  <!-- 할 수 있는 일: 다섯 묶음을 탭으로. 스크립트가 없으면 다섯 묶음이 차례로 모두 보인다 -->
   <section id="features" class="section" aria-labelledby="features-title">
     <div class="wrap">
       <div class="head head--center reveal">
         <p class="eyebrow">기능</p>
         <h2 id="features-title" class="h2">선생님과 학생이 쓰는 기능이에요.</h2>
-        <p class="lead">기능을 네 가지로 나눠 실제 화면과 함께 보여 드려요.</p>
+        <p class="lead">기능을 다섯 가지로 나눠 실제 화면과 함께 보여 드려요.</p>
       </div>
       <div class="show reveal" data-tabs>
         <div class="show__tabs" role="tablist" aria-label="기능 묶음">
-          <button class="show__tab" type="button" role="tab" id="tab-send" aria-controls="panel-send" style="--accent:var(--notice)">보내기<small>선생님</small></button>
+          <button class="show__tab" type="button" role="tab" id="tab-send" aria-controls="panel-send" style="--accent:var(--board)">보내기<small>선생님</small></button>
           <button class="show__tab" type="button" role="tab" id="tab-check" aria-controls="panel-check" style="--accent:var(--teacher)">확인하기<small>선생님</small></button>
           <button class="show__tab" type="button" role="tab" id="tab-keep" aria-controls="panel-keep" style="--accent:var(--student)">챙기기<small>학생</small></button>
+          <button class="show__tab" type="button" role="tab" id="tab-activity" aria-controls="panel-activity" style="--accent:var(--notice)">반 활동<small>함께</small></button>
           <button class="show__tab" type="button" role="tab" id="tab-class" aria-controls="panel-class" style="--accent:var(--supplies)">반 운영<small>선생님</small></button>
         </div>
 
-        <div class="show__panel" id="panel-send" style="--tint:var(--notice-soft);--accent:var(--notice)">
+        <div class="show__panel" id="panel-send" style="--tint:var(--supplies-soft);--accent:var(--board)">
           <div class="show__text">
             <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l18-8-8 18-2-8-8-2z"/></svg></span>보내기 <small>선생님</small></h3>
-            <p class="show__lead">공지·준비물·숙제·일정을 한곳에서 올려요.</p>
+            <p class="show__lead">공지·숙제·준비물·수행평가를 한 화면에서 올려요.</p>
             <dl>
-              <div><dt>공지 · 준비물·숙제 · 일정</dt><dd>학생 화면에는 오늘 필요한 것부터 보여요.</dd></div>
-              <div><dt>받을 학생 고르기</dt><dd>반 전체나 원하는 학생에게만 보내요.</dd></div>
-              <div><dt>지난 공지 다시 쓰기</dt><dd>예전 공지를 불러와 고쳐서 올려요.</dd></div>
+              <div><dt>한 화면에서 종류 고르기</dt><dd>공지·숙제·준비물·수행평가를 버튼으로 골라 써요.</dd></div>
+              <div><dt>중요 공지 표시</dt><dd>중요한 공지는 칠판 위쪽에 '중요'로 보여요.</dd></div>
+              <div><dt>지난 글 불러오기</dt><dd>예전 글을 불러와 고쳐서 올려요.</dd></div>
               <div><dt>일정에 공지 연결하기</dt><dd>일정을 열면 관련 공지·준비물이 함께 보여요.</dd></div>
               <div><dt>일정이 바뀌면</dt><dd>연결된 공지·준비물을 한 화면에서 '변경'·'유지'로 정리해요.</dd></div>
             </dl>
           </div>
-          <div class="strip" tabindex="0" role="group" aria-label="보내기 화면 예시 3장">
+          <div class="strip" tabindex="0" role="group" aria-label="보내기 화면 예시 2장">
             <figure class="device">
-              <div class="device__body"><img src="assets/shots/audience-select-640.webp" srcset="assets/shots/audience-select-640.webp 640w, assets/shots/audience-select-900.webp 900w, assets/shots/audience-select.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="공지 작성 화면의 게시 대상: '게시 시점의 전체 학생'과 '학생 직접 선택' 중 직접 선택을 고르고 학생 3명에 체크한 모습"></div>
-              <figcaption>받을 학생 고르기</figcaption>
+              <div class="device__body"><img src="assets/shots/notice-write-640.webp" srcset="assets/shots/notice-write-640.webp 640w, assets/shots/notice-write-900.webp 900w, assets/shots/notice-write.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="소식 쓰기 화면: 공지·숙제·준비물·수행평가 종류 버튼, 제목과 본문, '지난 글 불러오기'와 '중요 공지로 표시', '올리기' 버튼"></div>
+              <figcaption>소식 쓰기</figcaption>
             </figure>
             <figure class="device">
-              <div class="device__body"><img src="assets/shots/content-reuse-640.webp" srcset="assets/shots/content-reuse-640.webp 640w, assets/shots/content-reuse-900.webp 900w, assets/shots/content-reuse.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님의 내용 재사용 화면: '새 공지로 재사용' 제목 아래 제목·본문·분류를 가져왔다는 '새 공지 초안' 안내와 '원본 공지 보기' 버튼, 가져온 공지 제목이 채워진 작성 칸"></div>
-              <figcaption>지난 공지 다시 쓰기</figcaption>
-            </figure>
-            <figure class="device">
-              <div class="device__body"><img src="assets/shots/schedule-change-review-640.webp" srcset="assets/shots/schedule-change-review-640.webp 640w, assets/shots/schedule-change-review-900.webp 900w, assets/shots/schedule-change-review.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="일정 변경 검토 화면: 체육대회 안내 공지에 '변경'을 고르고, 변경 전 본문(10월 2일)과 고칠 변경 후 본문(10월 6일)을 함께 보여 줌"></div>
-              <figcaption>바뀐 일정 정리하기</figcaption>
+              <div class="device__body"><img src="assets/shots/teacher-home-640.webp" srcset="assets/shots/teacher-home-640.webp 640w, assets/shots/teacher-home-900.webp 900w, assets/shots/teacher-home.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님 홈의 우리반 칠판과 '칠판에 쓰기' 버튼"></div>
+              <figcaption>칠판에 쓰기</figcaption>
             </figure>
           </div>
-          <p class="strip-hint strip-hint--always" aria-hidden="true">옆으로 넘겨 더 보기 →</p>
         </div>
 
         <div class="show__panel" id="panel-check" style="--tint:var(--teacher-soft);--accent:var(--teacher)">
           <div class="show__text">
             <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>확인하기 <small>선생님</small></h3>
-            <p class="show__lead">누가 확인했는지 보고, 아직 확인하지 않은 학생을 챙겨요.</p>
+            <p class="show__lead">누가 확인했는지 보고, 아직 안 본 학생을 챙겨요.</p>
             <dl>
-              <div><dt>확인 현황</dt><dd>공지·준비물마다 확인한 학생 수를 바로 봐요.</dd></div>
-              <div><dt>고친 뒤 다시 확인</dt><dd>이미 확인한 학생도 다시 확인하고, 그 수를 알려 줘요.</dd></div>
-              <div><dt>다시 알리기</dt><dd>확인하지 않은 학생에게만 앱 안에서 다시 알려요. 문자나 메일은 보내지 않아요.</dd></div>
-              <div><dt>학생별로 모아보기</dt><dd>학생마다 아직 확인하지 않은 공지·준비물을 한 번에 봐요.</dd></div>
-              <div><dt>도움 요청 답하기</dt><dd>한 줄로 답하고 '처리 완료'를 눌러요.</dd></div>
+              <div><dt>확인 현황</dt><dd>공지·준비물마다 확인한 학생 수를 막대로 봐요.</dd></div>
+              <div><dt>고친 뒤 다시 확인</dt><dd>글을 고치면 이미 확인한 학생도 다시 확인하고, 그 수를 알려 줘요.</dd></div>
+              <div><dt>다시 알리기</dt><dd>아직 안 본 학생에게만 앱 안에서 다시 알려요. 문자나 메일은 보내지 않아요.</dd></div>
+              <div><dt>학생별 미해결 모아보기</dt><dd>기간을 정해 학생마다 확인이 남은 안내를 한 번에 봐요.</dd></div>
+              <div><dt>도움 대화 답하기</dt><dd>학생 질문에 1:1로 답하고, 해결되면 대화를 마무리해요.</dd></div>
             </dl>
           </div>
-          <div class="strip" tabindex="0" role="group" aria-label="확인하기 화면 예시 2장">
+          <div class="strip" tabindex="0" role="group" aria-label="확인하기 화면 예시 3장">
             <figure class="device">
-              <div class="device__body"><img src="assets/shots/followups-640.webp" srcset="assets/shots/followups-640.webp 640w, assets/shots/followups-900.webp 900w, assets/shots/followups.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생별 미해결 모아보기 화면: 확인이 남은 학생 수와 조회 기간, 학생 찾기 칸, 1번 학생에게 남은 공지 2개(변경 후 재확인·미확인)"></div>
+              <div class="device__body"><img src="assets/shots/teacher-notice-status-640.webp" srcset="assets/shots/teacher-notice-status-640.webp 640w, assets/shots/teacher-notice-status-900.webp 900w, assets/shots/teacher-notice-status.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님의 학생 확인 현황: 확인 16·고친 뒤 안 봄 0·아직 안 봄 7과 '7명에게 다시 알림' 버튼"></div>
+              <figcaption>확인 현황과 다시 알리기</figcaption>
+            </figure>
+            <figure class="device">
+              <div class="device__body"><img src="assets/shots/followups-640.webp" srcset="assets/shots/followups-640.webp 640w, assets/shots/followups-900.webp 900w, assets/shots/followups.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생별 미해결 모아보기: 시작일·종료일과 조회하기 버튼, '확인이 남은 학생 23명' 결과"></div>
               <figcaption>학생별 미해결 모아보기</figcaption>
             </figure>
             <figure class="device">
-              <div class="device__body"><img src="assets/shots/teacher-notice-status-640.webp" srcset="assets/shots/teacher-notice-status-640.webp 640w, assets/shots/teacher-notice-status-900.webp 900w, assets/shots/teacher-notice-status.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님의 학생 확인 현황 화면: 게시 대상 인원과 수정 후 재확인 인원, 확인·미확인·재확인 탭, 앱 안에서만 알리는 '앱 내 재알림' 버튼, 아직 확인하지 않은 학생 목록"></div>
-              <figcaption>확인 현황과 다시 알리기</figcaption>
-            </figure>
-          </div>
-          <p class="strip-hint" aria-hidden="true">옆으로 넘겨 더 보기 →</p>
-        </div>
-
-        <div class="show__panel" id="panel-keep" style="--tint:var(--student-soft);--accent:var(--student)">
-          <div class="show__text">
-            <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>챙기기 <small>학생</small></h3>
-            <p class="show__lead">학생 화면에는 오늘 할 일과 놓친 안내가 먼저 나와요.</p>
-            <dl>
-              <div><dt>오늘 할 일 먼저</dt><dd>홈 맨 위에 아직 보지 않은 공지와 오늘 챙길 준비물이 나와요.</dd></div>
-              <div><dt>준비물·숙제 체크</dt><dd>준비물을 챙기면 체크해요.</dd></div>
-              <div><dt>놓친 안내 모아 보기</dt><dd>며칠 동안 못 본 안내를 모아서, 바뀐 안내부터 확인해요.</dd></div>
-              <div><dt>알림 탭</dt><dd>공지·준비물·숙제를 한 목록에서 봐요.</dd></div>
-              <div><dt>일정</dt><dd>달력과 목록으로 보고, 과목·종류로 찾아요.</dd></div>
-              <div><dt>급식</dt><dd>우리 학교 오늘 급식을 봐요.</dd></div>
-              <div><dt>휴대폰 알림</dt><dd>지원 기기에서 홈 화면에 추가하고 알림을 허용하면 알림이 와요. 수업 시간과 밤에는 나중에 모아서 보내요.</dd></div>
-            </dl>
-          </div>
-          <div class="strip" tabindex="0" role="group" aria-label="챙기기 화면 예시 3장">
-            <figure class="device">
-              <div class="device__body"><img src="assets/shots/updates-list-640.webp" srcset="assets/shots/updates-list-640.webp 640w, assets/shots/updates-list-900.webp 900w, assets/shots/updates-list.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생의 알림 목록: 중요 공지 '체육대회 안내'(미확인), 숙제 '수학 익힘책 42~45쪽'(마감일·미완료), 준비물 '물감·붓'(필요한 날·미챙김), 중요 공지 '현장체험학습 준비물 변경'(확인 완료)이 한 목록에 있음"></div>
-              <figcaption>알림 탭</figcaption>
-            </figure>
-            <figure class="device">
-              <div class="device__body"><img src="assets/shots/catch-up-640.webp" srcset="assets/shots/catch-up-640.webp 640w, assets/shots/catch-up-900.webp 900w, assets/shots/catch-up.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생의 기간별 따라잡기 화면: 기간과 살펴볼 안내 수, '바뀐 안내부터 확인해요'에 변경 후 재확인할 공지, '아직 확인이 남아 있어요'에 미확인 공지와 숙제"></div>
-              <figcaption>놓친 안내 모아 보기</figcaption>
-            </figure>
-            <figure class="device">
-              <div class="device__body"><img src="assets/shots/schedule-calendar-640.webp" srcset="assets/shots/schedule-calendar-640.webp 640w, assets/shots/schedule-calendar-900.webp 900w, assets/shots/schedule-calendar.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생의 일정 화면: 한 주 날짜 줄에서 고른 날의 일정 '수학 익힘책 제출', 그 아래 일정이 있는 날에 점이 찍힌 9월 달력"></div>
-              <figcaption>일정 달력</figcaption>
+              <div class="device__body"><img src="assets/shots/help-requests-640.webp" srcset="assets/shots/help-requests-640.webp 640w, assets/shots/help-requests-900.webp 900w, assets/shots/help-requests.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님이 보는 도움 대화: 1번 학생의 질문과 선생님 답장, 아래 '학생에게 답장 쓰기' 칸과 '답장하면 학생에게 알림이 가요' 안내"></div>
+              <figcaption>도움 대화 답하기</figcaption>
             </figure>
           </div>
           <p class="strip-hint strip-hint--always" aria-hidden="true">옆으로 넘겨 더 보기 →</p>
         </div>
 
-        <div class="show__panel" id="panel-class" style="--tint:var(--supplies-soft);--accent:var(--supplies)">
+        <div class="show__panel" id="panel-keep" style="--tint:var(--student-soft);--accent:var(--student)">
+          <div class="show__text">
+            <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>챙기기 <small>학생</small></h3>
+            <p class="show__lead">학생 화면에는 아직 안 본 것과 오늘 챙길 것이 먼저 나와요.</p>
+            <dl>
+              <div><dt>우리반 칠판</dt><dd>홈 맨 위 칠판에 아직 안 본 공지와 챙길 준비물이 나와요.</dd></div>
+              <div><dt>소식 한 목록</dt><dd>공지·숙제·준비물·수행평가를 한 목록에서 보고, 안 한 것만 골라 봐요.</dd></div>
+              <div><dt>기간별 따라잡기</dt><dd>며칠 동안 못 본 안내를 모아서, 바뀐 안내부터 확인해요.</dd></div>
+              <div><dt>일정</dt><dd>한 주 띠와 달력으로 보고, 남은 날(D-day)을 확인해요.</dd></div>
+              <div><dt>급식</dt><dd>오늘·이번 주·다음 주 급식을 봐요.</dd></div>
+              <div><dt>휴대폰 알림</dt><dd>지원 기기에서 홈 화면에 추가하고 알림을 허용하면 알림이 와요. 수업 시간과 밤에는 나중에 모아서 보내요.</dd></div>
+            </dl>
+          </div>
+          <div class="strip" tabindex="0" role="group" aria-label="챙기기 화면 예시 4장">
+            <figure class="device">
+              <div class="device__body"><img src="assets/shots/updates-list-640.webp" srcset="assets/shots/updates-list-640.webp 640w, assets/shots/updates-list-900.webp 900w, assets/shots/updates-list.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생의 소식 목록: 전체·공지·숙제·준비물·수행평가 필터와 오늘 올라온 공지들, 각 카드의 '아직 안 했어요' 표시"></div>
+              <figcaption>소식 한 목록</figcaption>
+            </figure>
+            <figure class="device">
+              <div class="device__body"><img src="assets/shots/catch-up-640.webp" srcset="assets/shots/catch-up-640.webp 640w, assets/shots/catch-up-900.webp 900w, assets/shots/catch-up.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생의 기간별 따라잡기: 기간을 고르고 '지금 살펴볼 안내 4개', '바뀐 안내부터 확인해요'에 변경 후 재확인할 체육대회 공지"></div>
+              <figcaption>기간별 따라잡기</figcaption>
+            </figure>
+            <figure class="device">
+              <div class="device__body"><img src="assets/shots/schedule-calendar-640.webp" srcset="assets/shots/schedule-calendar-640.webp 640w, assets/shots/schedule-calendar-900.webp 900w, assets/shots/schedule-calendar.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생의 일정: 한 주 날짜 띠와 고른 날, 과제·수행평가·시험 필터, D-1 '수학 익힘책 42~45쪽 제출'"></div>
+              <figcaption>일정</figcaption>
+            </figure>
+            <figure class="device">
+              <div class="device__body"><img src="assets/shots/meals-week-640.webp" srcset="assets/shots/meals-week-640.webp 640w, assets/shots/meals-week-900.webp 900w, assets/shots/meals-week.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="급식 화면: 이번 주·다음 주 전환과 요일 칸, 오늘 메뉴와 '교육청(나이스) 정보' 출처 표시"></div>
+              <figcaption>급식</figcaption>
+            </figure>
+          </div>
+          <p class="strip-hint strip-hint--always" aria-hidden="true">옆으로 넘겨 더 보기 →</p>
+        </div>
+
+        <div class="show__panel" id="panel-activity" style="--tint:var(--notice-soft);--accent:var(--notice)">
+          <div class="show__text">
+            <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="m8 8 3 3 5-6"/></svg></span>반 활동 <small>함께</small></h3>
+            <p class="show__lead">반의 의견을 모으고, 대표를 뽑아요.</p>
+            <dl>
+              <div><dt>투표</dt><dd>한 가지를 골라 의견을 모아요. 선생님만 학생별 선택을 볼지, 결과를 언제 보여 줄지 정해요.</dd></div>
+              <div><dt>대표 선거</dt><dd>후보 등록 → 투표 → 마감 → 결과 공개 4단계로 진행해요. 동점이면 선생님이 정할 수 있어요.</dd></div>
+              <div><dt>반 활동 한곳에</dt><dd>진행 중인 투표와 선거를 한 화면에서 보고 참여해요.</dd></div>
+            </dl>
+          </div>
+          <div class="strip" tabindex="0" role="group" aria-label="반 활동 화면 예시 3장">
+            <figure class="device">
+              <div class="device__body"><img src="assets/shots/activities-640.webp" srcset="assets/shots/activities-640.webp 640w, assets/shots/activities-900.webp 900w, assets/shots/activities.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생의 반 활동 화면: 진행 중인 투표 '반 티셔츠 색 정하기'와 대표 선거 '2학기 학급 회장 선거'"></div>
+              <figcaption>반 활동</figcaption>
+            </figure>
+            <figure class="device">
+              <div class="device__body"><img src="assets/shots/poll-results-640.webp" srcset="assets/shots/poll-results-640.webp 640w, assets/shots/poll-results-900.webp 900w, assets/shots/poll-results.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="투표 결과: 내 선택 연두색, 총 18명 참여, 선택지별 인원과 비율 막대"></div>
+              <figcaption>투표 결과</figcaption>
+            </figure>
+            <figure class="device">
+              <div class="device__body"><img src="assets/shots/elections-640.webp" srcset="assets/shots/elections-640.webp 640w, assets/shots/elections-900.webp 900w, assets/shots/elections.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님의 대표 선거 화면: 후보 등록·투표·마감·결과 공개 4단계 중 투표 단계, 등록된 후보 3명과 '투표 마감하고 개표' 버튼"></div>
+              <figcaption>대표 선거</figcaption>
+            </figure>
+          </div>
+          <p class="strip-hint strip-hint--always" aria-hidden="true">옆으로 넘겨 더 보기 →</p>
+        </div>
+
+        <div class="show__panel" id="panel-class" style="--tint:var(--paper-2);--accent:var(--supplies)">
           <div class="show__text">
             <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span>반 운영 <small>선생님</small></h3>
             <p class="show__lead">학생 승인부터 학년 말 마무리까지 선생님이 관리해요.</p>
             <dl>
               <div><dt>QR · 초대 코드</dt><dd>학생은 QR 코드나 초대 코드로 참여를 요청해요. 코드는 기한이 있고, 새로 만들 수 있어요.</dd></div>
-              <div><dt>학생 승인</dt><dd>번호와 이름을 정해 승인해요. '모두 승인' 버튼으로 한꺼번에 승인해요.</dd></div>
-              <div><dt>출결 연락</dt><dd>학생이 지각·결석·조퇴를 미리 알리면 선생님이 목록에서 읽고 확인해요. 공식 출결이 아닌 사전 연락이에요.</dd></div>
+              <div><dt>학생 승인</dt><dd>'대기 학생 모두 승인'으로 한꺼번에, 또는 한 명씩 승인·거절해요.</dd></div>
+              <div><dt>출결 연락</dt><dd>학생이 지각·결석·조퇴를 미리 알리면 선생님이 읽고 확인해요. 공식 출결이 아닌 사전 연락이에요.</dd></div>
               <div><dt>반에서 제외</dt><dd>필요하면 제외해요. 학생은 다시 참여를 요청할 수 있어요.</dd></div>
-              <div><dt>관리 기록</dt><dd>반 관리 내용을 기록으로 확인해요.</dd></div>
-              <div><dt>반 마무리</dt><dd>학년 말에 반 운영을 끝내요.</dd></div>
-              <div><dt>화면 · 계정</dt><dd>화면을 밝게 또는 어둡게 바꿀 수 있어요. 비밀번호를 다시 정하거나 계정을 삭제할 수도 있어요.</dd></div>
+              <div><dt>관리 기록 · 반 마무리</dt><dd>반 관리 내용을 기록으로 확인하고, 학년 말에 반 운영을 끝내요.</dd></div>
+              <div><dt>화면 · 계정</dt><dd>밝은 화면·어두운 화면을 고르고, 비밀번호를 바꾸거나 계정을 삭제할 수 있어요.</dd></div>
             </dl>
           </div>
           <div class="strip" tabindex="0" role="group" aria-label="반 운영 화면 예시 3장">
             <figure class="device">
-              <div class="device__body"><img src="assets/shots/members-approve-640.webp" srcset="assets/shots/members-approve-640.webp 640w, assets/shots/members-approve-900.webp 900w, assets/shots/members-approve.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님의 학생 관리 화면: '반 참여 대기'·'학생 목록'·'다시 참여 관리' 탭, '대기 학생 모두 승인 (3명)' 버튼, 학생 번호·반에서 보이는 이름 입력 칸"></div>
-              <figcaption>학생 관리</figcaption>
+              <div class="device__body"><img src="assets/shots/members-approve-640.webp" srcset="assets/shots/members-approve-640.webp 640w, assets/shots/members-approve-900.webp 900w, assets/shots/members-approve.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님의 학생 화면: 대기 3·참여 24·제외 0 탭과 '대기 학생 모두 승인 (3명)' 버튼"></div>
+              <figcaption>학생 승인</figcaption>
             </figure>
             <figure class="device">
-              <div class="device__body"><img src="assets/shots/attendance-teacher-640.webp" srcset="assets/shots/attendance-teacher-640.webp 640w, assets/shots/attendance-teacher-900.webp 900w, assets/shots/attendance-teacher.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="출결 연락(선생님) 화면"></div>
+              <div class="device__body"><img src="assets/shots/attendance-teacher-640.webp" srcset="assets/shots/attendance-teacher-640.webp 640w, assets/shots/attendance-teacher-900.webp 900w, assets/shots/attendance-teacher.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="선생님의 출결 연락 화면: '공식 출결이 아닌 사전 연락이에요' 안내, 오늘 지각 1건(1번 학생, 09:20 예정)과 '읽음으로 확인' 버튼"></div>
               <figcaption>출결 연락(선생님)</figcaption>
             </figure>
             <figure class="device">
-              <div class="device__body"><img src="assets/shots/attendance-student-640.webp" srcset="assets/shots/attendance-student-640.webp 640w, assets/shots/attendance-student-900.webp 900w, assets/shots/attendance-student.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="출결 연락(학생) 화면"></div>
+              <div class="device__body"><img src="assets/shots/attendance-student-640.webp" srcset="assets/shots/attendance-student-640.webp 640w, assets/shots/attendance-student-900.webp 900w, assets/shots/attendance-student.png 1170w" sizes="(min-width:600px) 236px, 62vw" width="390" height="844" loading="lazy" alt="학생의 출결 연락 화면: 내 오늘 연락 '지각 · 09:20 예정'(확인 대기)과 '유형·시각 수정'·'연락 취소' 버튼, 공식 출결이 아닌 사전 연락이라는 안내"></div>
               <figcaption>출결 연락(학생)</figcaption>
             </figure>
           </div>
+          <p class="strip-hint strip-hint--always" aria-hidden="true">옆으로 넘겨 더 보기 →</p>
         </div>
       </div>
     </div>
@@ -353,15 +434,15 @@
   <section id="safe" class="section section--paper" aria-labelledby="safe-title">
     <div class="wrap">
       <div class="head reveal">
-        <p class="eyebrow" style="color:var(--student)">개인정보와 안전</p>
+        <p class="eyebrow">개인정보와 안전</p>
         <h2 id="safe-title" class="h2">꼭 필요한 정보만 받고, 선생님이 승인한 학생만 들어와요.</h2>
       </div>
       <ul class="safe-grid">
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><div><h3>선생님이 승인해야 들어와요</h3><p>코드를 알아도 승인 전에는 반 자료를 볼 수 없어요.</p></div></li>
-        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M4 4l16 16"/></svg></span><div><h3>전화번호와 채팅이 없어요</h3><p>이메일로 가입하고, 승인 화면에서도 이메일 일부는 가려져요. 학생끼리 대화하는 기능은 없어요.</p></div></li>
+        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/><path d="M4 4l16 16"/></svg></span><div><h3>전화번호를 받지 않아요</h3><p>이메일로 가입하고, 승인 화면에서도 이메일 일부는 가려져요. 학생끼리 대화하는 기능은 없어요.</p></div></li>
+        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><h3>도움 대화는 선생님만 봐요</h3><p>학생이 보낸 질문과 답장은 그 학생과 담임 선생님만 볼 수 있어요.</p></div></li>
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><div><h3>만 14세 이상만 참여해요</h3><p>공개 체험은 만 14세 이상, 학생은 중학교 3학년 이상을 대상으로 해요.</p></div></li>
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><div><h3>개인정보 안내도 개발 중이에요</h3><p>앱의 개인정보 안내는 개발본이에요. 실제 학급 운영에 앞서 확정·게시할 예정이며, 지금은 예시 정보로 체험해 주세요.</p></div></li>
-        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M17 11h6"/></svg></span><div><h3>반 관리는 선생님이 해요</h3><p>선생님이 학생을 반에서 뺄 수 있고, 반을 관리한 기록도 남아요.</p></div></li>
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15"/></svg></span><div><h3>계정은 직접 삭제할 수 있어요</h3><p>설정에서 계정 삭제를 요청할 수 있어요. 실제 학생의 자료를 보관하는 용도로는 아직 사용하지 마세요.</p></div></li>
       </ul>
       <aside class="honest reveal" aria-labelledby="honest-title">
@@ -411,21 +492,22 @@
       </div>
       <div class="faq">
         <h3>시작하기</h3>
-        <details><summary>앱을 설치해야 하나요?</summary><p>아니요. 인터넷 창(크롬·사파리)으로 열면 돼요. 알림을 받으려면 지원 기기에서 홈 화면에 추가하고 알림을 허용해 주세요.</p></details>
+        <details><summary>앱을 설치해야 하나요?</summary><p>아니요. 인터넷 창(크롬·사파리 등)으로 열면 돼요. 휴대폰과 PC 모두 쓸 수 있어요. 알림을 받으려면 지원 기기에서 홈 화면에 추가하고 알림을 허용해 주세요.</p></details>
         <details><summary>어떻게 시작하나요?</summary><p>'우리반 허브 열기'를 누르면 최신 앱 주소로 이동해요. 회원가입·이메일 인증 후 로그인해 주세요. 교사 기능은 별도 운영자 승인이 필요하므로 가입 후 메일로 문의해 주세요. 실제 학생 개인정보 대신 예시 정보로 체험해 주세요.</p></details>
         <details><summary>초등학생이나 중학교 1·2학년도 쓸 수 있나요?</summary><p>공개 체험도 만 14세 이상, 학생은 중학교 3학년 이상을 대상으로 해요.</p></details>
         <details><summary>초대 코드가 다른 사람에게 알려지면요?</summary><p>괜찮아요. 선생님이 승인해야 들어올 수 있어요. 코드는 기한이 있고, 새로 만들 수도 있어요.</p></details>
         <details><summary>앱이 열리지 않으면 어떻게 하나요?</summary><p>점검·재시작 중에는 잠시 접속이 끊길 수 있어요. 예전에 저장한 앱 주소 대신 이 소개 페이지의 앱 열기 버튼으로 다시 시도해 주세요. 새 주소가 반영되기까지 몇 분 걸릴 수 있어요. 계속 열리지 않으면 메일로 알려 주세요.</p></details>
         <h3>쓰는 방법</h3>
-        <details><summary>단체 대화방과 무엇이 다른가요?</summary><p>대화방에서는 누가 봤는지, 고친 내용을 다시 봤는지 알기 어려워요. 우리반 허브는 확인한 학생과 확인하지 않은 학생을 보여 주고, 고치면 다시 확인받아요.</p></details>
-        <details><summary>일부 학생에게만 보낼 수 있나요?</summary><p>네. 반 전체나 원하는 학생에게만 보낼 수 있어요.</p></details>
-        <details><summary>지난 공지를 다시 쓸 수 있나요?</summary><p>네. 예전 공지·숙제를 불러와 고쳐서 올리면 돼요. 마감일·중요 표시·받을 학생은 새로 골라요.</p></details>
+        <details><summary>단체 대화방과 무엇이 다른가요?</summary><p>대화방에서는 누가 봤는지, 고친 내용을 다시 봤는지 알기 어려워요. 우리반 허브는 확인한 학생과 아직 안 본 학생을 보여 주고, 글을 고치면 '바뀜' 표시와 함께 다시 확인받아요.</p></details>
+        <details><summary>우리반 칠판에는 무엇이 올라오나요?</summary><p>학생마다 아직 안 본 공지와 챙길 준비물·숙제가 올라와요. 바뀐 글은 노란 밑줄로 보여요. 선생님 칠판에는 반에 알린 중요한 글이 보이고, '칠판에 쓰기'로 바로 글을 올려요.</p></details>
+        <details><summary>지난 글을 다시 쓸 수 있나요?</summary><p>네. 소식 쓰기에서 '지난 글 불러오기'로 예전 글을 불러와 고쳐서 올리면 돼요.</p></details>
         <details><summary>일정이 바뀌면 공지를 하나하나 고쳐야 하나요?</summary><p>아니요. 일정을 고치면 연결되어 있던 공지·준비물을 한 화면에 모아 줘요. '변경'이나 '유지'만 고르면 한꺼번에 반영돼요.</p></details>
-        <details><summary>확인하지 않은 학생에게 다시 알릴 수 있나요?</summary><p>네. 아직 확인하지 않은 학생에게만 앱 안에서 다시 알려요. 학생마다 무엇을 아직 확인하지 않았는지는 '학생별 미해결 모아보기'에서 한 번에 볼 수 있어요.</p></details>
-        <details><summary>도움 요청은 채팅인가요?</summary><p>아니요. '질문 있어요'나 '준비하기 어려워요'를 누르고 짧게 적어 보내면 선생님만 봐요. 선생님은 한 줄로 답해요.</p></details>
+        <details><summary>안 본 학생에게 다시 알릴 수 있나요?</summary><p>네. 아직 안 본 학생에게만 앱 안에서 다시 알려요. 학생마다 무엇이 남았는지는 '학생별 미해결 모아보기'에서 한 번에 볼 수 있어요.</p></details>
+        <details><summary>도움 대화는 누가 볼 수 있나요?</summary><p>질문한 학생과 담임 선생님만 볼 수 있어요. 학생은 '선생님께 물어보기'나 공지 아래 '질문'으로 대화를 시작해요. 학생끼리 대화하는 기능은 없어요.</p></details>
+        <details><summary>반 투표에서 누가 무엇을 골랐는지 보이나요?</summary><p>투표를 만들 때 정해요. 담임 선생님만 학생별 선택을 볼 수 있게 하거나, 아무도 볼 수 없는 비밀투표로 할 수 있어요. 결과를 투표 뒤 바로 보여 줄지, 마감 뒤에 보여 줄지도 정해요.</p></details>
         <details><summary>밤에도 알림이 오나요?</summary><p>수업 시간과 밤에는 알림을 바로 보내지 않고, 나중에 모아서 보내요. 같은 공지에 대한 알림은 하나로 합쳐서 보내요.</p></details>
         <h3>개인정보와 안전</h3>
-        <details><summary>학생 전화번호가 필요한가요?</summary><p>아니요. 이메일로 가입해요. 전화번호는 받지 않고, 학생끼리 대화하는 기능도 없어요.</p></details>
+        <details><summary>학생 전화번호가 필요한가요?</summary><p>아니요. 이메일로 가입해요. 전화번호는 받지 않아요.</p></details>
         <details><summary>학부모도 볼 수 있나요?</summary><p>아직은 아니에요. 지금은 선생님·학생 화면만 있어요.</p></details>
         <details><summary>학년이 끝나면 자료는 어떻게 되나요?</summary><p>반 운영을 끝내거나 설정에서 계정 삭제를 요청할 수 있어요. 지금은 개발 중인 공개 체험 단계이므로 실제 학생 자료는 입력하지 마세요. 학급 자료 내보내기 기능은 제공하지 않아요.</p></details>
       </div>
@@ -436,7 +518,7 @@
   <section id="tools" class="section" aria-labelledby="tools-title">
     <div class="wrap">
       <div class="head reveal">
-        <p class="eyebrow" style="color:var(--board)">함께 쓰는 교실 도구</p>
+        <p class="eyebrow">함께 쓰는 교실 도구</p>
         <h2 id="tools-title" class="h2">발표자를 뽑을 때는 '뽑기 시간'을 써 보세요.</h2>
       </div>
       <a class="tool-card reveal" href="ppobgi">
@@ -451,14 +533,14 @@
     </div>
   </section>
 
-  <!-- 마무리 -->
+  <!-- 마무리: 나무 틀 칠판 -->
   <section class="closing" aria-labelledby="closing-title">
     <div class="wrap">
       <div class="closing__panel reveal">
-        <h2 id="closing-title"><span>우리반 허브를</span> <span>직접 열어 보세요.</span></h2>
+        <h2 id="closing-title"><span>우리반 칠판을</span> <span><u>직접 열어 보세요.</u></span></h2>
         <p>개발 중인 앱을 자유롭게 체험하고 의견을 보내 주세요. 예시 정보로 시작하면 돼요.</p>
         <div class="cta">
-          <a class="btn btn--white" href="start.html" data-app-entry><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>우리반 허브 열기</a>
+          <a class="btn btn--white" href="start.html" data-app-entry><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>우리반 허브 열기</a>
           <a class="btn btn--line" href="ppobgi">뽑기 시간도 보기</a>
         </div>
         <p class="small">gunyoon0322@naver.com</p>
@@ -473,7 +555,7 @@
       <a class="brand" href="#top" aria-label="우리반 허브 처음으로"><img src="assets/app-icon.png" width="34" height="34" alt=""><span>우리반 허브</span></a>
       <p style="margin-top:12px">© 2026 우리반 허브 · 제작·운영 이건윤</p>
       <p>문의 <a class="mail" href="mailto:gunyoon0322@naver.com">gunyoon0322@naver.com</a></p>
-      <p>화면 속 이름과 날짜는 예시예요.</p>
+      <p>화면 속 학교·이름·날짜는 모두 예시예요.</p>
     </div>
     <nav aria-label="바닥글 링크">
       <ul>
