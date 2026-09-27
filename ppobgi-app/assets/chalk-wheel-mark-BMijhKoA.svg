@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" fill="none" stroke-linecap="round">
+<!-- T-030 로고 L3 분필 룰렛(2026-09-27 건윤님 확정). 칠판 위 전용 — 밝은 바탕용 아이콘은 나무 테 칠판 판 위에 올린다 -->
+<circle cx="32" cy="35" r="24" stroke="#f3f1ea" stroke-width="3" stroke-dasharray="30 3 22 2"/>
+        <path d="M32 11v48M8 35h48M15 18l34 34M49 18 15 52" stroke="#f3f1ea" stroke-width="1.6" opacity=".6"/><path d="M32 35 15 18A24 24 0 0 1 32 11z" fill="#f5c84c"/><path d="M32 35 56 35A24 24 0 0 0 49 18z" fill="#ff8a7a"/>
+        <circle cx="32" cy="35" r="4" fill="#f3f1ea"/><path d="M26 3h12l-6 9z" fill="#f5c84c"/>
+</svg>

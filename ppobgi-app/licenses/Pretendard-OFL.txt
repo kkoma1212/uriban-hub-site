@@ -1,12 +1,13 @@
-Jua — Copyright 2018 The Jua Project Authors. SIL Open Font License 1.1.
-Source: https://github.com/google/fonts/tree/main/ofl/jua (Jua-Regular.ttf)
-Used for: not shown since 2026-09-27 (T-030 replaced it with Pretendard); file kept in the bundle.
+Pretendard — Copyright (c) 2021 Kil Hyung-jin. SIL Open Font License 1.1.
+Source: https://github.com/orioncactus/pretendard v1.3.9 (PretendardVariable.woff2)
+Used for: all UI text and numbers (since 2026-09-27, T-030).
 
-Copyright 2018 The Jua Project Authors
+Copyright (c) 2021, Kil Hyung-jin (https://github.com/orioncactus/pretendard),
+with Reserved Font Name Pretendard.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
+https://scripts.sil.org/OFL
 
 
 -----------------------------------------------------------
@@ -22,7 +23,7 @@ with others.
 
 The OFL allows the licensed fonts to be used, studied, modified and
 redistributed freely as long as they are not sold by themselves. The
-fonts, including any derivative works, can be bundled, embedded, 
+fonts, including any derivative works, can be bundled, embedded,
 redistributed and/or sold with any software provided that any reserved
 names are not used by derivative works. The fonts and derivatives,
 however, cannot be released under any other type of license. The
