@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jua&display=swap">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.4.3/dist/web/variable/pretendardvariable-dynamic-subset.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <!-- 뽑기 시간 원본과 같이 Hi Melody는 손글씨 소제목 두 곳(「아이가 물으면」 「프로젝터·TV로 볼 때」)에만. &text=로 그 글자만 받는다 -->
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hi+Melody&text=%EC%95%84%EC%9D%B4%EA%B0%80%EB%AC%BC%EC%9C%BC%EB%A9%B4%ED%94%84%EB%A1%9C%EC%A0%9D%ED%84%B0%C2%B7TV%EB%B3%BC%EB%95%8C&display=swap">
 <link rel="stylesheet" href="assets/site.css">
@@ -59,14 +59,15 @@
           <div class="cta">
             <a class="btn btn--primary pc-only" href="https://github.com/kkoma1212/ppobgi-site/releases/latest/download/ppobgi-sigan.exe" download><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></svg>무료로 받기</a>
             <a class="btn btn--primary phone-only" href="#download">무료로 받기</a>
+            <a class="btn btn--ghost" href="ppobgi-app/">웹에서 바로 열기</a>
             <a class="btn btn--ghost" href="#fair">공평한지 확인하기</a>
           </div>
           <p class="pc-note phone-only">Windows PC에서 받아 주세요. 받는 곳과 확인 방법은 아래 「받기」에 있어요.</p>
           <ul class="facts num">
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Windows 64비트</li>
             <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Windows 11에서 확인</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>약 358MB</li>
-            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>현재 버전 1.4.3</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>약 354MB</li>
+            <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>현재 버전 1.4.4</li>
           </ul>
           <a class="warn-link" href="#first-run">처음 실행할 때 Windows 안내 창이 나올 수 있어요. 여는 방법 보기 <span aria-hidden="true">→</span></a>
         </div>
@@ -109,7 +110,7 @@
           <h2 id="fair-title" class="h2">추첨 결과를 직접 세어 공개해요.</h2>
           <p class="lead">룰렛·캡슐·로또·승부수는 각 100만 번, 또르르는 36만 7,500판을 돌려 확인했어요.</p>
           <p class="body" style="margin-top:20px">앱의 추첨 코드를 그대로 돌려 번호마다(승부수는 칸마다) 뽑힌 횟수를 셌어요. 모두 「공평」으로 판정됐어요. <span class="nowrap">(2026년 9월 24일 검증)</span></p>
-          <p class="fair-src">외부 기관이 아닌 만든 사람이 직접 검증했어요. 자세한 수치는 보고서에 있어요.</p>
+          <p class="fair-src">외부 기관이 아닌 만든 사람이 직접 검증했어요. 아래 또르르 통계와 PDF는 2026년 9월 24일의 이전 엔진에 대한 결과예요. 1.4.4의 새 엔진은 별도 통계 검증 전이며, 이 결과를 그대로 적용하지 않아요.</p>
         </div>
         <figure style="margin:0">
           <div class="screen">
@@ -128,7 +129,7 @@
         </article>
         <article class="stat reveal" aria-labelledby="stat-b">
           <p id="stat-b" class="stat__n">36만 7,500<small>판</small></p>
-          <p class="stat__d">또르르 · 28명 · 실제 물리 경주</p>
+          <p class="stat__d">또르르 이전 엔진 · 28명 · 실제 물리 경주</p>
           <p class="verdict">판정: 「공평」</p>
           <p class="cond">※ 판마다 <strong>맵 4개 중 하나를 무작위로</strong> 골라, 막대기를 켠 채 <strong>아무도 건드리지 않은 경기</strong>에서 <strong>1등 당첨(기본값)</strong>만 잰 결과예요. 선생님이 막대기·기울이기·흔들기를 쓰면 결과가 달라질 수 있어요.</p>
         </article>
@@ -189,11 +190,11 @@
         <li class="card reveal" style="--m:var(--magnet-green)">
           <span class="magnet" aria-hidden="true"></span>
           <div class="screen">
-            <img src="assets/ppobgi/ddororeu-card-600.webp" srcset="assets/ppobgi/ddororeu-card-600.webp 600w, assets/ppobgi/ddororeu-card-895.webp 895w" sizes="(min-width:1024px) 360px, (min-width:600px) 50vw, 100vw" width="600" height="372" loading="lazy" alt="또르르 화면: 위에 맵·당첨 순위·「플리퍼 켜기」 설정, 가운데 칠판 경주판에서 출발을 기다리는 번호 공들과 미니맵, 아래에 왼쪽·오른쪽(막대기)·기울이기 A·기울이기 D·흔들기 S 버튼">
+            <img src="assets/ppobgi/ddororeu-self-engine-600.webp" srcset="assets/ppobgi/ddororeu-self-engine-600.webp 600w, assets/ppobgi/ddororeu-self-engine-895.webp 895w" sizes="(min-width:1024px) 360px, (min-width:600px) 50vw, 100vw" width="600" height="372" loading="lazy" alt="새 또르르 자 미끄럼틀의 실제 경주: 경사면과 나무 장애물을 따라 굴러가는 번호 공, 오른쪽의 전체 코스 미니맵">
           </div>
           <h3>또르르</h3>
-          <p>번호 공들이 긴 코스를 실제로 굴러 내려오는 경주예요. 맵은 네 가지(자 미끄럼틀 · 못밭과 풍차 · 깔때기 다섯 고개 · 물레방아 길)이고, 1등부터 꼴찌까지, 몇 번째로 도착한 공을 뽑을지 정할 수 있어요. 미니맵으로 코스를 살펴보고, 2배 빠르기로 빨리 볼 수도 있어요.</p>
-          <p class="aside">선생님이 막대기(← → · Z X), 기울이기(A · D), 흔들기(S)를 쓰면 결과가 달라질 수 있어요. 설정에서 막대기를 꺼도 기울이기와 흔들기는 그대로 남아요.</p>
+          <p>번호 공들이 긴 코스를 실제로 굴러 내려오는 경주예요. 새 자체 엔진의 맵은 네 가지(자 미끄럼틀 · 못밭과 풍차 · 깔때기 다섯 고개 · 물레방아 길)이고, 1등부터 꼴찌까지, 몇 번째로 도착한 공을 뽑을지 정할 수 있어요. 미니맵으로 코스를 살펴보고, 2배 빠르기로 빨리 볼 수도 있어요.</p>
+          <p class="aside">자 미끄럼틀·못밭과 풍차는 좌우 막대기(← → · Z X), 깔때기·물레방아는 자동 왕복 자를 써요. 모든 맵에 양쪽 스프링이 있어요. 기울이기(A · D)와 흔들기(S)를 포함한 조작은 결과에 영향을 줄 수 있어요. 설정에서 막대기를 꺼도 기울이기와 흔들기는 그대로 남아요.</p>
         </li>
         <li class="card reveal" style="--m:var(--magnet-sky)">
           <span class="magnet" aria-hidden="true"></span>
@@ -260,7 +261,7 @@
       </div>
       <div class="reveal">
         <p class="endline"><span class="magnet" style="--m:var(--magnet-sky)" aria-hidden="true"></span>발표 기록은 프로그램을 끄면 지워져요. 학생 기록이 남지 않도록 만들었어요.</p>
-        <p class="small times">한 번 뽑는 데 걸리는 시간: 캡슐은 손잡이를 돌리고 약 4초 뒤 열려요. 또르르는 1등 도착까지 평균 약 29초예요(검사에서 잰 게임 속 시간). 「2배 빠르기」로 빨리 볼 수도 있어요.</p>
+        <p class="small times">한 번 뽑는 데 걸리는 시간: 캡슐은 손잡이를 돌리고 약 4초 뒤 열려요. 또르르는 맵과 공의 움직임에 따라 도착 시간이 달라져요. 「2배 빠르기」로 빨리 볼 수도 있어요.</p>
       </div>
     </div>
   </section>
@@ -349,14 +350,14 @@
           <h2 id="dl-title" class="h2">파일 하나로 바로 써요</h2>
           <p class="lead">설치 없이 받은 파일을 두 번 눌러 열어요. 처음 열 때 Windows 경고가 뜨면 오른쪽 안내를 따라 주세요.</p>
           <a class="btn btn--magnet btn--lg" href="https://github.com/kkoma1212/ppobgi-site/releases/latest/download/ppobgi-sigan.exe" download><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M5 21h14"/></svg>무료로 받기</a>
-          <p class="spec num"><span class="nowrap">ppobgi-sigan.exe ·</span> <span class="nowrap">Windows 64비트 ·</span> <span class="nowrap">약 358MB ·</span> <span class="nowrap">현재 버전 1.4.3</span></p>
+          <p class="spec num"><span class="nowrap">ppobgi-sigan.exe ·</span> <span class="nowrap">Windows 64비트 ·</span> <span class="nowrap">약 354MB ·</span> <span class="nowrap">현재 버전 1.4.4</span></p>
           <p class="mobile-only">휴대폰에서는 쓸 수 없어요. Windows PC에서 받아 주세요.</p>
           <div class="trust">
             <h3>받은 파일이 맞는지 확인하는 법</h3>
             <ul>
               <li>이 페이지의 「무료로 받기」로 받은 파일만 열어 주세요. 다른 곳에서 받은 같은 이름의 파일은 열지 마세요.</li>
-              <li>파일 이름은 <code>ppobgi-sigan.exe</code>, 크기는 357,593,475바이트(약 358MB)예요.</li>
-              <li>파일 확인값(SHA-256): <code class="hash">03b2c4ee7228c11fe6f07647442892ac4be779c72f91e35146dd4b66b58e2ecf</code></li>
+              <li>파일 이름은 <code>ppobgi-sigan.exe</code>, 크기는 354,362,645바이트(약 354MB)예요.</li>
+              <li>파일 확인값(SHA-256): <code class="hash">debc01bcbab4ee94dcf4eec15b628f8a097c95431b1ef3dcde4f643516290183</code></li>
             </ul>
             <p class="maker">만든 사람: 이건윤<span class="maker__sep" aria-hidden="true"> · </span><a href="mailto:gunyoon0322@naver.com">gunyoon0322@naver.com</a></p>
           </div>
@@ -392,14 +393,14 @@
               <tr><th scope="row">운영체제</th><td>Windows 10 · 11 64비트 (Windows 11에서 확인)</td></tr>
               <tr><th scope="row">Windows 10</th><td>아직 확인하지 못했어요</td></tr>
               <tr><th scope="row">지원하지 않음</th><td>macOS · 태블릿 · 휴대폰</td></tr>
-              <tr><th scope="row">파일 크기</th><td>약 358MB, 파일 하나</td></tr>
+              <tr><th scope="row">파일 크기</th><td>약 354MB, 파일 하나</td></tr>
               <tr><th scope="row">메모리</th><td>4GB 이상 (권장 8GB)</td></tr>
               <tr><th scope="row">여유 공간</th><td>1.5GB 이상 (업데이트 포함)</td></tr>
               <tr><th scope="row">화면</th><td>1366×768 이상</td></tr>
               <tr><th scope="row">설치 · 계정</th><td>필요 없어요</td></tr>
               <tr><th scope="row">인터넷</th><td>없어도 뽑기는 모두 돼요 (업데이트 · 공지 · 유튜브 타이머 · 동의한 경우 사용 현황에만 사용)</td></tr>
               <tr><th scope="row">반 · 번호</th><td>반마다 1~40번, 빈 번호 지정 가능 (반 최대 30개)</td></tr>
-              <tr><th scope="row">현재 판</th><td>1.4.3</td></tr>
+              <tr><th scope="row">현재 판</th><td>1.4.4</td></tr>
               <tr><th scope="row">켜지는 시간</th><td>약 1.1초 (검사 PC 측정)</td></tr>
             </tbody>
           </table>
@@ -434,15 +435,15 @@
               </tbody>
             </table>
           </div>
-          <p>가장 무거운 것은 또르르(공 40개 경주)예요. 만든 사람의 PC(라이젠 7 9700X)에서 CPU를 10배 느리게 해도 1초에 60장면으로 부드러웠고, 16배부터 끊기기 시작했어요. 그래픽 가속을 끈 상태(그래픽이 약한 PC와 비슷한 조건)에서도 끊김 없이 돌았어요. 프로그램이 쓰는 메모리는 실제 화면(2560×1440)에서 약 0.6GB였어요. 켤 때마다 임시 폴더에 약 358MB를 풀고, 업데이트 때는 새 파일과 이전 파일을 함께 보관해서 여유 공간이 더 필요해요. Windows 7 · 8, 맥, 태블릿에서는 실행되지 않아요.</p>
+          <p>가장 무거운 것은 또르르(공 40개 경주)예요. 새 엔진은 만든 사람의 PC(라이젠 7 9700X, RAM 약 32GB)에서 네 맵·40공·1등/꼴찌 8조건을 숨김 창으로 검사했어요. 평균 약 60fps, 프레임 간격 p95 16.7~16.8ms였어요. 숨김 실행의 전체 프로세스 메모리 샘플은 약 0.7~1.8GiB였고, 실제 화면·GPU·저사양 PC는 아직 별도 확인이 필요해요. 켤 때마다 임시 폴더에 약 354MB를 풀고, 업데이트 때는 새 파일과 이전 파일을 함께 보관해서 여유 공간이 더 필요해요. Windows 7 · 8, 맥, 태블릿에서는 실행되지 않아요.</p>
         </details>
         <details><summary>실행할 때 Windows 안내 창이 나와요.</summary><p>코드 서명이 없어서 「Windows의 PC 보호」 경고가 뜰 수 있어요. 「추가 정보」를 누른 뒤 「실행」을 눌러 주세요. 학교 PC 설정에 따라 「실행」이 보이지 않으면 학교 전산 담당 선생님께 여쭤 주세요. 켜진 뒤 받는 업데이트 파일은 서명이 맞을 때만 적용해요.</p></details>
         <details><summary>학생 정보는 안전한가요?</summary><p>학생 이름을 넣는 칸이 없어요. 번호·결석·발표 기록은 어디로도 보내지 않고, 프로그램을 끄면 사라져요. 인터넷은 업데이트·공지 확인과 선생님이 고른 유튜브 타이머 화면, 그리고 선생님이 동의한 경우의 사용 현황(학교 이름·컴퓨터 모델명)에만 써요.</p></details>
         <details><summary>무엇을 모으나요?</summary><p>처음 켤 때 묻는 창에서 선생님이 동의한 경우에만 학교 이름, 컴퓨터 모델명, Windows·앱 버전, 보낸 날짜, 이 PC를 구분하는 임의 번호를 보내요. 학생 이름·번호와 뽑기 결과는 보내지 않아요. 마지막으로 보낸 날부터 1년 뒤 지우고, 설정 › 정보에서 동의를 취소하면 바로 지워요. 동의하지 않아도 모든 기능을 그대로 쓸 수 있어요. 자세한 내용은 <a href="ppobgi-privacy.html">개인정보 처리방침</a>에 있어요.</p></details>
         <details><summary>마지막 장면이 정해진 것처럼 보여요.</summary><p>룰렛·로또·캡슐은 당첨을 연출 전에 먼저 공평하게 정해요. 연출은 보는 재미일 뿐 확률을 바꾸지 않아요. 각 100만 번씩 돌려 본 검증 보고서도 공개해 두었어요.</p></details>
-        <details><summary>또르르에서 막대기를 쓰면 결과가 바뀌나요?</summary><p>네, 달라질 수 있어요. 또르르는 공이 실제로 도착한 순서로 정해지기 때문에, 막대기나 흔들기를 쓰면 결과가 달라질 수 있어요. 36만 7,500판 검증은 아무도 건드리지 않은 경기의 1등만 잰 결과예요. 막대기는 설정의 「또르르」 탭에서 끌 수 있지만, 기울이기(A · D)와 흔들기(S)는 그대로 남아요. 완전히 우연에 맡기고 싶은 날에는 룰렛이나 캡슐을 권해요.</p></details>
+        <details><summary>또르르에서 막대기를 쓰면 결과가 바뀌나요?</summary><p>네, 달라질 수 있어요. 또르르는 공이 실제로 도착한 순서로 정해지기 때문에, 막대기나 흔들기를 쓰면 결과가 달라질 수 있어요. 36만 7,500판 검증은 이전 엔진에서 아무도 건드리지 않은 경기의 1등만 잰 결과예요. 새 엔진의 통계 결과는 아직 확인하지 않았어요. 막대기는 설정의 「또르르」 탭에서 끌 수 있지만, 기울이기(A · D)와 흔들기(S)는 그대로 남아요. 완전히 우연에 맡기고 싶은 날에는 룰렛이나 캡슐을 권해요.</p></details>
         <details><summary>Windows 10이나 맥, 태블릿에서도 되나요?</summary><p>Windows 11에서 확인했어요. Windows 10(64비트)은 프로그램 바탕이 지원하지만 아직 직접 확인하지 못했어요. Windows 7 · 8, macOS·태블릿·휴대폰은 지원하지 않아요.</p></details>
-        <details><summary>파일이 358MB로 커요.</summary><p>빨리 켜지도록 압축하지 않은 파일이라 커요. 한 번 받아 두면 USB로 옮겨 쓸 수 있어요.</p></details>
+        <details><summary>파일이 354MB로 커요.</summary><p>빨리 켜지도록 압축하지 않은 파일이라 커요. 한 번 받아 두면 USB로 옮겨 쓸 수 있어요.</p></details>
         <details><summary>다른 선생님 PC와 반 설정이 섞이지 않나요?</summary><p>섞이지 않아요. 반 설정은 파일 옆 <code>data</code> 폴더에만 저장되고 어디로도 보내지 않아요. 다만 바탕화면이 OneDrive와 동기화되고 같은 계정으로 여러 PC를 쓰면, OneDrive가 <code>data</code> 폴더를 PC끼리 맞춰 줘요. 이럴 때는 파일을 OneDrive 밖 폴더(예: <code>C:뽑기시간</code>)나 USB에 두세요.</p></details>
         <details><summary>새로 받았더니 반을 다시 만들라고 나와요.</summary><p>반 설정은 프로그램 파일 바로 옆 <code>data</code> 폴더에 있어요. 새 파일을 다른 폴더(예: 다운로드)에서 켜면 옆에 <code>data</code>가 없어서 처음처럼 반 만들기부터 나와요. 예전에 쓰던 폴더의 <code>data</code> 폴더를 새 파일 옆으로 옮기거나, 새 파일을 예전 폴더에 넣고 옛 파일을 지워 주세요. 앱 안의 「업데이트」로 받으면 폴더가 그대로라 이런 일이 없어요.</p></details>
         <details><summary>발표 기록이 남지 않아서 아쉬워요.</summary><p>학생 기록을 남기지 않는 쪽을 일부러 골랐어요. 프로그램을 끄거나 업데이트 뒤 다시 시작하면 그날 기록은 지워져요.</p></details>
@@ -457,7 +458,7 @@
   <div class="wrap foot__grid">
     <div>
       <a class="brand" href="index.html" aria-label="우리반 허브 처음으로"><img src="assets/app-icon.png" width="34" height="34" alt=""><span>우리반 허브</span></a>
-      <p class="foot__sub"><img src="assets/ppobgi/app-mark.svg" width="22" height="22" alt="">뽑기 시간 1.4.3 · Windows 64비트용 무료 프로그램</p>
+      <p class="foot__sub"><img src="assets/ppobgi/app-mark.svg" width="22" height="22" alt="">뽑기 시간 1.4.4 · Windows 64비트용 무료 프로그램</p>
       <dl class="credits">
         <div><dt>만든 사람</dt><dd>이건윤</dd></div>
         <div><dt>문의</dt><dd><a href="mailto:gunyoon0322@naver.com">gunyoon0322@naver.com</a></dd></div>

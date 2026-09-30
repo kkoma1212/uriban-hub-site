@@ -1,7 +1,8 @@
-Course physics and course data format in this app are adapted from:
+Course data format in this app is adapted from:
 
   Marble Roulette by lazygyu  https://github.com/lazygyu/roulette  (commit 47230e32242e1c82030eacb4a263420fe95cedb6)
-  Adapted files: src/physics-box2d.ts, src/types/MapEntity.type.ts -> src/renderer/core/course-physics.ts, src/shared/course.ts
+  Adapted file: src/types/MapEntity.type.ts -> src/shared/course.ts
+  Physics was replaced by the app's self-engine on 2026-09-30; no original Box2D physics code is shipped.
 
 "Marble Roulette" and "마블 룰렛" are trademarks of lazygyu. This app is not Marble Roulette and is not affiliated with it.
 No maps, images, advertising, keyword or recording code from that project are included.
