@@ -69,10 +69,6 @@ h1,h2{font-weight:800;letter-spacing:-.035em}
 .has-js .show__tabs{grid-template-columns:repeat(5,1fr);max-width:780px}
 @media (max-width:599px){.has-js .show__tabs{grid-template-columns:repeat(3,1fr)}.show__tab{font-size:15px}}
 
-/* ── 비교 ── */
-.compare thead th.us{background:var(--board);color:var(--chalk)}
-.compare td.us{background:#eef4f0}
-@media (max-width:759px){.compare td.us::before{color:var(--student)}}
 
 /* ── 시작 순서·팁 ── */
 .steps li::before{background:var(--board);color:var(--chalk)}

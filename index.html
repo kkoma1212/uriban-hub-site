@@ -29,6 +29,7 @@
         <li><a href="#new">새 기능</a></li>
         <li><a href="#how">시작 방법</a></li>
         <li><a href="#features">기능</a></li>
+        <li><a href="#compare">비교</a></li>
         <li><a href="#pilot">이용 안내</a></li>
         <li><a href="#faq">자주 묻는 질문</a></li>
         <li class="menu__other"><a href="ppobgi">뽑기 시간 <small>함께 쓰는 도구</small></a></li>
@@ -239,27 +240,89 @@
     </div>
   </section>
 
-  <!-- 비교: 기능 수준의 사실만. 특정 서비스 이름·숫자 없음 -->
+  <!-- 비교: 서비스 실명 없이 '종류'로만 비교한다(2026-10-01 사용자 결정 — 실명은 기능 변경 시 틀린 말이 되고 비교광고 분쟁 위험).
+       우리반 허브 칸은 이 페이지의 다른 절에서 설명한 기능만 쓴다. 다른 종류는 단정하기 어려우면 '△ 서비스마다 달라요'로 둔다. -->
   <section id="compare" class="section section--paper" aria-labelledby="compare-title">
     <div class="wrap">
       <div class="head head--center reveal">
         <p class="eyebrow">비교</p>
-        <h2 id="compare-title" class="h2">단체 대화방과 이렇게 달라요.</h2>
+        <h2 id="compare-title" class="h2"><span class="nowrap">다른 학급 소통 방법과</span> <span class="nowrap">이렇게 달라요.</span></h2>
+        <p class="lead">단체 대화방, 알림장형 앱, 커뮤니티형 학급 앱과 나란히 놓고 봤어요. 우리반 허브는 <b>공지를 전하고 확인받는 일</b>에 집중해요.</p>
       </div>
-      <div class="reveal">
+
+      <ul class="edge reveal" aria-label="우리반 허브의 핵심 장점">
+        <li><span class="edge__no" aria-hidden="true">01</span><h3>누가 봤는지 이름으로</h3><p>확인한 학생과 아직 안 본 학생을 나눠 보여 줘요.</p></li>
+        <li><span class="edge__no" aria-hidden="true">02</span><h3>고친 글은 다시 확인</h3><p>'바뀜' 표시가 붙고, 이미 본 학생도 다시 확인해요.</p></li>
+        <li><span class="edge__no" aria-hidden="true">03</span><h3>전화번호 없이</h3><p>이메일로 가입하고, 선생님이 승인한 학생만 들어와요.</p></li>
+        <li><span class="edge__no" aria-hidden="true">04</span><h3>설치 없이 바로</h3><p>휴대폰·교실 PC 브라우저에서 주소만 열면 돼요.</p></li>
+      </ul>
+
+      <div class="compare-wrap reveal">
         <table class="compare">
-          <caption class="sr-only">단체 대화방 공지와 우리반 허브 비교</caption>
-          <thead><tr><th scope="col"><span class="sr-only">항목</span></th><th scope="col">단체 대화방</th><th scope="col" class="us"><img src="assets/app-icon.png" width="22" height="22" alt="">우리반 허브</th></tr></thead>
+          <caption class="sr-only">학급 소통 방법 종류별 비교. ○ 기본으로 돼요, △ 서비스나 설정마다 달라요, ✕ 어려워요.</caption>
+          <thead>
+            <tr>
+              <th scope="col"><span class="sr-only">항목</span></th>
+              <th scope="col">단체 대화방</th>
+              <th scope="col">알림장형 앱</th>
+              <th scope="col">커뮤니티형<br>학급 앱</th>
+              <th scope="col" class="us"><img src="assets/app-icon.png" width="22" height="22" alt="">우리반 허브</th>
+            </tr>
+          </thead>
           <tbody>
-            <tr><th scope="row">공지 위치</th><td data-label="단체 대화방">새 대화가 올라오면 찾기 어려워요.</td><td class="us" data-label="우리반 허브">아직 안 본 공지가 칠판에 남아 있어요.</td></tr>
-            <tr><th scope="row">누가 확인했는지</th><td data-label="단체 대화방">알기 어려워요.</td><td class="us" data-label="우리반 허브">확인한 학생과 아직 안 본 학생이 나뉘어 보여요.</td></tr>
-            <tr><th scope="row">내용을 고치면</th><td data-label="단체 대화방">다시 봤는지 알 수 없어요.</td><td class="us" data-label="우리반 허브">'바뀜' 표시가 붙고, 다시 확인한 학생 수를 보여 줘요.</td></tr>
-            <tr><th scope="row">안 본 학생 챙기기</th><td data-label="단체 대화방">한 명씩 찾아야 해요.</td><td class="us" data-label="우리반 허브">아직 안 본 학생에게만 다시 알려요.</td></tr>
-            <tr><th scope="row">질문·어려움</th><td data-label="단체 대화방">모두가 보는 대화방에 질문을 올려요.</td><td class="us" data-label="우리반 허브">담임 선생님과 1:1 도움 대화로 물어봐요.</td></tr>
-            <tr><th scope="row">연락처·대화</th><td data-label="단체 대화방">학생 모두가 같은 대화방에 있어요.</td><td class="us" data-label="우리반 허브">전화번호를 받지 않아요. 반 대화는 선생님이 열고 닫으며, 밤 10시~아침 7시에는 학생이 보낼 수 없어요.</td></tr>
+            <tr>
+              <th scope="row">공지가 대화에 묻히지 않아요</th>
+              <td data-label="단체 대화방"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td data-label="알림장형 앱"><span class="m m--yes" aria-hidden="true">○</span><span class="sr-only">기본으로 돼요</span></td>
+              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>아직 안 본 공지만 칠판에 남아요.</td>
+            </tr>
+            <tr>
+              <th scope="row">누가 확인했는지 학생별로</th>
+              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
+              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>확인한 학생·안 본 학생 명단을 보여 줘요.</td>
+            </tr>
+            <tr>
+              <th scope="row">고친 공지를 다시 확인받기</th>
+              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
+              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>'바뀜' 표시와 다시 확인한 학생 수를 보여 줘요.</td>
+            </tr>
+            <tr>
+              <th scope="row">안 본 학생에게만 다시 알리기</th>
+              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
+              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>확인하지 않은 학생에게만 알려요.</td>
+            </tr>
+            <tr>
+              <th scope="row">전화번호 없이 가입</th>
+              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
+              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>이메일로 가입해요.</td>
+            </tr>
+            <tr>
+              <th scope="row">다른 학생 모르게 선생님께 질문</th>
+              <td data-label="단체 대화방"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>담임 선생님과 1:1 도움 대화로 물어봐요.</td>
+            </tr>
+            <tr>
+              <th scope="row">밤에는 반 대화 쉬게 하기</th>
+              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
+              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
+              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>선생님이 열어야 쓰고, 밤 10시~아침 7시엔 학생이 보낼 수 없어요.</td>
+            </tr>
           </tbody>
         </table>
-        <p class="compare-note">우리반 허브의 중심은 공지를 전하고 확인하는 일이에요. 반 대화는 선생님이 관리하는 보조 기능이에요.</p>
+        <p class="compare-legend" aria-hidden="true"><span><b class="m m--yes">○</b>기본으로 돼요</span><span><b class="m m--some">△</b>서비스나 설정마다 달라요</span><span><b class="m m--no">✕</b>어려워요</span></p>
+        <p class="compare-note">종류별로 흔히 볼 수 있는 모습을 정리했어요. 특정 서비스를 가리키지 않으며, 서비스마다 실제 기능은 다를 수 있어요. 반 대화는 선생님이 관리하는 보조 기능이에요.</p>
       </div>
     </div>
   </section>
