@@ -1,0 +1,325 @@
+@media (min-width: 1600px) {
+  .hero h1 {
+    font-size: 55px;
+  }
+}
+@media (max-width: 1000px) {
+  .container {
+    width: calc(100% - 44px);
+  }
+  .hero {
+    gap: 28px;
+    padding-block: 55px;
+  }
+  .hero h1 {
+    font-size: 40px;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+  .hero-visual {
+    padding: 22px 17px;
+  }
+  .demo-content {
+    padding: 17px;
+  }
+  .hero-actions {
+    gap: 17px;
+  }
+  .hero-actions > .button {
+    font-size: 15px;
+    padding-inline: 18px;
+  }
+  .feature {
+    padding: 18px;
+  }
+  .feature h3 {
+    font-size: 22px;
+  }
+  .audience-grid {
+    gap: 35px;
+  }
+  .comparison-intro {
+    padding: 32px;
+  }
+  .difference-panel {
+    padding: 25px;
+  }
+  .difference-list > div {
+    grid-template-columns: 95px 1fr;
+    gap: 12px;
+  }
+  .faq-section {
+    gap: 35px;
+  }
+  .final-cta {
+    padding: 40px;
+  }
+  .cta-wordmark {
+    font-size: 75px;
+  }
+}
+@media (max-width: 760px) {
+  .container {
+    width: calc(100% - 36px);
+  }
+  .header-inner {
+    min-height: 70px;
+    gap: 10px;
+  }
+  .hub-brand {
+    font-size: 14px;
+  }
+  .product-nav {
+    gap: 14px;
+    font-size: 12px;
+  }
+  .product-nav a:not([aria-current]) {
+    display: none;
+  }
+  .new-dot {
+    display: none;
+  }
+  .button-small {
+    font-size: 12px;
+    padding: 9px 12px;
+    min-height: 39px;
+    gap: 8px;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    padding-block: 40px 45px;
+    gap: 32px;
+  }
+  .brand-lockup {
+    margin-bottom: 21px;
+  }
+  .brand-lockup > span {
+    font-size: 11px;
+  }
+  .hero h1 {
+    font-size: clamp(32px, 6.4vw, 44px);
+    letter-spacing: -0.06em;
+  }
+  .hero-description {
+    font-size: 16px;
+  }
+  .hero .eyebrow {
+    font-size: 11px;
+  }
+  .hero-actions > .button {
+    font-size: 15px;
+    padding: 15px 20px;
+    gap: 21px;
+  }
+  .hero-actions .text-link {
+    font-size: 12px;
+    gap: 6px;
+  }
+  .hero-facts {
+    font-size: 11px;
+    gap: 10px;
+  }
+  .hero-visual {
+    max-width: 540px;
+    width: 100%;
+    margin: auto;
+    padding: 24px;
+  }
+  .demo-content {
+    padding: 21px;
+  }
+  .demo-heading h2 {
+    font-size: 14px;
+  }
+  .word-card > strong {
+    font-size: 39px;
+  }
+  .principle-band > .container {
+    display: block;
+    padding-block: 20px;
+  }
+  .principle-band p {
+    font-size: 18px;
+  }
+  .principle-band > .container > span {
+    display: block;
+    font-size: 11px;
+    margin-top: 9px;
+  }
+  .section {
+    padding-block: 58px;
+  }
+  .section-heading h2,
+  .audience-grid h2,
+  .faq-section h2 {
+    font-size: 30px;
+  }
+  .section-heading > p:last-child,
+  .section-description {
+    font-size: 14px;
+  }
+  .eyebrow {
+    font-size: 11px;
+    margin-bottom: 16px;
+  }
+  .feature-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .feature {
+    padding: 23px;
+  }
+  .feature-art {
+    min-height: 135px;
+    max-width: 430px;
+  }
+  .feature h3 {
+    font-size: 24px;
+  }
+  .feature h3 br {
+    display: none;
+  }
+  .feature p {
+    font-size: 14px;
+  }
+  .feature-label {
+    font-size: 11px;
+  }
+  .audience-section {
+    padding-block: 50px;
+  }
+  .audience-grid {
+    grid-template-columns: 1fr;
+    gap: 27px;
+  }
+  .audience-tabs {
+    margin-top: 5px;
+  }
+  .audience-panel {
+    padding: 25px;
+  }
+  .audience-panel h3 {
+    font-size: 24px;
+  }
+  .how-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  .how-grid h3 {
+    font-size: 17px;
+  }
+  .how-grid p {
+    font-size: 12px;
+  }
+  .comparison {
+    grid-template-columns: 1fr;
+    border-radius: 18px;
+  }
+  .comparison-intro {
+    padding: 28px;
+  }
+  .comparison h2 {
+    font-size: 29px;
+  }
+  .comparison-signature {
+    display: none;
+  }
+  .difference-panel {
+    padding: 24px;
+  }
+  .difference-list > div {
+    grid-template-columns: 85px 1fr;
+    gap: 14px;
+    padding-block: 22px;
+  }
+  .difference-list dt {
+    font-size: 11px;
+  }
+  .difference-list dd strong {
+    font-size: 15px;
+  }
+  .difference-list dd p {
+    font-size: 12px;
+  }
+  .faq-section {
+    grid-template-columns: 1fr;
+    gap: 17px;
+  }
+  .faq-section h2 br {
+    display: none;
+  }
+  .faq-list summary {
+    font-size: 15px;
+    padding-block: 20px;
+    gap: 16px;
+  }
+  .faq-list details p {
+    font-size: 13px;
+    margin-right: 12px;
+  }
+  .final-cta {
+    display: block;
+    padding: 30px;
+    border-radius: 18px;
+    margin-bottom: 45px;
+  }
+  .cta-wordmark {
+    font-size: 55px;
+    margin-bottom: 24px;
+    letter-spacing: -0.06em;
+  }
+  .cta-wordmark span {
+    font-size: 39px;
+  }
+  .final-copy h2 {
+    font-size: 29px;
+  }
+  .final-copy p:not(.eyebrow) {
+    font-size: 14px;
+  }
+  .final-copy .button {
+    width: 100%;
+    font-size: 15px;
+  }
+  .site-footer {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding-block: 29px;
+  }
+  .site-footer nav {
+    justify-content: flex-start;
+    gap: 12px;
+    font-size: 11px;
+  }
+  .copyright {
+    grid-column: 1;
+  }
+  .entry-card {
+    padding: 30px;
+  }
+  .entry-card h1 {
+    font-size: 31px;
+  }
+  .entry-card > p:not(.eyebrow) {
+    font-size: 14px;
+  }
+  .legal-page h1 {
+    font-size: 29px;
+  }
+  .legal-page h2 {
+    font-size: 20px;
+  }
+  .legal-page p,
+  .legal-page li {
+    font-size: 14px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
