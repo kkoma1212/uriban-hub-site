@@ -48,7 +48,8 @@
 .worry li{position:relative;background:var(--paper);border-radius:var(--r);padding:30px 24px 24px;box-shadow:var(--shadow-card),0 0 0 1px var(--line)}
 .worry li::before{content:"";position:absolute;top:-11px;left:24px;width:24px;height:24px;border-radius:50%;background:var(--m);box-shadow:2px 4px 0 #20201d33,inset 4px 5px 0 #ffffff55,inset -4px -6px 0 #0003}
 .worry h3{font-size:20px}
-.worry h3 small{display:block;font-size:13px;font-weight:700;color:var(--m);letter-spacing:.02em;margin-bottom:4px}
+/* 작은 문구는 본문 보조색으로 읽히게(자석 노랑은 대비 1.59:1). 자석 색은 위 동그라미에만 쓴다. */
+.worry h3 small{display:block;font-size:13px;font-weight:700;color:var(--muted);letter-spacing:.02em;margin-bottom:4px}
 .worry p{margin-top:8px;color:var(--muted);font-size:16px}
 @media (min-width:760px){.worry ul{grid-template-columns:repeat(3,1fr)}.worry li:nth-child(2){transform:translateY(10px)}}
 

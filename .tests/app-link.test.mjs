@@ -51,7 +51,11 @@ test("public copy and entry paths agree with approval requirements", () => {
   assert.match(index, /교사 기능은.*운영자 승인/u);
   assert.match(start, /교사 기능은.*운영자 승인/u);
   assert.match(index, /개인정보 대신 예시 정보/u);
-  assert.equal((index.match(/href="start.html" data-app-entry/g) ?? []).length, 4);
+  assert.equal((index.match(/href="start.html" data-app-entry>/g) ?? []).length, 4);
+  // 개인정보처리방침·이용약관 링크는 같은 최신 앱 주소의 /legal/ 화면으로만 연다.
+  const legal = [...index.matchAll(/data-app-entry data-app-entry-path="([^"]+)"/g)].map((value) => value[1]);
+  assert.ok(legal.length >= 2);
+  for (const path of legal) assert.match(path, /^\/legal\/(privacy-policy|terms)$/u);
   const ids = new Set([...index.matchAll(/\bid="([^"]+)"/g)].map((value) => value[1]));
   for (const [, target] of index.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(target), target);
 });

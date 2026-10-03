@@ -54,7 +54,12 @@ if (typeof document !== "undefined") {
       opening = true;
       link.setAttribute("aria-busy", "true");
       openApp({
-        navigate: (url) => window.location.assign(url), report,
+        // 약관·개인정보처리방침 링크는 같은 최신 앱 주소의 /legal/ 화면으로 연다.
+        navigate: (url) => {
+          const path = link.dataset.appEntryPath;
+          window.location.assign(path && path.startsWith("/legal/") ? new URL(path, url).href : url);
+        },
+        report,
         finish: () => { opening = false; link.removeAttribute("aria-busy"); },
       });
     });

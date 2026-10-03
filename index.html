@@ -6,9 +6,18 @@
 <title>우리반 허브 — 공지를 누가 확인했는지 바로 보여요</title>
 <meta name="description" content="공지·숙제·준비물·일정을 우리반 칠판 한곳에 올리는 학급 안내 앱이에요. 학생은 아직 안 본 것부터 보고, 선생님은 누가 확인했는지 바로 봐요. 개발 중인 앱의 접속 주소와 체험 방법을 안내해요.">
 <meta name="theme-color" content="#f6f4f0">
+<link rel="canonical" href="https://kkoma1212.github.io/uriban-hub-site/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ko_KR">
+<meta property="og:site_name" content="우리반 허브">
+<meta property="og:url" content="https://kkoma1212.github.io/uriban-hub-site/">
+<meta property="og:title" content="우리반 허브 — 공지를 누가 확인했는지 바로 보여요">
+<meta property="og:description" content="공지·숙제·준비물·일정을 우리반 칠판 한곳에 올리는 학급 안내 앱이에요. 개발 중인 앱의 접속 주소와 체험 방법을 안내해요.">
+<meta property="og:image" content="https://kkoma1212.github.io/uriban-hub-site/assets/og/uriban-hub.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="assets/app-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css">
 <script>document.documentElement.classList.add("has-js")</script>
 <link rel="stylesheet" href="assets/site.css">
@@ -80,8 +89,8 @@
       <h2 id="worry-title" class="sr-only">단체 대화방 공지에서 생기는 걱정</h2>
       <ul>
         <li class="reveal" style="--m:var(--board)">
-          <h3><small>대화가 많으면 공지를 찾기 어려워요</small>칠판에 아직 안 본 것만 남아요</h3>
-          <p>학생 홈의 우리반 칠판에는 각자 아직 안 본 공지와 챙길 것이 올라와요.</p>
+          <h3><small>대화가 많으면 공지를 찾기 어려워요</small>칠판에 꼭 볼 것만 올라와요</h3>
+          <p>학생 홈의 우리반 칠판에는 바뀐 공지·중요 공지·챙길 준비물 중 꼭 볼 것 3가지가 올라와요. 나머지 새 소식은 바로 아래 소식 목록에서 봐요.</p>
         </li>
         <li class="reveal" style="--m:var(--magnet-yellow)">
           <h3><small>공지 내용이 바뀌었어요</small>고친 글은 다시 확인받아요</h3>
@@ -241,8 +250,7 @@
     </div>
   </section>
 
-  <!-- 비교: 서비스 실명 없이 '종류'로만 비교한다(2026-10-01 사용자 결정 — 실명은 기능 변경 시 틀린 말이 되고 비교광고 분쟁 위험).
-       우리반 허브 칸은 이 페이지의 다른 절에서 설명한 기능만 쓴다. 다른 종류는 단정하기 어려우면 '△ 서비스마다 달라요'로 둔다. -->
+  <!-- 비교 -->
   <section id="compare" class="section section--paper" aria-labelledby="compare-title">
     <div class="wrap">
       <div class="head head--center reveal">
@@ -503,8 +511,8 @@
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><div><h3>선생님이 승인해야 들어와요</h3><p>코드를 알아도 승인 전에는 반 자료를 볼 수 없어요.</p></div></li>
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/><path d="M4 4l16 16"/></svg></span><div><h3>전화번호를 받지 않아요</h3><p>이메일로 가입하고, 승인 화면에서도 이메일 일부는 가려져요. 반 대화에서 문제가 되는 말은 선생님께 신고할 수 있어요.</p></div></li>
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><h3>도움 대화는 선생님만 봐요</h3><p>학생이 보낸 질문과 답장은 그 학생과 담임 선생님만 볼 수 있어요.</p></div></li>
-        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><div><h3>만 14세 이상만 참여해요</h3><p>공개 체험은 만 14세 이상, 학생은 중학교 3학년 이상을 대상으로 해요.</p></div></li>
-        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><div><h3>개인정보 안내도 개발 중이에요</h3><p>앱의 개인정보 안내는 개발본이에요. 실제 학급 운영에 앞서 확정·게시할 예정이며, 지금은 예시 정보로 체험해 주세요.</p></div></li>
+        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><div><h3>만 14세 이상만 참여해요</h3><p>공개 체험은 만 14세 이상, 학생은 중학교 3학년 이상을 대상으로 해요. 생년월일과 프로필 사진은 원할 때만 입력해요.</p></div></li>
+        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><div><h3>개인정보 안내도 개발 중이에요</h3><p>앱의 <a href="start.html" data-app-entry data-app-entry-path="/legal/privacy-policy">개인정보처리방침</a>은 개발본이에요. 실제 학급 운영에 앞서 확정·게시할 예정이며, 지금은 예시 정보로 체험해 주세요.</p></div></li>
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15"/></svg></span><div><h3>계정은 직접 삭제할 수 있어요</h3><p>설정에서 계정 삭제를 요청할 수 있어요. 실제 학생의 자료를 보관하는 용도로는 아직 사용하지 마세요.</p></div></li>
       </ul>
       <aside class="honest reveal" aria-labelledby="honest-title">
@@ -561,15 +569,16 @@
         <details><summary>앱이 열리지 않으면 어떻게 하나요?</summary><p>점검·재시작 중에는 잠시 접속이 끊길 수 있어요. 예전에 저장한 앱 주소 대신 이 소개 페이지의 앱 열기 버튼으로 다시 시도해 주세요. 새 주소가 반영되기까지 몇 분 걸릴 수 있어요. 계속 열리지 않으면 메일로 알려 주세요.</p></details>
         <h3>쓰는 방법</h3>
         <details><summary>단체 대화방과 무엇이 다른가요?</summary><p>대화방에서는 누가 봤는지, 고친 내용을 다시 봤는지 알기 어려워요. 우리반 허브는 확인한 학생과 아직 안 본 학생을 보여 주고, 글을 고치면 '바뀜' 표시와 함께 다시 확인받아요.</p></details>
-        <details><summary>우리반 칠판에는 무엇이 올라오나요?</summary><p>학생마다 아직 안 본 공지와 챙길 준비물·숙제가 올라와요. 바뀐 글은 노란 밑줄로 보여요. 선생님 칠판에는 반에 알린 중요한 글이 보이고, '칠판에 쓰기'로 바로 글을 올려요.</p></details>
+        <details><summary>우리반 칠판에는 무엇이 올라오나요?</summary><p>바뀐 공지, 아직 확인하지 않은 중요 공지, 아직 안 챙긴 준비물·숙제 순서로 꼭 볼 것 3가지가 올라와요. 나머지 새 소식은 바로 아래 소식 목록에서 봐요. 바뀐 글은 노란 밑줄로 보여요. 선생님 칠판에는 반에 알린 중요한 글이 보이고, '칠판에 쓰기'로 바로 글을 올려요.</p></details>
         <details><summary>지난 글을 다시 쓸 수 있나요?</summary><p>네. 소식 쓰기에서 '지난 글 불러오기'로 예전 글을 불러와 고쳐서 올리면 돼요.</p></details>
         <details><summary>일정이 바뀌면 공지를 하나하나 고쳐야 하나요?</summary><p>아니요. 일정을 고치면 연결되어 있던 공지·준비물을 한 화면에 모아 줘요. '변경'이나 '유지'만 고르면 한꺼번에 반영돼요.</p></details>
         <details><summary>안 본 학생에게 다시 알릴 수 있나요?</summary><p>네. 아직 안 본 학생에게만 앱 안에서 다시 알려요. 학생마다 무엇이 남았는지는 '학생별 미해결 모아보기'에서 한 번에 볼 수 있어요.</p></details>
         <details><summary>도움 대화는 누가 볼 수 있나요?</summary><p>질문한 학생과 담임 선생님만 볼 수 있어요. 학생은 '선생님께 물어보기'나 공지 아래 '질문'으로 대화를 시작해요. 반 전체가 함께 쓰는 반 대화는 따로 있고, 선생님이 열고 닫아요.</p></details>
-        <details><summary>반 투표에서 누가 무엇을 골랐는지 보이나요?</summary><p>투표를 만들 때 정해요. 담임 선생님만 학생별 선택을 볼 수 있게 하거나, 아무도 볼 수 없는 비밀투표로 할 수 있어요. 결과를 투표 뒤 바로 보여 줄지, 마감 뒤에 보여 줄지도 정해요.</p></details>
+        <details><summary>반 투표에서 누가 무엇을 골랐는지 보이나요?</summary><p>투표를 만들 때 정해요. 담임 선생님만 학생별 선택을 볼 수 있게 하거나, 앱에서는 선생님도 학생별 선택을 볼 수 없는 비공개 투표로 할 수 있어요. 비공개 투표는 마감 뒤에 결과가 보여요. 학생에게 결과를 투표 뒤 바로 보여 줄지, 마감 뒤에 보여 줄지, 선생님만 볼지도 정해요.</p></details>
         <details><summary>밤에도 알림이 오나요?</summary><p>수업 시간과 밤에는 알림을 바로 보내지 않고, 나중에 모아서 보내요. 같은 공지에 대한 알림은 하나로 합쳐서 보내요.</p></details>
         <h3>개인정보와 안전</h3>
         <details><summary>학생 전화번호가 필요한가요?</summary><p>아니요. 이메일로 가입해요. 전화번호는 받지 않아요.</p></details>
+        <details><summary>생년월일이나 사진도 받나요?</summary><p>둘 다 원할 때만이에요. 생년월일을 입력하면 만 14세 확인과 담임 선생님의 학생 확인에 쓰고, 생일 알림은 본인이 켤 때만 보내요. 한 번 입력하면 직접 고칠 수 없고 운영자에게 요청해요. 프로필 사진은 같은 반의 승인된 구성원과 선생님에게 보여요.</p></details>
         <details><summary>학부모도 볼 수 있나요?</summary><p>아직은 아니에요. 지금은 선생님·학생 화면만 있어요.</p></details>
         <details><summary>학년이 끝나면 자료는 어떻게 되나요?</summary><p>반 운영을 끝내거나 설정에서 계정 삭제를 요청할 수 있어요. 지금은 개발 중인 공개 체험 단계이므로 실제 학생 자료는 입력하지 마세요. 학급 자료 내보내기 기능은 제공하지 않아요.</p></details>
       </div>
@@ -644,6 +653,8 @@
         <li><a href="ppobgi">뽑기 시간</a></li>
         <li><a href="lexi/">LEXI</a></li>
         <li><a href="#faq">자주 묻는 질문</a></li>
+        <li><a href="start.html" data-app-entry data-app-entry-path="/legal/privacy-policy">개인정보처리방침(개발본)</a></li>
+        <li><a href="start.html" data-app-entry data-app-entry-path="/legal/terms">이용약관(개발본)</a></li>
       </ul>
     </nav>
   </div>
