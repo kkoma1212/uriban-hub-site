@@ -134,19 +134,21 @@ export async function initPromotion(root) {
       viewer.querySelector(".promotion-controls").append(button);
     }
     container.append(viewer);
-    viewers.push(viewer);
+    const controls = viewer.querySelector('.promotion-controls');
+    if (!expanded) root.querySelector('[data-deck-controls]').append(controls);
+    viewers.push({ viewer, controls });
   }
   function go(next) {
     index = Math.max(0, Math.min(slides.length - 1, next));
-    for (const viewer of viewers) {
+    for (const { viewer, controls } of viewers) {
       const image = viewer.querySelector("img");
       image.hidden = false;
       viewer.querySelector("[role=status]").hidden = true;
       image.alt = slides[index].alt;
       image.src = slides[index].url;
-      viewer.querySelector(".promotion-counter").textContent = `${index + 1} / ${slides.length}`;
-      viewer.querySelector("[data-prev]").disabled = index === 0;
-      viewer.querySelector("[data-next]").disabled = index === slides.length - 1;
+      controls.querySelector(".promotion-counter").textContent = `${index + 1} / ${slides.length}`;
+      controls.querySelector("[data-prev]").disabled = index === 0;
+      controls.querySelector("[data-next]").disabled = index === slides.length - 1;
     }
   }
   makeViewer(root.querySelector("[data-deck-viewer]"));
