@@ -2,9 +2,24 @@
   "videoUrl": "https://youtube.com/shorts/5HYiKFGdEtM",
   "videoFile": "assets/promotion/uriban_hub_shorts_55s.mp4",
   "presentation": {
-    "title": "우리반 허브 소개 자료",
-    "slides": [],
+    "title": "우리반 허브 소개",
+    "slides": [
+      "assets/presentation/slide-01.png",
+      "assets/presentation/slide-02.png",
+      "assets/presentation/slide-03.png",
+      "assets/presentation/slide-04.png",
+      "assets/presentation/slide-05.png",
+      "assets/presentation/slide-06.png",
+      "assets/presentation/slide-07.png",
+      "assets/presentation/slide-08.png",
+      "assets/presentation/slide-09.png",
+      "assets/presentation/slide-10.png",
+      "assets/presentation/slide-11.png",
+      "assets/presentation/slide-12.png",
+      "assets/presentation/slide-13.png",
+      "assets/presentation/slide-14.png"
+    ],
     "pdfUrl": "",
-    "pptxUrl": ""
+    "pptxUrl": "assets/presentation/uriban-hub-introduction.pptx"
   }
 }
