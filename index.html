@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="assets/home.css">
 <link rel="stylesheet" href="assets/entry.css">
 <link rel="stylesheet" href="assets/brand.css">
+<link rel="stylesheet" href="assets/promotion.css">
 </head>
 <body>
 <a class="skip" href="#main">본문으로 건너뛰기</a>
@@ -59,7 +60,7 @@
         <p class="lead">공지·숙제·준비물·일정을 우리반 칠판 한곳에 올려요. 학생은 아직 안 본 것부터 보고, 선생님은 확인하지 않은 학생에게만 다시 알려요.</p>
         <div class="cta">
           <a class="btn btn--primary" href="start.html" data-app-entry>우리반 허브 열기</a>
-          <a class="btn btn--ghost" href="#day">하루 예시 보기</a>
+          <a class="btn btn--ghost" href="#promotion">영상·소개 자료 보기</a>
         </div>
         <p class="entry-note">개발 중인 앱을 열어 보세요. 교사 기능은 운영자 승인 후 사용할 수 있어요. 실제 학생 개인정보 대신 예시 정보로 체험해 주세요. <a href="#pilot">이용 안내</a></p>
         <ul class="facts">
@@ -84,6 +85,35 @@
   </section>
 
   <!-- 걱정 해소 띠 -->
+  <section id="promotion" class="section section--paper" aria-labelledby="promotion-title" data-promotion>
+    <div class="wrap">
+      <div class="head">
+        <p class="eyebrow">영상·소개 자료</p>
+        <h2 id="promotion-title" class="h2">우리반 허브를 만나 보세요.</h2>
+        <p class="lead">짧은 영상과 소개 자료로 우리반 허브의 모습을 살펴보세요.</p>
+      </div>
+      <div class="promotion-grid">
+        <article class="promotion-card">
+          <h3>홍보 영상</h3>
+          <p>우리반 허브를 짧은 영상으로 소개해요.</p>
+          <div class="promotion-empty" data-video-status><strong>영상 준비 중</strong><span>곧 이곳에서 바로 볼 수 있어요.</span></div>
+          <div class="promotion-actions"><a class="btn btn--ghost" data-video-link target="_blank" rel="noopener noreferrer" hidden>유튜브에서 보기</a></div>
+        </article>
+        <article class="promotion-card">
+          <h3 data-deck-title>우리반 허브 소개 자료</h3>
+          <p>자료를 넘기며 기능과 사용 방법을 살펴보세요.</p>
+          <div class="promotion-empty" data-deck-status><strong>소개 자료 준비 중</strong><span>완성되면 별도 앱 없이 볼 수 있어요.</span></div>
+          <div data-deck-viewer></div>
+          <div class="promotion-actions">
+            <a class="btn btn--ghost" data-pdf-link target="_blank" rel="noopener noreferrer" hidden>PDF 보기·저장</a>
+            <a class="btn btn--ghost" data-pptx-link download hidden>PPT 원본 받기</a>
+          </div>
+        </article>
+      </div>
+      <noscript><p>영상과 소개 자료를 보려면 브라우저의 JavaScript를 켜 주세요.</p></noscript>
+    </div>
+  </section>
+
   <section class="worry" aria-labelledby="worry-title">
     <div class="wrap">
       <h2 id="worry-title" class="sr-only">단체 대화방 공지에서 생기는 걱정</h2>
@@ -663,5 +693,6 @@
 <div class="entry-status-banner" role="status" aria-live="polite" data-app-link-status></div>
 <script src="assets/site.js"></script>
 <script type="module" src="assets/app-link.mjs"></script>
+<script type="module" src="assets/promotion.mjs"></script>
 </body>
 </html>
