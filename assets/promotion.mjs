@@ -37,8 +37,23 @@ export async function initPromotion(root) {
     for (const status of [videoStatus, deckStatus]) status.textContent = "자료를 불러오지 못했어요. 잠시 후 페이지를 새로고침해 주세요.";
     return;
   }
+  const base = new URL("../", import.meta.url).href;
   const id = youtubeVideoId(config.videoUrl);
-  if (id) {
+  const videoFile = mediaUrl(config.videoFile, base);
+  if (videoFile) {
+    const player = doc.createElement("video");
+    player.className = "promotion-video";
+    player.setAttribute("aria-label", "우리반 허브 홍보 영상");
+    player.controls = true;
+    player.playsInline = true;
+    player.preload = "metadata";
+    player.src = videoFile;
+    player.addEventListener("error", () => {
+      videoStatus.textContent = "영상을 불러오지 못했어요. 아래 유튜브에서 보기 버튼으로 열어 주세요.";
+      player.replaceWith(videoStatus);
+    }, { once: true });
+    videoStatus.replaceWith(player);
+  } else if (id) {
     const player = doc.createElement("iframe");
     player.className = "promotion-video";
     player.title = "우리반 허브 홍보 영상";
@@ -48,14 +63,15 @@ export async function initPromotion(root) {
     player.allowFullscreen = true;
     player.referrerPolicy = "strict-origin-when-cross-origin";
     videoStatus.replaceWith(player);
-    const link = root.querySelector("[data-video-link]");
-    link.href = `https://www.youtube.com/shorts/${id}`;
-    link.hidden = false;
   } else if (config.videoUrl) {
     videoStatus.textContent = "영상 주소를 확인하고 있어요. 곧 다시 안내할게요.";
   }
+  if (id) {
+    const link = root.querySelector("[data-video-link]");
+    link.href = `https://www.youtube.com/shorts/${id}`;
+    link.hidden = false;
+  }
   const presentation = config.presentation ?? {};
-  const base = new URL("../", import.meta.url).href;
   if (typeof presentation.title === "string" && presentation.title.trim()) root.querySelector("[data-deck-title]").textContent = presentation.title;
   const pdf = mediaUrl(presentation.pdfUrl, base);
   const pptx = mediaUrl(presentation.pptxUrl, base);
