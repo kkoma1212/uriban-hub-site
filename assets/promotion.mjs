@@ -54,15 +54,27 @@ export async function initPromotion(root) {
     }, { once: true });
     videoStatus.replaceWith(player);
   } else if (id) {
-    const player = doc.createElement("iframe");
-    player.className = "promotion-video";
-    player.title = "우리반 허브 홍보 영상";
-    player.src = `https://www.youtube-nocookie.com/embed/${id}`;
-    player.loading = "lazy";
-    player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    player.allowFullscreen = true;
-    player.referrerPolicy = "strict-origin-when-cross-origin";
-    videoStatus.replaceWith(player);
+    const choice = doc.createElement("div");
+    choice.className = "promotion-empty";
+    const explanation = doc.createElement("p");
+    explanation.textContent = "버튼을 누르면 YouTube에 연결해 영상을 불러와요.";
+    const button = doc.createElement("button");
+    button.type = "button";
+    button.className = "btn btn--ghost";
+    button.textContent = "YouTube 영상 보기";
+    choice.append(explanation, button);
+    videoStatus.replaceWith(choice);
+    button.addEventListener("click", () => {
+      const player = doc.createElement("iframe");
+      player.className = "promotion-video";
+      player.title = "우리반 허브 홍보 영상";
+      player.src = `https://www.youtube-nocookie.com/embed/${id}`;
+      player.loading = "lazy";
+      player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      player.allowFullscreen = true;
+      player.referrerPolicy = "strict-origin-when-cross-origin";
+      choice.replaceWith(player);
+    }, { once: true });
   } else if (config.videoUrl) {
     videoStatus.textContent = "영상 주소를 확인하고 있어요. 곧 다시 안내할게요.";
   }
