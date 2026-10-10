@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>우리반 허브 — 공지를 누가 확인했는지 바로 보여요</title>
-<meta name="description" content="공지·숙제·준비물·일정을 우리반 칠판 한곳에 올리는 학급 안내 앱이에요. 학생은 아직 안 본 것부터 보고, 선생님은 누가 확인했는지 바로 봐요. 개발 중인 앱의 접속 주소와 체험 방법을 안내해요.">
+<meta name="description" content="공지·숙제·준비물·일정을 우리반 칠판 한곳에 올리는 학급 안내 앱이에요. 학생은 확인이 남은 안내부터 보고, 선생님은 확인 버튼 기록을 학생별로 봐요. 현재 접속 안내와 운영 준비 상태를 확인할 수 있어요.">
 <meta name="theme-color" content="#f6f4f0">
 <link rel="canonical" href="https://kkoma1212.github.io/uriban-hub-site/">
 <meta property="og:type" content="website">
@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="우리반 허브">
 <meta property="og:url" content="https://kkoma1212.github.io/uriban-hub-site/">
 <meta property="og:title" content="우리반 허브 — 공지를 누가 확인했는지 바로 보여요">
-<meta property="og:description" content="공지·숙제·준비물·일정을 우리반 칠판 한곳에 올리는 학급 안내 앱이에요. 개발 중인 앱의 접속 주소와 체험 방법을 안내해요.">
+<meta property="og:description" content="공지·숙제·준비물·일정을 우리반 칠판 한곳에 올리는 학급 안내 앱이에요. 현재 접속 안내와 운영 준비 상태를 확인할 수 있어요.">
 <meta property="og:image" content="https://kkoma1212.github.io/uriban-hub-site/assets/og/uriban-hub.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -39,7 +39,7 @@
         <li><a href="#new">새 기능</a></li>
         <li><a href="#how">시작 방법</a></li>
         <li><a href="#features">기능</a></li>
-        <li><a href="#compare">비교</a></li>
+        <li><a href="#compare">확인 흐름</a></li>
         <li><a href="#pilot">이용 안내</a></li>
         <li><a href="#faq">자주 묻는 질문</a></li>
         <li class="menu__other"><a href="ppobgi">뽑기 시간 <small>함께 쓰는 도구</small></a></li>
@@ -55,14 +55,14 @@
   <section id="top" class="hero" aria-labelledby="hero-title">
     <div class="wrap hero__grid">
       <div>
-        <p class="pill"><b>공개 체험</b>개발 중인 학급 안내 앱</p>
+        <p class="pill"><b>운영 준비 중</b>개발 중인 학급 안내 앱</p>
         <h1 id="hero-title"><span>공지를 올리면</span> <span><em>누가 확인했는지</em> 바로 보여요.</span></h1>
-        <p class="lead">공지·숙제·준비물·일정을 우리반 칠판 한곳에 올려요. 학생은 아직 안 본 것부터 보고, 선생님은 확인하지 않은 학생에게만 다시 알려요.</p>
+        <p class="lead">공지·숙제·준비물·일정을 우리반 칠판 한곳에 올려요. 학생은 확인이 남은 안내부터 보고, 선생님은 확인 버튼을 누르지 않았거나 수정본 재확인이 남은 학생에게 앱 안에서 다시 알려요.</p>
         <div class="cta">
           <a class="btn btn--primary" href="start.html" data-app-entry>우리반 허브 열기</a>
           <a class="btn btn--ghost" href="#promotion">영상·소개 자료 보기</a>
         </div>
-        <p class="entry-note">개발 중인 앱을 열어 보세요. 교사 기능은 운영자 승인 후 사용할 수 있어요. 실제 학생 개인정보 대신 예시 정보로 체험해 주세요. <a href="#pilot">이용 안내</a></p>
+        <p class="entry-note">현재 신규 가입은 약관 게시를 준비 중이에요. 교사 기능은 운영자 승인 후 사용할 수 있어요. 개인정보 대신 예시 정보로 화면을 살펴봐 주세요. <a href="#pilot">이용 안내</a></p>
         <ul class="facts">
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>앱 설치 없이 휴대폰·PC에서</li>
           <li><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>전화번호 없이 이메일로 가입</li>
@@ -76,7 +76,7 @@
             <figcaption><span class="tag tag--teacher">선생님</span> 홈 화면</figcaption>
           </figure>
           <figure class="device">
-            <div class="device__body"><img src="assets/shots/student-home-640.webp" srcset="assets/shots/student-home-640.webp 640w, assets/shots/student-home-900.webp 900w, assets/shots/student-home.png 1170w" sizes="(min-width:600px) 270px, 72vw" width="390" height="844" fetchpriority="high" alt="학생 홈 화면: '선생님께 물어보기' 버튼, 우리반 칠판에 노란 밑줄과 '바뀜' 표시가 붙은 '체육대회 일정 안내', 오늘 급식과 가까운 일정(D-1 수학 익힘책 제출)"></div>
+            <div class="device__body"><img src="assets/shots/student-home-640.webp" srcset="assets/shots/student-home-640.webp 640w, assets/shots/student-home-900.webp 900w, assets/shots/student-home.png 1170w" sizes="(min-width:600px) 270px, (min-width:417px) 300px, 72vw" width="390" height="844" fetchpriority="high" alt="학생 홈 화면: '선생님께 물어보기' 버튼, 우리반 칠판에 노란 밑줄과 '바뀜' 표시가 붙은 '체육대회 일정 안내', 오늘 급식과 가까운 일정(D-1 수학 익힘책 제출)"></div>
             <figcaption><span class="tag tag--student">학생</span> 홈 화면</figcaption>
           </figure>
         </div>
@@ -147,7 +147,7 @@
         </li>
         <li class="reveal" style="--m:var(--frame)">
           <h3><small>연락처가 걱정돼요</small>전화번호를 받지 않아요</h3>
-          <p>이메일로 가입해요. 궁금한 점은 선생님과 1:1 도움 대화로 물어봐요. 반 대화는 선생님이 열어야 쓸 수 있고, 밤에는 잠겨요.</p>
+          <p>가입은 이메일을 사용하도록 구성돼 있어요. 궁금한 점은 선생님과 1:1 도움 대화로 물어봐요. 반 전체 대화는 운영 준비 중이에요.</p>
         </li>
       </ul>
     </div>
@@ -159,12 +159,12 @@
       <div class="head head--center reveal">
         <p class="eyebrow">새로 생긴 기능</p>
         <h2 id="new-title" class="h2">새 화면과 새 기능이에요.</h2>
-        <p class="lead">홈 화면 맨 위 칠판에 아직 안 본 공지와 챙길 것이 모여요. 선생님께 묻기, 반 투표·선거, 다음 주 급식도 새로 생겼어요.</p>
+        <p class="lead">홈 화면 맨 위 칠판에 확인이 남은 공지와 챙길 것이 모여요. 공지 확인·미확인 재안내·숙제 자기 체크·지난 글 재사용을 중심으로 살펴보세요.</p>
       </div>
       <ul class="news-grid">
         <li class="news-card reveal" style="--tint:var(--student-soft)">
           <div class="news-card__img"><figure class="device"><div class="device__body"><img src="assets/shots/notice-detail-640.webp" srcset="assets/shots/notice-detail-640.webp 640w, assets/shots/notice-detail-900.webp 900w" sizes="220px" width="390" height="844" loading="lazy" alt="학생의 공지 화면: '선생님이 글을 고쳤어요' 노란 안내와 바뀐 체육대회 날짜, 아래에 '질문'과 '확인했어요' 버튼"></div></figure></div>
-          <div class="news-card__body"><span class="tag tag--new">새 화면</span><h3>우리반 칠판</h3><p>아직 안 본 공지와 챙길 것이 홈 맨 위에 모여요. 고친 글에는 '바뀜' 표시가 붙어요.</p></div>
+          <div class="news-card__body"><span class="tag tag--new">새 화면</span><h3>우리반 칠판</h3><p>확인이 남은 공지와 챙길 것이 홈 맨 위에 모여요. 고친 글에는 '바뀜' 표시가 붙어요.</p></div>
         </li>
         <li class="news-card reveal" style="--tint:var(--teacher-soft)">
           <div class="news-card__img"><figure class="device"><div class="device__body"><img src="assets/shots/help-thread-640.webp" srcset="assets/shots/help-thread-640.webp 640w, assets/shots/help-thread-900.webp 900w" sizes="220px" width="390" height="844" loading="lazy" alt="학생과 담임 선생님의 도움 대화: 학생이 수채화 물감을 빌려도 되는지 묻고, 선생님이 미술실 물감을 쓰라고 답한 대화, '선생님만 볼 수 있어요' 안내"></div></figure></div>
@@ -172,7 +172,7 @@
         </li>
         <li class="news-card reveal" style="--tint:var(--notice-soft)">
           <div class="news-card__img"><figure class="device"><div class="device__body"><img src="assets/shots/poll-results-640.webp" srcset="assets/shots/poll-results-640.webp 640w, assets/shots/poll-results-900.webp 900w" sizes="220px" width="390" height="844" loading="lazy" alt="반 투표 화면: '반 티셔츠 색 정하기' 투표에 내 선택(연두색)과 18명이 참여한 결과 막대"></div></figure></div>
-          <div class="news-card__body"><span class="tag tag--new">새 기능</span><h3>반 투표 · 대표 선거</h3><p>반 의견을 모으고 대표를 뽑아요. 비밀투표 여부와 결과 공개 시점을 정할 수 있어요.</p></div>
+          <div class="news-card__body"><span class="tag tag--new">운영 준비 중</span><h3>반 투표 · 대표 선거</h3><p>아래는 개발 화면 예시예요. 현재 운영 앱에서는 투표와 선거를 제공하지 않아요.</p></div>
         </li>
         <li class="news-card reveal" style="--tint:var(--supplies-soft)">
           <div class="news-card__img"><figure class="device"><div class="device__body"><img src="assets/shots/meals-next-640.webp" srcset="assets/shots/meals-next-640.webp 640w, assets/shots/meals-next-900.webp 900w" sizes="220px" width="390" height="844" loading="lazy" alt="급식 화면: 다음 주 월요일부터 금요일 요일 칸과 고른 날(10월 5일)의 메뉴"></div></figure></div>
@@ -212,7 +212,7 @@
       <p class="strip-hint" aria-hidden="true">옆으로 넘겨 더 보기 →</p>
       <div class="tipnote reveal">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.2 1 2V17h6v-.3c0-.8.4-1.5 1-2A7 7 0 0 0 12 2z"/></svg>
-        <div><strong>선생님 홈에서 바로 써요.</strong><p>선생님 홈 칠판 아래 '칠판에 쓰기'를 누르면 바로 글을 올릴 수 있어요. 학생 칠판에는 각자 아직 안 본 것만 보여요.</p></div>
+        <div><strong>선생님 홈에서 바로 써요.</strong><p>선생님 홈 칠판 아래 '칠판에 쓰기'를 누르면 바로 글을 올릴 수 있어요. 학생 칠판에는 각자 확인이 남은 안내와 챙길 것 보여요.</p></div>
       </div>
     </div>
   </section>
@@ -238,7 +238,7 @@
           <ol class="tl">
             <li><span class="tag tag--teacher">선생님</span><p>체육대회 날짜를 고쳐 다시 올려요.</p></li>
             <li><span class="tag tag--student">학생</span><p>칠판에서 '바뀜' 표시를 보고 글을 열어 '확인했어요'를 눌러요.</p></li>
-            <li><span class="tag tag--sys">알림</span><p>지원 기기에서 홈 화면에 추가하고 알림을 허용하면 알림을 받아요. 수업 시간과 밤에는 바로 보내지 않고 나중에 모아서 보내요.</p></li>
+            <li><span class="tag tag--sys">알림</span><p>휴대폰 푸시 알림은 운영 준비 중이에요. 새 소식은 앱 안의 칠판과 소식에서 직접 확인해요.</p></li>
           </ol>
         </div>
       </article>
@@ -251,10 +251,10 @@
         </div>
         <div class="feature__text reveal">
           <p class="when"><b>2</b>점심</p>
-          <h3>아직 안 본 학생에게만 다시 알려요.</h3>
+          <h3>확인·재확인이 남은 학생에게 다시 알려요.</h3>
           <ol class="tl">
-            <li><span class="tag tag--teacher">선생님</span><p>확인한 학생·고친 뒤 안 본 학생·아직 안 본 학생이 나뉘어 보여요.</p></li>
-            <li><span class="tag tag--sys">다시 알리기</span><p>'7명에게 다시 알림'을 누르면 아직 안 본 학생에게만 앱 안에서 알려요. 문자나 메일은 보내지 않아요.</p></li>
+            <li><span class="tag tag--teacher">선생님</span><p>확인 버튼을 누른 학생·수정본 재확인이 남은 학생·아직 확인 버튼을 누르지 않은 학생이 나뉘어 보여요.</p></li>
+            <li><span class="tag tag--sys">다시 알리기</span><p>'7명에게 다시 알림'을 누르면 확인·재확인이 남은 학생에게 앱 안에서 알려요. 문자나 메일은 보내지 않으며, 휴대폰 푸시 도착을 보장하지 않아요.</p></li>
           </ol>
         </div>
       </article>
@@ -299,99 +299,66 @@
     </div>
   </section>
 
-  <!-- 비교 -->
+  <!-- 공지 확인 흐름 -->
   <section id="compare" class="section section--paper" aria-labelledby="compare-title">
     <div class="wrap">
       <div class="head head--center reveal">
-        <p class="eyebrow">비교</p>
-        <h2 id="compare-title" class="h2"><span class="nowrap">다른 학급 소통 방법과</span> <span class="nowrap">이렇게 달라요.</span></h2>
-        <p class="lead">단체 대화방, 알림장형 앱, 커뮤니티형 학급 앱과 나란히 놓고 봤어요. 우리반 허브는 <b>공지를 전하고 확인받는 일</b>에 집중해요.</p>
+        <p class="eyebrow">확인 흐름</p>
+        <h2 id="compare-title" class="h2"><span class="nowrap">공지 하나부터</span> <span class="nowrap">학생별 남은 확인까지.</span></h2>
+        <p class="lead">공지를 올린 뒤 누구에게 어떤 확인이 남았는지 살펴보세요. 우리반 허브는 <b>확인 버튼 기록을 보고 다음 안내를 정하는 흐름</b>으로 이어져요.</p>
       </div>
 
-      <ul class="edge reveal" aria-label="우리반 허브의 핵심 장점">
-        <li><span class="edge__no" aria-hidden="true">01</span><h3>누가 봤는지 이름으로</h3><p>확인한 학생과 아직 안 본 학생을 나눠 보여 줘요.</p></li>
-        <li><span class="edge__no" aria-hidden="true">02</span><h3>고친 글은 다시 확인</h3><p>'바뀜' 표시가 붙고, 이미 본 학생도 다시 확인해요.</p></li>
-        <li><span class="edge__no" aria-hidden="true">03</span><h3>전화번호 없이</h3><p>이메일로 가입하고, 선생님이 승인한 학생만 들어와요.</p></li>
-        <li><span class="edge__no" aria-hidden="true">04</span><h3>설치 없이 바로</h3><p>휴대폰·교실 PC 브라우저에서 주소만 열면 돼요.</p></li>
+      <ul class="edge reveal" aria-label="우리반 허브의 공지 확인 흐름">
+        <li><span class="edge__no" aria-hidden="true">01</span><h3>확인 버튼 기록</h3><p>공지마다 '확인했어요'를 누른 학생을 이름으로 봐요.</p></li>
+        <li><span class="edge__no" aria-hidden="true">02</span><h3>수정본 재확인</h3><p>고친 글은 이전 확인과 구분해 다시 확인받아요.</p></li>
+        <li><span class="edge__no" aria-hidden="true">03</span><h3>필요한 학생에게 안내</h3><p>확인·재확인이 남은 학생에게 앱 안에서 다시 알려요.</p></li>
+        <li><span class="edge__no" aria-hidden="true">04</span><h3>기간별 남은 확인</h3><p>기간을 정해 학생별로 확인이 남은 안내를 모아 봐요.</p></li>
       </ul>
 
       <div class="compare-wrap reveal">
         <table class="compare">
-          <caption class="sr-only">학급 소통 방법 종류별 비교. ○ 기본으로 돼요, △ 서비스나 설정마다 달라요, ✕ 어려워요.</caption>
+          <caption class="sr-only">우리반 허브에서 공지 확인 기록을 보고 후속 안내를 정하는 순서</caption>
           <thead>
             <tr>
-              <th scope="col"><span class="sr-only">항목</span></th>
-              <th scope="col">단체 대화방</th>
-              <th scope="col">알림장형 앱</th>
-              <th scope="col">커뮤니티형<br>학급 앱</th>
-              <th scope="col" class="us"><img src="assets/app-icon.png" width="22" height="22" alt="">우리반 허브</th>
+              <th scope="col">이럴 때</th>
+              <th scope="col">선생님이 보는 것</th>
+              <th scope="col" class="us"><img src="assets/app-icon.png" width="22" height="22" alt="">다음에 할 일</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <th scope="row">공지가 대화에 묻히지 않아요</th>
-              <td data-label="단체 대화방"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td data-label="알림장형 앱"><span class="m m--yes" aria-hidden="true">○</span><span class="sr-only">기본으로 돼요</span></td>
-              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>아직 안 본 공지만 칠판에 남아요.</td>
+              <th scope="row">공지를 올린 뒤</th>
+              <td data-label="선생님이 보는 것" style="grid-column:1/-1">공지별로 '확인했어요'를 누른 학생과 확인이 남은 학생</td>
+              <td class="us" data-label="다음에 할 일">확인 현황을 열어 학생별 버튼 기록을 살펴봐요.</td>
             </tr>
             <tr>
-              <th scope="row">누가 확인했는지 학생별로</th>
-              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
-              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>확인한 학생·안 본 학생 명단을 보여 줘요.</td>
+              <th scope="row">날짜나 내용을 고친 뒤</th>
+              <td data-label="선생님이 보는 것" style="grid-column:1/-1">이전 내용은 확인했지만 수정본 재확인이 남은 학생</td>
+              <td class="us" data-label="다음에 할 일">학생은 '바뀜' 표시가 붙은 글을 읽고 확인 버튼을 다시 눌러요.</td>
             </tr>
             <tr>
-              <th scope="row">고친 공지를 다시 확인받기</th>
-              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
-              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>'바뀜' 표시와 다시 확인한 학생 수를 보여 줘요.</td>
+              <th scope="row">확인이 계속 남아 있을 때</th>
+              <td data-label="선생님이 보는 것" style="grid-column:1/-1">확인 버튼을 누르지 않았거나 수정본 재확인이 남은 학생</td>
+              <td class="us" data-label="다음에 할 일">'다시 알림'으로 해당 학생에게 앱 안에서 후속 안내를 보내요.</td>
             </tr>
             <tr>
-              <th scope="row">안 본 학생에게만 다시 알리기</th>
-              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
-              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>확인하지 않은 학생에게만 알려요.</td>
-            </tr>
-            <tr>
-              <th scope="row">전화번호 없이 가입</th>
-              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
-              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>이메일로 가입해요.</td>
-            </tr>
-            <tr>
-              <th scope="row">다른 학생 모르게 선생님께 질문</th>
-              <td data-label="단체 대화방"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>담임 선생님과 1:1 도움 대화로 물어봐요.</td>
-            </tr>
-            <tr>
-              <th scope="row">밤에는 반 대화 쉬게 하기</th>
-              <td data-label="단체 대화방"><span class="m m--no" aria-hidden="true">✕</span><span class="sr-only">어려워요</span></td>
-              <td data-label="알림장형 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td data-label="커뮤니티형 학급 앱"><span class="m m--some" aria-hidden="true">△</span><span class="sr-only">서비스마다 달라요</span></td>
-              <td class="us" data-label="우리반 허브"><span class="m m--us" aria-hidden="true">○</span>선생님이 열어야 쓰고, 밤 10시~아침 7시엔 학생이 보낼 수 없어요.</td>
+              <th scope="row">여러 안내를 함께 점검할 때</th>
+              <td data-label="선생님이 보는 것" style="grid-column:1/-1">선택한 기간에 학생마다 확인이 남은 안내</td>
+              <td class="us" data-label="다음에 할 일">'학생별 미해결 모아보기'에서 누구에게 무엇이 남았는지 살펴봐요.</td>
             </tr>
           </tbody>
         </table>
-        <p class="compare-legend" aria-hidden="true"><span><b class="m m--yes">○</b>기본으로 돼요</span><span><b class="m m--some">△</b>서비스나 설정마다 달라요</span><span><b class="m m--no">✕</b>어려워요</span></p>
-        <p class="compare-note">종류별로 흔히 볼 수 있는 모습을 정리했어요. 특정 서비스를 가리키지 않으며, 서비스마다 실제 기능은 다를 수 있어요. 반 대화는 선생님이 관리하는 보조 기능이에요.</p>
+        <p class="compare-note">확인 기록은 학생이 버튼을 누른 기록이에요. 글을 열어 본 여부나 내용 이해를 뜻하지 않아요. 다시 알림은 앱 안의 안내이며 문자·이메일을 보내거나 휴대폰 푸시 도착을 보장하지 않아요.</p>
       </div>
     </div>
   </section>
-
   <!-- 할 수 있는 일: 다섯 묶음을 탭으로. 스크립트가 없으면 다섯 묶음이 차례로 모두 보인다 -->
   <section id="features" class="section" aria-labelledby="features-title">
     <div class="wrap">
       <div class="head head--center reveal">
         <p class="eyebrow">기능</p>
         <h2 id="features-title" class="h2">선생님과 학생이 쓰는 기능이에요.</h2>
-        <p class="lead">기능을 다섯 가지로 나눠 실제 화면과 함께 보여 드려요.</p>
+        <p class="lead">기능을 다섯 가지로 나눠 개발 화면과 함께 보여 드려요. 운영 준비 중인 기능은 따로 표시했어요.</p>
       </div>
       <div class="show reveal" data-tabs>
         <div class="show__tabs" role="tablist" aria-label="기능 묶음">
@@ -429,11 +396,11 @@
         <div class="show__panel" id="panel-check" style="--tint:var(--teacher-soft);--accent:var(--teacher)">
           <div class="show__text">
             <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>확인하기 <small>선생님</small></h3>
-            <p class="show__lead">누가 확인했는지 보고, 아직 안 본 학생을 챙겨요.</p>
+            <p class="show__lead">확인 버튼 기록을 보고, 확인·재확인이 남은 학생을 챙겨요.</p>
             <dl>
               <div><dt>확인 현황</dt><dd>공지·준비물마다 확인한 학생 수를 막대로 봐요.</dd></div>
               <div><dt>고친 뒤 다시 확인</dt><dd>글을 고치면 이미 확인한 학생도 다시 확인하고, 그 수를 알려 줘요.</dd></div>
-              <div><dt>다시 알리기</dt><dd>아직 안 본 학생에게만 앱 안에서 다시 알려요. 문자나 메일은 보내지 않아요.</dd></div>
+              <div><dt>다시 알리기</dt><dd>확인·재확인이 남은 학생에게 앱 안에서 다시 알려요. 문자나 메일은 보내지 않으며, 휴대폰 푸시 도착을 보장하지 않아요.</dd></div>
               <div><dt>학생별 미해결 모아보기</dt><dd>기간을 정해 학생마다 확인이 남은 안내를 한 번에 봐요.</dd></div>
               <div><dt>도움 대화 답하기</dt><dd>학생 질문에 1:1로 답하고, 해결되면 대화를 마무리해요.</dd></div>
             </dl>
@@ -458,14 +425,15 @@
         <div class="show__panel" id="panel-keep" style="--tint:var(--student-soft);--accent:var(--student)">
           <div class="show__text">
             <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg></span>챙기기 <small>학생</small></h3>
-            <p class="show__lead">학생 화면에는 아직 안 본 것과 오늘 챙길 것이 먼저 나와요.</p>
+            <p class="show__lead">학생 화면에는 확인이 남은 안내와 오늘 챙길 것이 먼저 나와요.</p>
             <dl>
-              <div><dt>우리반 칠판</dt><dd>홈 맨 위 칠판에 아직 안 본 공지와 챙길 준비물이 나와요.</dd></div>
+              <div><dt>우리반 칠판</dt><dd>홈 맨 위 칠판에 확인이 남은 공지와 챙길 준비물이 나와요.</dd></div>
               <div><dt>소식 한 목록</dt><dd>공지·숙제·준비물·수행평가를 한 목록에서 보고, 안 한 것만 골라 봐요.</dd></div>
+              <div><dt>숙제 자기 체크</dt><dd>학생이 끝낸 숙제를 직접 표시해요. 실제 제출 여부나 교사의 채점·평가를 대신하지 않아요.</dd></div>
               <div><dt>기간별 따라잡기</dt><dd>며칠 동안 못 본 안내를 모아서, 바뀐 안내부터 확인해요.</dd></div>
               <div><dt>일정</dt><dd>한 주 띠와 달력으로 보고, 남은 날(D-day)을 확인해요.</dd></div>
               <div><dt>급식</dt><dd>오늘·이번 주·다음 주 급식을 봐요.</dd></div>
-              <div><dt>휴대폰 알림</dt><dd>지원 기기에서 홈 화면에 추가하고 알림을 허용하면 알림이 와요. 수업 시간과 밤에는 나중에 모아서 보내요.</dd></div>
+              <div><dt>휴대폰 알림</dt><dd>운영 준비 중이에요. 현재는 휴대폰 푸시 대신 앱 안에서 새 소식을 확인해 주세요.</dd></div>
             </dl>
           </div>
           <div class="strip" tabindex="0" role="group" aria-label="챙기기 화면 예시 4장">
@@ -492,7 +460,7 @@
         <div class="show__panel" id="panel-activity" style="--tint:var(--notice-soft);--accent:var(--notice)">
           <div class="show__text">
             <h3><span class="ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="m8 8 3 3 5-6"/></svg></span>반 활동 <small>함께</small></h3>
-            <p class="show__lead">반의 의견을 모으고, 대표를 뽑아요.</p>
+            <p class="show__lead">운영 준비 중이에요. 투표·대표 선거는 현재 운영 앱에서 제공하지 않으며, 아래는 개발 화면 예시예요.</p>
             <dl>
               <div><dt>투표</dt><dd>한 가지를 골라 의견을 모아요. 선생님만 학생별 선택을 볼지, 결과를 언제 보여 줄지 정해요.</dd></div>
               <div><dt>대표 선거</dt><dd>후보 등록 → 투표 → 마감 → 결과 공개 4단계로 진행해요. 동점이면 선생님이 정할 수 있어요.</dd></div>
@@ -558,10 +526,10 @@
       </div>
       <ul class="safe-grid">
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="3"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><div><h3>선생님이 승인해야 들어와요</h3><p>코드를 알아도 승인 전에는 반 자료를 볼 수 없어요.</p></div></li>
-        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/><path d="M4 4l16 16"/></svg></span><div><h3>전화번호를 받지 않아요</h3><p>이메일로 가입하고, 승인 화면에서도 이메일 일부는 가려져요. 반 대화에서 문제가 되는 말은 선생님께 신고할 수 있어요.</p></div></li>
+        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/><path d="M4 4l16 16"/></svg></span><div><h3>전화번호를 받지 않아요</h3><p>이메일로 가입하고, 승인 화면에서도 이메일 일부는 가려져요. 반 전체 대화는 운영 준비 중이에요.</p></div></li>
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><div><h3>도움 대화는 선생님만 봐요</h3><p>학생이 보낸 질문과 답장은 그 학생과 담임 선생님만 볼 수 있어요.</p></div></li>
-        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><div><h3>만 14세 이상만 참여해요</h3><p>공개 체험은 만 14세 이상, 학생은 중학교 3학년 이상을 대상으로 해요. 생년월일과 프로필 사진은 원할 때만 입력해요.</p></div></li>
-        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><div><h3>개인정보 안내도 개발 중이에요</h3><p>앱의 <a href="start.html" data-app-entry data-app-entry-path="/legal/privacy-policy">개인정보처리방침</a>은 개발본이에요. 실제 학급 운영에 앞서 확정·게시할 예정이며, 지금은 예시 정보로 체험해 주세요.</p></div></li>
+        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10 12 5 2 10l10 5 10-5z"/><path d="M6 12v5c3 2 9 2 12 0v-5"/></svg></span><div><h3>만 14세 이상만 참여해요</h3><p>가입 대상은 만 14세 이상, 학생은 중학교 3학년 이상을 대상으로 해요. 생년월일과 프로필 사진은 원할 때만 입력해요.</p></div></li>
+        <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h4"/></svg></span><div><h3>개인정보 안내는 게시 준비 중이에요</h3><p>앱의 <a href="start.html" data-app-entry data-app-entry-path="/legal/privacy-policy">개인정보처리방침</a>과 가입 약관은 정식 게시를 준비 중이에요. 게시가 완료되기 전에는 신규 가입이 열리지 않을 수 있어요.</p></div></li>
         <li class="reveal"><span class="ico"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h18M8 6V4h8v2M6 6l1 15h10l1-15"/></svg></span><div><h3>계정은 직접 삭제할 수 있어요</h3><p>설정에서 계정 삭제를 요청할 수 있어요. 실제 학생의 자료를 보관하는 용도로는 아직 사용하지 마세요.</p></div></li>
       </ul>
       <aside class="honest reveal" aria-labelledby="honest-title">
@@ -578,10 +546,10 @@
   <section id="pilot" class="section" aria-labelledby="pilot-title">
     <div class="wrap pilot">
       <div class="reveal">
-        <p class="eyebrow">공개 체험 이용 안내</p>
+        <p class="eyebrow">접속·운영 준비 안내</p>
         <h2 id="pilot-title" class="h2">앱을 열고 직접 살펴보세요.</h2>
-        <p class="lead">우리반 허브는 개발 중이에요. 먼저 화면과 기능을 써 보고, 불편한 점이나 의견을 알려 주세요.</p>
-        <p class="entry-note">실제 학급 운영을 시작하기 전의 체험판이에요. 학생의 실제 이름·연락처·상담 내용 등 개인정보 대신 예시 정보를 사용해 주세요.</p>
+        <p class="lead">우리반 허브는 운영을 준비 중이에요. 소개 화면으로 기능을 살펴보고, 앱을 열기 전 현재 이용 범위를 확인해 주세요.</p>
+        <p class="entry-note">실제 학급 운영에 앞서 가입 약관과 운영 기능을 준비 중이에요. 개인정보 대신 예시 정보로 화면을 살펴봐 주세요.</p>
         <div class="cta">
           <a class="btn btn--primary" href="start.html" data-app-entry>우리반 허브 열기</a>
           <a class="btn btn--ghost" href="mailto:gunyoon0322@naver.com">의견 보내기</a>
@@ -591,7 +559,7 @@
         <h3>체험 전에 알아 두세요</h3>
         <dl>
           <div><dt>대상</dt><dd>만 14세 이상. 학생은 중학교 3학년 이상</dd></div>
-          <div><dt>시작</dt><dd>앱에서 회원가입·이메일 인증 후 로그인해요. 교사 기능은 별도 운영자 승인이 필요하며, 가입 후 메일로 문의해 주세요.</dd></div>
+          <div><dt>시작</dt><dd>신규 가입은 약관 정식 게시를 준비 중이에요. 교사 기능은 별도 운영자 승인이 필요하며, 이용 가능 여부는 메일로 문의해 주세요.</dd></div>
           <div><dt>학생 참여</dt><dd>선생님의 초대 코드와 승인이 있어야 반 자료를 볼 수 있어요.</dd></div>
           <div><dt>접속</dt><dd>점검·재시작 중에는 잠시 끊길 수 있어요. 열리지 않으면 잠시 뒤 이 페이지에서 다시 열어 주세요.</dd></div>
           <div><dt>즐겨찾기</dt><dd>이 소개 페이지를 저장해 주세요. 앱 주소가 바뀌어도 여기서 최신 주소를 안내해요.</dd></div>
@@ -611,10 +579,10 @@
       </div>
       <div class="faq">
         <h3>처음 시작 · 계정과 로그인</h3>
-        <details><summary>처음 방문했어요. 어디서 시작하면 되나요?</summary><p>소개 페이지의 ‘우리반 허브 열기’를 누르면 현재 접속 가능한 앱으로 이동해요. 계정이 있으면 가입한 이메일과 비밀번호로 로그인하고, 처음이면 ‘선생님·학생 가입’을 눌러 주세요. 지금은 개발 중인 공개 체험이므로 실제 학생 개인정보 대신 예시 정보로 체험해 주세요.</p></details>
-        <details><summary>앱을 설치해야 하나요? 휴대폰과 PC에서 모두 되나요?</summary><p>별도 설치 없이 크롬·사파리 같은 인터넷 창에서 열 수 있어요. 휴대폰과 PC에서 같은 계정으로 이용해요. 홈 화면 추가와 기기 알림은 지원 기기에서 따로 설정하며, 기기·브라우저에 따라 사용 가능한 기능이 달라요.</p></details>
-        <details><summary>학생과 선생님은 어떻게 가입하나요?</summary><p>가입 화면에서 ① 학생 또는 선생님 선택 ② 나이 확인 ③ 이메일·기본 이름·비밀번호 입력 ④ 약관과 개인정보 수집·이용 내용을 확인하고 동의 순서로 진행해요. 가입 후에는 로그인 화면에서 직접 로그인해야 해요. 이메일 가입 기준이며 빠른 로그인은 제공되는 버튼과 화면 안내를 따라 주세요.</p></details>
-        <details><summary>누가 이용할 수 있나요?</summary><p>현재 공개 체험은 만 14세 이상, 학생은 중학교 3학년 이상을 대상으로 해요. 가입 화면의 나이 확인은 본인에게 맞게 선택해 주세요. 초등학생·중학교 1·2학년이나 만 14세 미만의 이용 가능 여부를 임의로 판단하지 말고 운영자에게 문의해 주세요.</p></details>
+        <details><summary>처음 방문했어요. 어디서 시작하면 되나요?</summary><p>소개 페이지의 ‘우리반 허브 열기’에서 접속 안내를 확인해 주세요. 신규 가입은 약관 정식 게시를 준비 중이며, 바로 가입할 수 있다는 안내는 아니에요. 이용 가능 여부는 운영자에게 문의하고, 개인정보 대신 예시 정보로 화면을 살펴봐 주세요.</p></details>
+        <details><summary>앱을 설치해야 하나요? 휴대폰과 PC에서 모두 되나요?</summary><p>별도 설치 없이 크롬·사파리 같은 인터넷 창에서 열 수 있어요. 휴대폰과 PC에서 같은 계정으로 이용해요. 홈 화면 추가는 기기·브라우저에 따라 달라요. 휴대폰 푸시 알림은 운영 준비 중이에요.</p></details>
+        <details><summary>학생과 선생님은 어떻게 가입하나요?</summary><p>신규 가입은 약관 정식 게시 후 열릴 예정이에요. 가입이 열리면 가입 화면에서 ① 학생 또는 선생님 선택 ② 나이 확인 ③ 이메일·기본 이름·비밀번호 입력 ④ 약관과 개인정보 수집·이용 내용을 확인하고 동의 순서로 진행해요. 가입 후에는 로그인 화면에서 직접 로그인해야 해요. 이메일 가입 기준이며 빠른 로그인은 운영 준비 중이에요.</p></details>
+        <details><summary>누가 이용할 수 있나요?</summary><p>현재 가입 대상은 만 14세 이상, 학생은 중학교 3학년 이상을 대상으로 해요. 가입 화면의 나이 확인은 본인에게 맞게 선택해 주세요. 초등학생·중학교 1·2학년이나 만 14세 미만의 이용 가능 여부를 임의로 판단하지 말고 운영자에게 문의해 주세요.</p></details>
         <details><summary>아이디는 무엇인가요? 비밀번호는 어떻게 정하나요?</summary><p>아이디는 가입할 때 사용한 이메일이에요. 이메일 가입 비밀번호는 문자와 숫자를 모두 포함해 6자 이상 입력하고 확인 칸에도 같게 입력해 주세요. 다른 서비스와 겹치지 않는 충분히 긴 비밀번호를 권해요. 기본 이름은 친구와 선생님에게 보이는 이름이에요.</p></details>
         <details><summary>가입했는데 인증번호 입력 화면이 나와요. 무엇을 넣나요?</summary><p>가입한 이메일과 비밀번호로 로그인한 뒤 이메일로 받은 숫자 6자리 가입 인증번호를 입력하고 ‘가입 인증 완료’를 눌러요. 학생의 반 초대 코드나 교사의 별도 승인번호와는 다른 번호예요. 가입 인증이 끝나면 계정 상태에 맞는 다음 단계가 안내돼요.</p></details>
         <details><summary>인증 메일이 안 오거나 번호가 만료되었어요.</summary><p>가입한 이메일 주소와 스팸함을 먼저 확인하고 ‘인증번호 메일 다시 보내기’를 눌러 주세요. 번호는 10분 동안 유효하고 5회 틀리면 새 번호가 필요해요. 반복 요청 제한이 표시되면 화면에 안내된 시간 뒤 다시 시도해요. 메일 전송 실패가 계속되면 화면 아래 문의 이메일로 연락해 주세요.</p></details>
@@ -630,20 +598,20 @@
         <details><summary>공지에 ‘바뀜’ 표시가 있어요. 이미 확인했는데 다시 봐야 하나요?</summary><p>선생님이 수정한 공지예요. 노란 표시를 단서로 글을 다시 열고 현재 내용을 읽은 뒤 ‘확인했어요’를 다시 눌러 주세요. 이전에 확인했어도 바뀐 내용을 확인할 일이 남을 수 있어요. 준비물이나 날짜가 달라졌는지도 함께 살펴 주세요.</p></details>
         <details><summary>준비물·숙제는 어떻게 확인하고 챙겼다고 표시하나요?</summary><p>홈이나 소식에서 해당 항목을 열어 내용과 기한을 먼저 확인해요. 준비하거나 끝낸 뒤 화면의 챙김·완료 버튼으로 상태를 표시해 주세요. 단순히 공지를 읽었다고 실제 준비가 끝나는 것은 아니므로, 확인과 챙김을 각각 점검해요.</p></details>
         <details><summary>일정과 급식은 어디서 보나요?</summary><p>홈에서 오늘 정보를 살펴보고, 자세한 일정은 일정 화면, 급식은 급식 화면에서 날짜를 바꿔 확인해요. 급식 정보가 없다고 나오면 다른 날짜를 확인하고, 실제 학교 안내와 다른 점은 선생님에게 알려 주세요. 학교에서 제공한 안내도 함께 확인해요.</p></details>
-        <details><summary>궁금한 내용은 어디로 질문하나요? 다른 학생도 보나요?</summary><p>‘선생님께 물어보기’ 또는 공지 아래 ‘질문’으로 담임과 1:1 도움 대화를 시작해요. 어떤 공지의 어느 부분이 궁금한지 구체적으로 적으면 답하기 쉬워요. 일반 반 화면에서는 질문한 학생과 담임만 볼 수 있으며, 반 전체가 보는 반 대화와는 별도예요. 답장은 도움 대화에서 다시 확인해요.</p></details>
-        <details><summary>알림이 안 와도 새 소식을 확인할 수 있나요?</summary><p>네. 앱 안의 홈과 소식에서 직접 확인할 수 있어요. 기기 알림은 지원 기기의 홈 화면 추가, 앱의 알림 설정, 브라우저·휴대폰 권한을 함께 확인해 주세요. 수업 시간이나 밤에는 바로 보내지 않고 나중에 모아 보내므로 알림만 기다리지 말고 홈도 확인해요.</p></details>
+        <details><summary>궁금한 내용은 어디로 질문하나요? 다른 학생도 보나요?</summary><p>‘선생님께 물어보기’ 또는 공지 아래 ‘질문’으로 담임과 1:1 도움 대화를 시작해요. 어떤 공지의 어느 부분이 궁금한지 구체적으로 적으면 답하기 쉬워요. 일반 반 화면에서는 질문한 학생과 담임만 볼 수 있으며, 운영 준비 중인 반 전체 대화와는 별도예요. 답장은 도움 대화에서 다시 확인해요.</p></details>
+        <details><summary>알림이 안 와도 새 소식을 확인할 수 있나요?</summary><p>네. 앱 안의 홈과 소식에서 직접 확인할 수 있어요. 휴대폰 푸시 알림은 운영 준비 중이므로 칠판과 소식을 직접 확인해 주세요.</p></details>
         <h3>선생님 · 반 개설과 운영</h3>
-        <details><summary>선생님으로 가입했는데 반을 만들 수 없어요.</summary><p>가입 인증과 교사 권한 승인은 별도예요. 먼저 이메일의 6자리 가입 인증번호로 인증을 끝내고, 운영자에게 교사 확인과 승인을 문의해 주세요. 관리자가 발급한 6자리 ‘교사 승인번호’를 입력해 ‘교사 승인 확인’을 마쳐야 반을 만들 수 있어요. 승인 상태가 바뀌면 ‘승인 상태 확인’으로 확인해요.</p></details>
-        <details><summary>교사는 처음에 어떤 순서로 설정하면 되나요?</summary><p>① 가입·로그인과 이메일 인증 ② 교사 승인 ③ ‘반 만들기’에서 학교 검색·선택과 반 정보 입력 ④ 반 초대 코드나 QR 전달 ⑤ ‘학생 관리’에서 참여 요청 확인·승인 ⑥ 첫 공지 작성 순서로 시작해요. 공개 체험에서는 예시 반과 예시 정보만 사용해 주세요.</p></details>
+        <details><summary>선생님으로 가입했는데 반을 만들 수 없어요.</summary><p>신규 가입은 약관 게시를 준비 중이에요. 가입 인증과 교사 권한 승인은 별도예요. 먼저 이메일의 6자리 가입 인증번호로 인증을 끝내고, 운영자에게 교사 확인과 승인을 문의해 주세요. 관리자가 발급한 6자리 ‘교사 승인번호’를 입력해 ‘교사 승인 확인’을 마쳐야 반을 만들 수 있어요. 승인 상태가 바뀌면 ‘승인 상태 확인’으로 확인해요.</p></details>
+        <details><summary>교사는 처음에 어떤 순서로 설정하면 되나요?</summary><p>신규 가입이 열린 뒤에는 ① 가입·로그인과 이메일 인증 ② 교사 승인 ③ ‘반 만들기’에서 학교 검색·선택과 반 정보 입력 ④ 반 초대 코드나 QR 전달 ⑤ ‘학생 관리’에서 참여 요청 확인·승인 ⑥ 첫 공지 작성 순서로 시작해요. 화면을 살펴볼 때는 예시 반과 예시 정보만 사용해 주세요.</p></details>
         <details><summary>학교를 검색해도 나오지 않아요.</summary><p>학교 이름을 두 글자 이상 입력해 검색하고, 같은 이름의 학교는 지역과 학교 종류까지 확인해 선택해요. 그래도 없다면 운영자에게 학교 추가를 요청해 주세요. 임의로 다른 학교를 선택해 실제 반을 만들지 마세요.</p></details>
         <details><summary>학생 초대 코드와 QR은 어디서 확인하나요?</summary><p>반을 만들면 초대 코드가 자동으로 발급돼요. 반 관리에서 코드와 유효기간을 확인하고 복사하거나 QR을 보여 주세요. 학생은 로그인 후 참여 요청을 보내며, 교사의 승인까지 받아야 반 자료를 볼 수 있어요. QR 자체가 가입이나 승인을 대신하지는 않아요.</p></details>
         <details><summary>학생 참여 요청은 어떻게 승인하나요?</summary><p>‘학생 관리’의 참여 요청에서 학생을 확인하고 승인해요. 이름만 같다고 바로 승인하지 말고 본인과 반을 확인해 주세요. 학생에게 승인 후 ‘승인 상태 확인’을 누르도록 안내하면 반 홈으로 들어갈 수 있어요. 잘못 온 요청은 거절하고 필요한 안내를 전달해요.</p></details>
         <details><summary>초대 코드가 다른 사람에게 알려졌어요.</summary><p>코드만으로 반 자료를 볼 수는 없고 교사의 승인이 필요해요. 그래도 반 구성원에게만 공유해 주세요. 유출이 의심되면 반 관리에서 새 코드를 발급하면 기존 코드는 즉시 사용할 수 없어요. 이미 승인 대기 중인 참여 요청은 유지되므로 낯선 요청도 함께 확인해요.</p></details>
         <details><summary>첫 공지는 어떻게 올리면 좋을까요?</summary><p>홈의 ‘칠판에 쓰기’나 소식 쓰기에서 제목과 본문, 공개 대상과 필요한 날짜를 확인해 게시해요. 첫 글은 앱 이용 안내처럼 짧고 분명하게 쓰고, 학생에게 읽은 뒤 ‘확인했어요’를 누르도록 안내해 주세요. 중요 공지는 칠판에 올라오는 흐름도 함께 확인해요.</p></details>
-        <details><summary>누가 공지를 확인했는지, 아직 안 봤는지 어디서 보나요?</summary><p>게시한 공지의 확인 현황에서 확인한 학생과 아직 확인하지 않은 학생을 확인해요. 미확인 학생에게만 ‘다시 알림’을 보낼 수 있어요. 이것은 앱 알림이며 모든 학생의 휴대폰에 즉시 도착하거나 내용을 이해했다는 보장은 아니므로 중요한 안내는 별도로 확인해 주세요.</p></details>
+        <details><summary>누가 확인 버튼을 눌렀는지, 재확인이 남았는지 어디서 보나요?</summary><p>게시한 공지의 확인 현황에서 확인한 학생과 아직 확인하지 않은 학생을 확인해요. 미확인 학생에게만 ‘다시 알림’을 보낼 수 있어요. 이것은 앱 알림이며 모든 학생의 휴대폰에 즉시 도착하거나 내용을 이해했다는 보장은 아니므로 중요한 안내는 별도로 확인해 주세요.</p></details>
         <details><summary>학생마다 남은 일이 다를 때 한 번에 볼 수 있나요?</summary><p>‘학생별 미해결 모아보기’에서 아직 확인하지 않은 소식이나 미완료 항목을 학생별로 살펴볼 수 있어요. 반 전체에 같은 안내를 반복하기 전에 누구에게 무엇이 남았는지 확인해 필요한 학생에게 안내해요.</p></details>
         <details><summary>지난 글을 다시 쓰거나 일정에 연결된 글을 함께 고칠 수 있나요?</summary><p>소식 쓰기의 ‘지난 글 불러오기’로 예전 글을 가져와 고쳐서 게시할 수 있어요. 일정을 변경하면 연결된 공지·준비물을 한 화면에 모아 주므로 각 항목을 변경할지 유지할지 확인해 반영해요. 날짜·대상·본문을 그대로 재사용하지 말고 이번 안내에 맞게 점검해 주세요.</p></details>
-        <details><summary>반 투표에서 학생별 선택과 결과는 누구에게 보이나요?</summary><p>투표를 만들 때 공개 설정을 정해요. 담임만 학생별 선택을 보는 방식과 앱에서 담임도 학생별 선택을 볼 수 없는 비공개 방식이 있어요. 비공개 투표는 마감 후 결과를 확인해요. 학생에게 결과를 바로 보여 줄지, 마감 뒤 보여 줄지, 교사만 볼지도 설정을 확인해 주세요.</p></details>
+        <details><summary>반 투표에서 학생별 선택과 결과는 누구에게 보이나요?</summary><p>반 투표는 현재 운영 앱에서 제공하지 않아요. 아래는 개발 기능 설명이에요. 투표를 만들 때 공개 설정을 정해요. 담임만 학생별 선택을 보는 방식과 앱에서 담임도 학생별 선택을 볼 수 없는 비공개 방식이 있어요. 비공개 투표는 마감 후 결과를 확인해요. 학생에게 결과를 바로 보여 줄지, 마감 뒤 보여 줄지, 교사만 볼지도 설정을 확인해 주세요.</p></details>
         <h3>개인정보 · 이용 범위</h3>
         <details><summary>학생 전화번호나 생년월일·사진은 꼭 필요한가요?</summary><p>전화번호는 받지 않으며 이메일로 가입해요. 만 14세 이상 가입에서 생년월일과 프로필 사진은 선택이에요. 입력한 생년월일은 나이 확인과 담임의 학생 확인에 쓰며, 생일 알림은 본인이 설정에서 켤 때 사용해요. 생년월일 수정은 운영자에게 요청해 주세요. 프로필 사진은 같은 반의 승인된 구성원과 선생님에게 보여요.</p></details>
         <details><summary>학부모 계정이나 여러 반 이용도 되나요?</summary><p>현재 안내 대상은 선생님·학생이며 학부모 화면은 제공하지 않아요. 여러 반과 수강반 같은 확대 기능은 지금 제공되는 기능으로 가정하지 말고 현재 앱 화면의 이용 범위를 확인해 주세요.</p></details>
@@ -696,7 +664,7 @@
     <div class="wrap">
       <div class="closing__panel reveal">
         <h2 id="closing-title"><span>우리반 허브를</span> <span>직접 열어 보세요.</span></h2>
-        <p>개발 중인 앱을 자유롭게 체험하고 의견을 보내 주세요. 예시 정보로 시작하면 돼요.</p>
+        <p>공지 확인부터 지난 글 재사용까지 화면으로 살펴보세요. 신규 가입과 일부 기능은 운영 준비 중이에요.</p>
         <div class="cta">
           <a class="btn btn--white" href="start.html" data-app-entry><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>우리반 허브 열기</a>
           <a class="btn btn--line" href="ppobgi">뽑기 시간도 보기</a>

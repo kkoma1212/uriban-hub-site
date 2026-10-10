@@ -5,7 +5,7 @@ export function parseAppLink(value) {
   const url = new URL(value.url);
   const allowed = value.mode === "preview"
     ? /^(?!api\.)[a-z0-9-]+\.trycloudflare\.com$/.test(url.hostname)
-    : url.hostname === "app.uribanhub.com";
+    : ["uribanhub.com", "app.uribanhub.com"].includes(url.hostname);
   if (!allowed || url.protocol !== "https:" || url.username || url.password || url.port ||
       url.pathname !== "/login" || url.search || url.hash)
     throw new Error("INVALID_LINK");

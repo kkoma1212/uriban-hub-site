@@ -8,7 +8,29 @@ const document = { version: 1, mode: "preview", url: "https://example-preview.tr
 test("valid destination, paused state and fixed-address migration", () => {
   assert.equal(parseAppLink(document).url, document.url);
   assert.throws(() => parseAppLink({ ...document, mode: "paused" }), /PAUSED/);
+  assert.equal(parseAppLink({ ...document, mode: "fixed", url: "https://uribanhub.com/login" }).url, "https://uribanhub.com/login");
   assert.equal(parseAppLink({ ...document, mode: "fixed", url: "https://app.uribanhub.com/login" }).url, "https://app.uribanhub.com/login");
+});
+
+test("fixed destinations retain strict host, protocol and login-path restrictions", () => {
+  for (const url of [
+    "http://uribanhub.com/login", "https://www.uribanhub.com/login",
+    "https://admin.uribanhub.com/login", "https://uribanhub.com.evil.test/login",
+    "https://eviluribanhub.com/login", "https://uribanhub.com./login",
+    "https://uribanhub.com@evil.test/login", "https://user@uribanhub.com/login",
+    "https://user:pass@app.uribanhub.com/login", "https://uribanhub.com:444/login",
+    "https://app.uribanhub.com:444/login", "https://uribanhub.com/",
+    "https://uribanhub.com/sign-up", "https://uribanhub.com/login/",
+    "https://uribanhub.com/login?next=https://evil.test", "https://uribanhub.com/login#anything",
+    "https://example-preview.trycloudflare.com/login",
+  ]) assert.throws(() => parseAppLink({ ...document, mode: "fixed", url }), url);
+  assert.throws(() => parseAppLink({ ...document, url: "https://uribanhub.com/login" }));
+});
+
+test("published configuration uses the verified company login address", () => {
+  const configuration = JSON.parse(readFileSync(new URL("../app-link.json", import.meta.url), "utf8"));
+  assert.equal(configuration.mode, "fixed");
+  assert.equal(parseAppLink(configuration).url, "https://uribanhub.com/login");
 });
 
 test("rejects other sites, credentials, query redirects, malformed data and unsafe protocols", () => {
