@@ -9,6 +9,10 @@ test("valid destination, paused state and fixed-address migration", () => {
   assert.equal(parseAppLink(document).url, document.url);
   assert.throws(() => parseAppLink({ ...document, mode: "paused" }), /PAUSED/);
   assert.equal(parseAppLink({ ...document, mode: "fixed", url: "https://app.uribanhub.com/login" }).url, "https://app.uribanhub.com/login");
+  const fixedEntry = "https://uriban-hub.kkoma1212.workers.dev/login";
+  assert.equal(parseAppLink({ ...document, mode: "fixed", url: fixedEntry }).url, fixedEntry);
+  for (const url of ["https://other.kkoma1212.workers.dev/login", "https://uriban-hub.kkoma1212.workers.dev.evil.test/login", "http://uriban-hub.kkoma1212.workers.dev/login"]) assert.throws(() => parseAppLink({ ...document, mode: "fixed", url }));
+  assert.throws(() => parseAppLink({ ...document, url: fixedEntry }), /INVALID_LINK/);
 });
 
 test("rejects other sites, credentials, query redirects, malformed data and unsafe protocols", () => {
