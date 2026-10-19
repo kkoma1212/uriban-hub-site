@@ -125,7 +125,7 @@ export async function initPromotion(root) {
     viewer.className = "promotion-viewer";
     viewer.tabIndex = 0;
     viewer.setAttribute("aria-label", "소개 자료. 좌우 화살표 키로 넘기기");
-    viewer.innerHTML = '<div class="promotion-stage"><img><p role="status" hidden>이 슬라이드를 불러오지 못했어요. 다음 쪽을 보거나 PDF를 열어 주세요.</p></div><div class="promotion-controls"><button type="button" data-prev>이전</button><span class="promotion-counter" aria-live="polite" aria-atomic="true"></span><button type="button" data-next>다음</button></div>';
+    viewer.innerHTML = '<div class="promotion-stage"><img loading="lazy" decoding="async"><p role="status" hidden>이 슬라이드를 불러오지 못했어요. 다음 쪽을 보거나 PDF를 열어 주세요.</p></div><div class="promotion-controls"><button type="button" data-prev>이전</button><span class="promotion-counter" aria-live="polite" aria-atomic="true"></span><button type="button" data-next>다음</button></div>';
     const image = viewer.querySelector("img");
     image.addEventListener("error", () => { image.hidden = true; viewer.querySelector("[role=status]").hidden = false; });
     image.addEventListener("load", () => { image.hidden = false; viewer.querySelector("[role=status]").hidden = true; });
