@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { test } from "node:test";
-import { loadAppLink, openApp, parseAppLink } from "../assets/app-link.mjs";
+import { entryDestination, loadAppLink, openApp, parseAppLink } from "../assets/app-link.mjs";
 
 const document = { version: 1, mode: "preview", url: "https://example-preview.trycloudflare.com/login", updatedAt: "2026-09-27T00:00:00.000Z" };
 
@@ -18,6 +18,13 @@ test("valid destination, paused state and fixed-address migration", () => {
 test("rejects other sites, credentials, query redirects, malformed data and unsafe protocols", () => {
   for (const url of ["javascript:alert(1)", "http://example.trycloudflare.com/login", "https://example.trycloudflare.com.evil.test/login", "https://example.trycloudflare.com@evil.test/login", "https://user:pass@example.trycloudflare.com/login", "https://example.trycloudflare.com/login?next=evil", "https://example.trycloudflare.com/login#anything", "https://example.trycloudflare.com:444/login", "https://api.trycloudflare.com/login", "https://127.0.0.1/login"]) assert.throws(() => parseAppLink({ ...document, url }));
   for (const value of [null, {}, { ...document, version: 2 }, { ...document, updatedAt: "invalid" }]) assert.throws(() => parseAppLink(value));
+});
+
+test("entry paths open only the legal pages or the demo on the same app address", () => {
+  const app = "https://uriban-hub.kkoma1212.workers.dev/login";
+  assert.equal(entryDestination(app, "/demo"), "https://uriban-hub.kkoma1212.workers.dev/demo");
+  assert.equal(entryDestination(app, "/legal/terms"), "https://uriban-hub.kkoma1212.workers.dev/legal/terms");
+  for (const path of [undefined, "", "//evil.test/demo", "https://evil.test/demo", "/demo?next=evil", "/demo/../admin", "/admin"]) assert.equal(entryDestination(app, path), app, String(path));
 });
 
 test("a fresh configuration is fetched without credentials or redirect following", async () => {
@@ -56,10 +63,11 @@ test("public copy and entry paths agree with approval requirements", () => {
   assert.match(start, /교사 기능은.*운영자 승인/u);
   assert.match(index, /개인정보 대신 예시 정보/u);
   assert.equal((index.match(/href="start.html" data-app-entry>/g) ?? []).length, 4);
-  // 개인정보처리방침·이용약관 링크는 같은 최신 앱 주소의 /legal/ 화면으로만 연다.
-  const legal = [...index.matchAll(/data-app-entry data-app-entry-path="([^"]+)"/g)].map((value) => value[1]);
-  assert.ok(legal.length >= 2);
-  for (const path of legal) assert.match(path, /^\/legal\/(privacy-policy|terms)$/u);
+  // 개인정보처리방침·이용약관·예시 체험 링크는 같은 최신 앱 주소의 정해진 화면으로만 연다.
+  const paths = [...index.matchAll(/data-app-entry data-app-entry-path="([^"]+)"/g)].map((value) => value[1]);
+  assert.ok(paths.filter((path) => path.startsWith("/legal/")).length >= 2);
+  assert.equal(paths.filter((path) => path === "/demo").length, 2);
+  for (const path of paths) assert.match(path, /^\/legal\/(privacy-policy|terms)$|^\/demo$/u);
   const ids = new Set([...index.matchAll(/\bid="([^"]+)"/g)].map((value) => value[1]));
   for (const [, target] of index.matchAll(/href="#([^"]+)"/g)) assert.ok(ids.has(target), target);
 });

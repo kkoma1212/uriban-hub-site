@@ -13,6 +13,11 @@ export function parseAppLink(value) {
   return { url: url.href, updatedAt: value.updatedAt };
 }
 
+// 약관·개인정보처리방침·예시 체험 링크는 같은 최신 앱 주소의 정해진 화면으로만 연다.
+export function entryDestination(appUrl, path) {
+  return path && (path.startsWith("/legal/") || path === "/demo") ? new URL(path, appUrl).href : appUrl;
+}
+
 export async function loadAppLink(fetchResponse = globalThis.fetch) {
   const url = new URL("../app-link.json", import.meta.url);
   url.searchParams.set("v", String(Date.now()));
@@ -54,11 +59,7 @@ if (typeof document !== "undefined") {
       opening = true;
       link.setAttribute("aria-busy", "true");
       openApp({
-        // 약관·개인정보처리방침 링크는 같은 최신 앱 주소의 /legal/ 화면으로 연다.
-        navigate: (url) => {
-          const path = link.dataset.appEntryPath;
-          window.location.assign(path && path.startsWith("/legal/") ? new URL(path, url).href : url);
-        },
+        navigate: (url) => window.location.assign(entryDestination(url, link.dataset.appEntryPath)),
         report,
         finish: () => { opening = false; link.removeAttribute("aria-busy"); },
       });

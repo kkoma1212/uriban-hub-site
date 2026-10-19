@@ -29,6 +29,7 @@
   .hero .lead{margin-top:16px}
   .cta{margin-top:24px}
   .cta .btn{flex:1 1 0;padding:12px 10px;font-size:16px}
+  .cta .btn--wide{flex-basis:100%}
   .facts{margin-top:20px;gap:4px 14px;font-size:14px}
   /* 좁은 화면: 학생 화면 하나를 크게 */
   .duo .device:first-child{display:none}
