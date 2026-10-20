@@ -49,9 +49,10 @@ jobs:
           fi
           days=$(( ( $(date -d "$end" +%s) - $(date +%s) ) / 86400 ))
           echo "만료: $end (남은 날 $days)"
+          # 2026-10-20 사용자 결정: 회사 서버 갱신을 미루는 동안 매시간 실패 메일에 진짜 장애 메일이 묻히지 않게,
+          # 만료 임박은 실패가 아닌 경고로만 남긴다. 갱신 기한은 원본 저장소 BACKLOG에 둔다.
           if [ "$days" -lt "$WARN_DAYS" ]; then
-            echo "::error::$HOST 인증서가 ${days}일 뒤 만료됩니다. 서버 담당자에게 갱신을 요청하세요."
-            exit 1
+            echo "::warning::$HOST 인증서가 ${days}일 뒤 만료됩니다. 서버 담당자에게 갱신을 요청하세요."
           fi
 
       - name: 알림 시험
