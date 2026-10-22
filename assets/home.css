@@ -254,3 +254,4 @@
 .closing :focus-visible{outline-color:#fff}
 .closing .small{margin-top:20px;font-size:14px;color:#e3ecfa}
 
+.news-more{margin-top:clamp(28px,4vw,40px);text-align:center}

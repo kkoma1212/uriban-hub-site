@@ -1,0 +1,14 @@
+/* 업데이트 소식 페이지(updates.html). 공통 색·글꼴은 site.css를 그대로 쓴다. */
+.updates{max-width:calc(820px + var(--gutter)*2)}
+.updates .head{margin-bottom:clamp(28px,4vw,44px)}
+.updates-legend{margin-top:16px;display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:15px;color:var(--muted)}
+.tag--all{background:var(--paper-2);color:var(--text)}
+.update-day{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px clamp(18px,3vw,28px);box-shadow:var(--shadow-card)}
+.update-day + .update-day{margin-top:18px}
+.update-day h2{font-size:clamp(19px,2vw,22px);font-weight:800;line-height:1.35}
+.update-day ul{margin-top:14px;display:grid;gap:12px;list-style:none;padding:0}
+.update-day li{display:grid;grid-template-columns:auto 1fr;align-items:start;gap:10px}
+.update-day li .tag{min-width:58px;justify-content:center}
+.update-day li p{font-size:16px;line-height:1.7;word-break:keep-all;overflow-wrap:anywhere}
+@media (max-width:480px){.update-day li{grid-template-columns:1fr;gap:6px}.update-day li .tag{justify-self:start}}
+.updates-foot{margin-top:28px;font-size:15px;line-height:1.7;color:var(--muted);word-break:keep-all}
