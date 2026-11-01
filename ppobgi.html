@@ -120,9 +120,9 @@
         <div>
           <p class="eyebrow">공평성 검증</p>
           <h2 id="fair-title" class="h2">추첨 결과를 직접 세어 공개해요.</h2>
-          <p class="lead">룰렛·캡슐·로또·승부수는 각 100만 번, 또르르는 36만 7,500판을 돌려 확인했어요.</p>
-          <p class="body" style="margin-top:20px">앱의 추첨 코드를 그대로 돌려 번호마다(승부수는 칸마다) 뽑힌 횟수를 셌어요. 모두 「공평」으로 판정됐어요. <span class="nowrap">(2026년 9월 24일 검증)</span></p>
-          <p class="fair-src">외부 기관이 아닌 만든 사람이 직접 검증했어요. 아래 또르르 통계와 PDF는 2026년 9월 24일의 이전 엔진에 대한 결과예요. 1.4.4의 새 엔진은 별도 통계 검증 전이며, 이 결과를 그대로 적용하지 않아요.</p>
+          <p class="lead">룰렛·캡슐·풍선·폭탄·로또·승부수는 각 100만 번, 또르르는 10만 9,600판을 돌려 확인했어요.</p>
+          <p class="body" style="margin-top:20px">앱의 추첨 코드를 그대로 돌려 번호마다(승부수는 칸마다) 뽑힌 횟수를 셌어요. 모두 「공평」으로 판정됐어요. <span class="nowrap">(2026년 11월 1일 검증)</span></p>
+          <p class="fair-src">외부 기관이 아닌 만든 사람이 직접 검증했어요.</p>
         </div>
         <figure style="margin:0">
           <div class="screen">
@@ -135,26 +135,27 @@
       <div class="stats num">
         <article class="stat reveal" aria-labelledby="stat-a">
           <p id="stat-a" class="stat__n">100만<small>번씩</small></p>
-          <p class="stat__d">룰렛 · 캡슐 · 로또: 28명 반과 40명 반에서 각각, 번호마다 뽑힌 횟수</p>
+          <p class="stat__d">룰렛 · 캡슐 · 풍선 · 폭탄 · 로또: 28명 반과 40명 반에서 각각, 번호마다 뽑힌 횟수(풍선·폭탄은 연출이 끝났을 때 화면에 보인 번호)</p>
           <p class="stat__d">승부수: 기본 6칸이 정한 비율대로 나오는지</p>
           <p class="verdict">판정: 모두 「공평」</p>
         </article>
         <article class="stat reveal" aria-labelledby="stat-b">
-          <p id="stat-b" class="stat__n">36만 7,500<small>판</small></p>
-          <p class="stat__d">또르르 이전 엔진 · 28명 · 실제 물리 경주</p>
+          <p id="stat-b" class="stat__n">10만 9,600<small>판</small></p>
+          <p class="stat__d">또르르 · 28명 · 실제 물리 경주 · 꼴찌 당첨</p>
           <p class="verdict">판정: 「공평」</p>
-          <p class="cond">※ 판마다 <strong>맵 4개 중 하나를 무작위로</strong> 골라, 막대기를 켠 채 <strong>아무도 건드리지 않은 경기</strong>에서 <strong>1등 당첨(그때 기본값 — 지금 기본은 꼴찌)</strong>만 잰 결과예요. 선생님이 막대기·기울이기·흔들기를 쓰면 결과가 달라질 수 있어요.</p>
+          <p class="cond">※ 판마다 <strong>맵 4개 중 하나를 무작위로</strong> 골라, 막대기를 켠 채 <strong>아무도 건드리지 않은 경기</strong>에서 <strong>꼴찌 당첨(앱 기본값)</strong>만 잰 결과예요. 선생님이 막대기·기울이기·흔들기를 쓰면 결과가 달라질 수 있어요.</p>
         </article>
       </div>
 
       <div class="fair__more reveal">
         <div class="body">
-          <p>28명이면 번호마다 1등 할 확률은 3.57%예요. 36만 7,500판에서 1등이 가장 많았던 5번은 3.63%, 가장 적었던 26번은 3.52%였어요.</p>
-          <p class="small">통계 검사(카이제곱) 기준 p ≥ 0.01이면 「공평」으로 판정했어요. 또르르는 p = 0.86이었어요.</p>
+          <p>28명이면 번호마다 꼴찌로 당첨될 확률은 3.57%예요. 10만 9,600판에서 가장 많았던 25번은 3.67%, 가장 적었던 3번은 3.47%였어요.</p>
+          <p>출발 자리는 자리마다 유불리가 있었어요(2.33%~6.15%). 그래서 앱은 한 판이 끝날 때마다 출발 자리를 새로 섞어, 어느 번호도 좋은 자리에 계속 머물지 않게 해요.</p>
+          <p class="small">통계 검사(카이제곱) 기준 p ≥ 0.01이면 「공평」으로 판정했어요. 또르르는 p = 0.71이었어요.</p>
         </div>
         <div>
           <a class="btn btn--magnet" href="assets/ppobgi/fairness-report.pdf" target="_blank" rel="noopener">검증 보고서 보기<span class="sr-only"> (PDF, 새 탭)</span></a>
-          <p class="small">PDF · 약 173KB · 새 탭에서 열려요</p>
+          <p class="small">PDF · 약 213KB · 새 탭에서 열려요</p>
         </div>
       </div>
     </div>
@@ -471,7 +472,7 @@
         <details><summary>학생 정보는 안전한가요?</summary><p>학생 이름을 넣는 칸이 없어요. 번호·결석·발표 기록은 어디로도 보내지 않고, 프로그램을 끄면 사라져요. 인터넷은 업데이트·공지 확인과 선생님이 고른 유튜브 타이머 화면, 그리고 선생님이 동의한 경우의 사용 현황(학교 이름·컴퓨터 모델명)에만 써요.</p></details>
         <details><summary>무엇을 모으나요?</summary><p>처음 켤 때 묻는 창에서 선생님이 동의한 경우에만 학교 이름, 컴퓨터 모델명, Windows·앱 버전, 보낸 날짜, 이 PC를 구분하는 임의 번호를 보내요. 학생 이름·번호와 뽑기 결과는 보내지 않아요. 마지막으로 보낸 날부터 1년 뒤 지우고, 설정 › 정보에서 동의를 취소하면 바로 지워요. 동의하지 않아도 모든 기능을 그대로 쓸 수 있어요. 자세한 내용은 <a href="ppobgi-privacy.html">개인정보 처리방침</a>에 있어요.</p></details>
         <details><summary>마지막 장면이 정해진 것처럼 보여요.</summary><p>룰렛·로또·캡슐·풍선·폭탄은 당첨을 연출 전에 먼저 공평하게 정해요. 연출은 보는 재미일 뿐 확률을 바꾸지 않아요. 각 100만 번씩 돌려 본 검증 보고서도 공개해 두었어요.</p></details>
-        <details><summary>또르르에서 막대기를 쓰면 결과가 바뀌나요?</summary><p>네, 달라질 수 있어요. 또르르는 공이 실제로 도착한 순서로 정해지기 때문에, 막대기나 흔들기를 쓰면 결과가 달라질 수 있어요. 36만 7,500판 검증은 이전 엔진에서 아무도 건드리지 않은 경기의 1등만 잰 결과예요. 새 엔진의 통계 결과는 아직 확인하지 않았어요. 막대기는 설정의 「또르르」 탭에서 끌 수 있지만, 기울이기(A · D)와 흔들기(S)는 그대로 남아요. 완전히 우연에 맡기고 싶은 날에는 룰렛이나 캡슐을 권해요.</p></details>
+        <details><summary>또르르에서 막대기를 쓰면 결과가 바뀌나요?</summary><p>네, 달라질 수 있어요. 또르르는 공이 실제로 도착한 순서로 정해지기 때문에, 막대기나 흔들기를 쓰면 결과가 달라질 수 있어요. 10만 9,600판 검증은 아무도 건드리지 않은 경기의 꼴찌 당첨만 잰 결과예요. 막대기는 설정의 「또르르」 탭에서 끌 수 있지만, 기울이기(A · D)와 흔들기(S)는 그대로 남아요. 완전히 우연에 맡기고 싶은 날에는 룰렛이나 캡슐을 권해요.</p></details>
         <details><summary>Windows 10이나 맥, 태블릿에서도 되나요?</summary><p>Windows 11에서 확인했어요. Windows 10(64비트)은 프로그램 바탕이 지원하지만 아직 직접 확인하지 못했어요. Windows 7 · 8, macOS·태블릿·휴대폰은 지원하지 않아요.</p></details>
         <details><summary>파일이 354MB로 커요.</summary><p>빨리 켜지도록 압축하지 않은 파일이라 커요. 한 번 받아 두면 USB로 옮겨 쓸 수 있어요.</p></details>
         <details><summary>다른 선생님 PC와 반 설정이 섞이지 않나요?</summary><p>섞이지 않아요. 반 설정은 파일 옆 <code>data</code> 폴더에만 저장되고 어디로도 보내지 않아요. 다만 바탕화면이 OneDrive와 동기화되고 같은 계정으로 여러 PC를 쓰면, OneDrive가 <code>data</code> 폴더를 PC끼리 맞춰 줘요. 이럴 때는 파일을 OneDrive 밖 폴더(예: <code>C:뽑기시간</code>)나 USB에 두세요.</p></details>
