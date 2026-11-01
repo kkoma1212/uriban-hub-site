@@ -12,9 +12,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="뽑기 시간">
     <link rel="apple-touch-icon" href="./icons/icon-180.png">
-    <script type="module" crossorigin src="./assets/index-DFzp_4zd.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/preload-helper-B5CIiySc.js">
-    <link rel="stylesheet" crossorigin href="./assets/index-DrJ8We_U.css">
+    <script type="module" crossorigin src="./assets/index-ClZhSHkL.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/preload-helper-CCjON1Gc.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-CE2N3dfV.css">
   </head>
   <body>
    <div class="app-board">
@@ -36,6 +36,7 @@
       <button id="nav-pinball" class="nav-magnet" type="button" data-route="pinball"><span class="magnet" aria-hidden="true"></span><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h11M8 12h12M4 17h11" stroke="#b98a55" stroke-width="2.6" stroke-linecap="round"/><circle cx="18.5" cy="6.5" r="2.4" fill="#ff6f61"/><circle cx="5.5" cy="12" r="2.4" fill="#3fa3f0"/><circle cx="18" cy="17" r="2.4" fill="#ffb627"/></svg><span class="nav-label">또르르</span></button>
       <button id="nav-capsule" class="nav-magnet" type="button" data-route="capsule"><span class="magnet" aria-hidden="true"></span><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="9" r="6.5" fill="#fff" stroke="currentColor" stroke-width="1.6"/><circle cx="10" cy="8" r="1.8" fill="#ff6f61"/><circle cx="14" cy="10" r="1.8" fill="#3fa3f0"/><rect x="6" y="15" width="12" height="7" rx="1.6" fill="#ff8c42" stroke="currentColor" stroke-width="1.4"/></svg><span class="nav-label">캡슐</span></button>
       <button id="nav-timer" class="nav-magnet" type="button" data-route="timer"><span class="magnet" aria-hidden="true"></span><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="14" r="7.5" fill="#fff" stroke="currentColor" stroke-width="1.8"/><path d="M12 14V9.5M12 14l3 2M9.5 3h5" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></svg><span class="nav-label">타이머</span></button>
+      <button id="nav-more" class="nav-magnet" type="button" aria-haspopup="dialog" aria-expanded="false" aria-controls="more-games"><span class="magnet" aria-hidden="true"></span><svg class="nav-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="13" r="2.4" fill="currentColor"/><circle cx="12" cy="13" r="2.4" fill="currentColor"/><circle cx="19" cy="13" r="2.4" fill="currentColor"/></svg><span class="nav-label">더보기</span><span id="nav-more-now" class="nav-now" aria-hidden="true"></span></button>
     </nav>
     <div class="shell-notices">
     <aside id="session-warning" class="notice" role="status" hidden></aside>
@@ -44,6 +45,7 @@
     <aside id="size-warning" class="notice" role="status" hidden>화면이 작아 한 열로 표시합니다. 아래로 스크롤해 주세요.</aside>
     <p id="error" class="notice" role="alert" hidden></p>
     </div>
+    <p id="route-note" class="notice route-note" role="status" hidden></p>
     <main id="screen" tabindex="-1" aria-label="뽑기 시간 화면"></main>
     <footer class="chalk-ledge" aria-label="현재 화면과 단축키">
       <strong id="shell-route">오늘의 수업</strong>
