@@ -1,5 +1,6 @@
 Hi Melody — Copyright 2018 The Hi Melody Project Authors. SIL Open Font License 1.1.
 Source: https://github.com/google/fonts/tree/main/ofl/himelody (HiMelody-Regular.ttf)
+Format: converted to WOFF2 on 2026-11-02 to cut download size (12.6MB -> 0.88MB); all 12,103 glyphs, outlines, hinting and layout tables unchanged.
 Used for: decorative chalk doodles on the course screen only.
 
 Copyright (c) YoonDesign Inc. All Rights Reserved.
