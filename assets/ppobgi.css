@@ -290,6 +290,7 @@ td.num,th.num{text-align:right}
 .trust{margin-top:var(--s5);padding-top:var(--s4);border-top:2px dashed #f4f1e833}
 .trust ul{margin:var(--s1) 0 0;padding-left:1.2em;font-size:15px;color:var(--chalk-soft)}
 .trust li+li{margin-top:4px}
+.trust>.btn{margin-top:var(--s3)}
 .hash{word-break:break-all;font-variant-numeric:tabular-nums}
 .honest{position:relative;padding:calc(var(--card-pad) + 6px) var(--card-pad) var(--card-pad);background:var(--note);color:var(--note-ink);border-radius:2px;rotate:-.4deg;box-shadow:0 2px 3px #0000004d,0 22px 34px -20px #000c}
 .honest::before{content:"";position:absolute;top:-12px;left:50%;width:100px;height:24px;margin-left:-50px;background:#eee2c0e6;rotate:2deg;box-shadow:0 1px 2px #0002}
