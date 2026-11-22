@@ -10,12 +10,27 @@ const marker = "<!-- uriban-fixed-preview-uptime:v1 -->";
 export async function previewReady(request = fetch, wait = delay) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const response = await request(origin + "/readyz", {
+      const options = {
         redirect: "manual",
         cache: "no-store",
         signal: AbortSignal.timeout(20_000),
-      });
-      if (response.status === 200 && (await response.json()).status === "ready") return true;
+      };
+      const response = await request(origin + "/readyz", options);
+      if (response.status === 200 && (await response.json()).status === "ready") {
+        const [login, bootstrap] = await Promise.all([
+          request(origin + "/login", options),
+          request(origin + "/api/v1/bootstrap", options),
+        ]);
+        if (login.status === 200 && bootstrap.status === 401 &&
+            (await bootstrap.json()).error?.code === "UNAUTHENTICATED") {
+          const html = await login.text();
+          const entry = html.match(/<script\b[^>]+\bsrc="(\/assets\/index-[\w-]+\.js)"/u)?.[1];
+          if (html.includes("<title>우리반 허브</title>") && entry) {
+            const script = await request(origin + entry, options);
+            if (script.status === 200 && /^(text|application)\/javascript\b/iu.test(script.headers.get("content-type") ?? "") && (await script.text()).trim()) return true;
+          }
+        }
+      }
     } catch {
       // Timeouts, malformed responses and connection failures each count as one check.
     }
@@ -41,7 +56,7 @@ export function recordCheck(ready, repository, runUrl, api = github) {
   if (!incident) {
     const owner = repository.split("/")[0];
     const body = [
-      marker, `@${owner} 검수 사이트가 30초 간격의 확인 세 번에 모두 준비 응답을 보내지 못했습니다.`,
+      marker, `@${owner} 검수 사이트의 준비 상태, 로그인 화면, 비로그인 API 응답을 세 차례 함께 확인했지만 정상 접속을 확인하지 못했습니다.`,
       "", `[검수 사이트](${origin}/login) · [최초 점검 기록](${runUrl})`,
       "", "이 이슈가 열려 있는 동안 매시간 점검 결과는 Actions 실행 요약에 기록됩니다. 접속이 복구되면 감시가 이 이슈를 닫습니다.",
     ].join("\n");

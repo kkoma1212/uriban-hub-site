@@ -2,6 +2,29 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { previewReady, recordCheck } from "../.github/fixed-preview-uptime.mjs";
 
+function healthy(path) {
+  if (path === "/login") return new Response('<title>우리반 허브</title><script type="module" src="/assets/index-test.js"></script>');
+  if (path === "/assets/index-test.js") return new Response("import './app.js'", { headers: { "Content-Type": "text/javascript; charset=utf-8" } });
+  if (path === "/api/v1/bootstrap") return Response.json({ error: { code: "UNAUTHENTICATED" } }, { status: 401 });
+  assert.equal(path, "/readyz");
+  return Response.json({ status: "ready" });
+}
+test("a healthy readiness endpoint cannot mask a broken login or a wrong API response", async () => {
+  for (const [path, failure] of [
+    ["/login", () => new Response("", { status: 503 })],
+    ["/login", () => new Response("<title>다른 사이트</title>")],
+    ["/login", () => new Response("<title>우리반 허브</title>")],
+    ["/assets/index-test.js", () => new Response("", { status: 404 })],
+    ["/assets/index-test.js", () => new Response("<html></html>", { headers: { "Content-Type": "text/html" } })],
+    ["/assets/index-test.js", () => new Response("", { headers: { "Content-Type": "application/javascript" } })],
+    ["/api/v1/bootstrap", () => Response.json({ error: { code: "OTHER" } }, { status: 401 })],
+  ]) {
+    const waits = [];
+    assert.equal(await previewReady(async url => new URL(url).pathname === path ? failure() : healthy(new URL(url).pathname), async ms => waits.push(ms)), false);
+    assert.deepEqual(waits, [30000, 30000]);
+  }
+});
+
 test("two schedules share one incident from first outage through recovery", () => {
   const repo = "example/review";
   const issues = [{ number: 4, user: { login: "someone" }, body: "Unrelated", state: "open" }];
@@ -39,8 +62,9 @@ test("two schedules share one incident from first outage through recovery", () =
 test("transient and malformed responses are retried, with no redirect accepted", async () => {
   let waits = [], attempts = 0;
   const result = await previewReady(async (url, options) => {
-    assert.equal(new URL(url).pathname, "/readyz");
     assert.equal(options.redirect, "manual");
+    const path = new URL(url).pathname;
+    if (path !== "/readyz") return healthy(path);
     attempts++;
     if (attempts === 1) throw new Error("timeout");
     if (attempts === 2) return new Response("not JSON");
