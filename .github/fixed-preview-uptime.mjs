@@ -3,11 +3,12 @@ import { appendFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { setTimeout as delay } from "node:timers/promises";
 import { fileURLToPath } from "node:url";
+import { loginFormReady } from "./login-form-ready.mjs";
 
 const origin = "https://uriban-hub.kkoma1212.workers.dev";
 const marker = "<!-- uriban-fixed-preview-uptime:v1 -->";
 
-export async function previewReady(request = fetch, wait = delay) {
+export async function previewReady(request = fetch, wait = delay, renderLogin = loginFormReady) {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
       const options = {
@@ -27,7 +28,7 @@ export async function previewReady(request = fetch, wait = delay) {
           const entry = html.match(/<script\b[^>]+\bsrc="(\/assets\/index-[\w-]+\.js)"/u)?.[1];
           if (html.includes("<title>우리반 허브</title>") && entry) {
             const script = await request(origin + entry, options);
-            if (script.status === 200 && /^(text|application)\/javascript\b/iu.test(script.headers.get("content-type") ?? "") && (await script.text()).trim()) return true;
+            if (script.status === 200 && /^(text|application)\/javascript\b/iu.test(script.headers.get("content-type") ?? "") && (await script.text()).trim() && await renderLogin(origin + "/login")) return true;
           }
         }
       }
