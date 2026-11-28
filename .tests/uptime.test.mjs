@@ -20,7 +20,7 @@ test("a healthy readiness endpoint cannot mask a broken login or a wrong API res
     ["/api/v1/bootstrap", () => Response.json({ error: { code: "OTHER" } }, { status: 401 })],
   ]) {
     const waits = [];
-    assert.equal(await previewReady(async url => new URL(url).pathname === path ? failure() : healthy(new URL(url).pathname), async ms => waits.push(ms)), false);
+    assert.equal(await previewReady(async url => new URL(url).pathname === path ? failure() : healthy(new URL(url).pathname), async ms => waits.push(ms), () => true), false);
     assert.deepEqual(waits, [30000, 30000]);
   }
 });
@@ -69,7 +69,7 @@ test("transient and malformed responses are retried, with no redirect accepted",
     if (attempts === 1) throw new Error("timeout");
     if (attempts === 2) return new Response("not JSON");
     return Response.json({ status: "ready" });
-  }, async ms => waits.push(ms));
+  }, async ms => waits.push(ms), () => true);
   assert.equal(result, true);
   assert.deepEqual(waits, [30_000, 30_000]);
   for (const response of [502, 302, 200]) {
@@ -77,7 +77,7 @@ test("transient and malformed responses are retried, with no redirect accepted",
     assert.equal(await previewReady(async () => {
       count++;
       return Response.json({ status: response === 200 ? "unready" : "ready" }, { status: response });
-    }, async () => {}), false);
+    }, async () => {}, () => true), false);
     assert.equal(count, 3);
   }
 });
